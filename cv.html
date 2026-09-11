@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Khan Muhammad Ahsan — Curriculum Vitae</title>
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/fonts.css" />
+  <style>
+    :root {
+      --bg: #F8F8F6;
+      --paper: #FFFFFF;
+      --text: #111111;
+      --muted: #555555;
+      --line: #E0E0E0;
+      --sans: "Helvetica Now Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      --serif: "EB Garamond", Garamond, Georgia, serif;
+      --mono: "Consolas", "Courier New", monospace;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 13.5px;
+      line-height: 1.5;
+      padding: 40px 20px;
+    }
+
+    .top-bar {
+      max-width: 820px;
+      margin: 0 auto 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .back-link {
+      font-family: var(--sans);
+      font-size: 13px;
+      color: var(--text);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    .print-btn {
+      background: var(--text);
+      color: #FFFFFF;
+      border: none;
+      padding: 8px 16px;
+      font-family: var(--sans);
+      font-size: 12px;
+      font-weight: 500;
+      border-radius: 4px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: opacity 0.2s;
+    }
+
+    .print-btn:hover {
+      opacity: 0.85;
+    }
+
+    .cv-sheet {
+      max-width: 820px;
+      margin: 0 auto;
+      background: var(--paper);
+      padding: 56px 56px;
+      border: 1px solid var(--line);
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+    }
+
+    header {
+      margin-bottom: 28px;
+    }
+
+    .cv-name {
+      font-family: var(--serif);
+      font-size: 32px;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      line-height: 1.1;
+      margin-bottom: 8px;
+    }
+
+    .cv-contact {
+      font-size: 12.5px;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 14px;
+    }
+
+    .cv-contact a {
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .cv-section {
+      margin-top: 24px;
+    }
+
+    .cv-section-title {
+      font-family: var(--sans);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border-bottom: 1.5px solid var(--text);
+      padding-bottom: 4px;
+      margin-bottom: 14px;
+    }
+
+    .cv-entry {
+      margin-bottom: 16px;
+    }
+
+    .cv-entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 3px;
+    }
+
+    .cv-entry-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .cv-entry-link {
+      font-weight: 400;
+      font-size: 12px;
+      color: var(--muted);
+      margin-left: 8px;
+    }
+
+    .cv-entry-date {
+      font-size: 12px;
+      color: var(--muted);
+      font-family: var(--mono);
+      white-space: nowrap;
+    }
+
+    .cv-entry-role {
+      font-size: 13px;
+      font-style: italic;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .cv-entry ul {
+      margin-left: 18px;
+      list-style-type: disc;
+    }
+
+    .cv-entry li {
+      font-size: 12.5px;
+      line-height: 1.45;
+      color: #333333;
+      margin-bottom: 4px;
+    }
+
+    .cv-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px 28px;
+    }
+
+    .skill-group {
+      margin-bottom: 10px;
+    }
+
+    .skill-group strong {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .skill-group span {
+      font-size: 12.5px;
+      color: #444444;
+    }
+
+    @media print {
+      body {
+        background: #FFFFFF;
+        padding: 0;
+      }
+      .top-bar {
+        display: none;
+      }
+      .cv-sheet {
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .cv-sheet {
+        padding: 28px 20px;
+      }
+      .cv-grid-2 {
+        grid-template-columns: 1fr;
+      }
+      .cv-entry-header {
+        flex-direction: column;
+        gap: 2px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-bar">
+    <a href="index.html" class="back-link">← Back to Portfolio</a>
+    <button class="print-btn" onclick="window.print()">Print / Save PDF</button>
+  </div>
+
+  <article class="cv-sheet">
+    <header>
+      <h1 class="cv-name">Khan Muhammad Ahsan</h1>
+      <div class="cv-contact">
+        <span>Suwon, South Korea</span>
+        <span>•</span>
+        <span>+82 10-6651-3148</span>
+        <span>•</span>
+        <a href="mailto:455ahsankhan@gmail.com">455ahsankhan@gmail.com</a>
+        <span>•</span>
+        <a href="https://www.linkedin.com/in/455ahsankhan" target="_blank">LinkedIn</a>
+        <span>•</span>
+        <a href="https://preplitai.com" target="_blank">preplitai.com</a>
+      </div>
+    </header>
+
+    <section class="cv-section">
+      <h2 class="cv-section-title">Professional Summary</h2>
+      <p style="font-size: 13px; color: #333; line-height: 1.5;">
+        Software engineering student with strong business acumen and a sharp focus on user experience, currently studying at Ajou University in South Korea under the prestigious Global Korea Scholarship (GKS). Dedicated to shipping products that simplify people's lives through high-leverage artificial intelligence, full-stack architectures, and intuitive digital interfaces.
+      </p>
+    </section>
+
+    <section class="cv-section">
+      <h2 class="cv-section-title">Professional Experience</h2>
+
+      <div class="cv-entry">
+        <div class="cv-entry-header">
+          <span class="cv-entry-title">Preplit AI <span class="cv-entry-link">— <a href="https://preplitai.com" target="_blank">preplitai.com</a></span></span>
+          <span class="cv-entry-date">2026 – Present</span>
+        </div>
+        <div class="cv-entry-role">Chief Executive Officer — Seoul, South Korea</div>
+        <ul>
+          <li>Architecting and developing an AI-powered education workspace using Next.js, React, TypeScript, Tailwind CSS, and LLM APIs, featuring AI tutoring, note distillation, exam prep tools, and academic workflows.</li>
+          <li>Building end-to-end full-stack workflows including multi-agent pipelines, pgvector vector search, auth, file processing, database connectivity, and responsive streaming UI from system design through deployment.</li>
+        </ul>
+      </div>
+
+      <div class="cv-entry">
+        <div class="cv-entry-header">
+          <span class="cv-entry-title">CampusRank <span class="cv-entry-link">— <a href="https://campusrank-ruby.vercel.app" target="_blank">campusrank-ruby.vercel.app</a></span></span>
+          <span class="cv-entry-date">2026 – Present</span>
+        </div>
+        <div class="cv-entry-role">Founder (Side Project) — Suwon, South Korea</div>
+        <ul>
+          <li>Developing a global student and university competitive ranking platform using Next.js, React, TypeScript, and Tailwind CSS, featuring verifiable user profiles, leaderboards, university rankings, and algorithmic scoring.</li>
+        </ul>
+      </div>
+
+      <div class="cv-entry">
+        <div class="cv-entry-header">
+          <span class="cv-entry-title">Resumate <span class="cv-entry-link">— <a href="https://resumate-ai-lake.vercel.app" target="_blank">resumate-ai-lake.vercel.app</a></span></span>
+          <span class="cv-entry-date">2026 – Present</span>
+        </div>
+        <div class="cv-entry-role">Founder & Full-Stack Developer — Suwon, South Korea</div>
+        <ul>
+          <li>Built an AI platform performing deep resume analysis, ATS compatibility scoring, and line-by-line feedback to help job seekers maximize interview callback rates.</li>
+          <li>Developed full-stack application using Next.js, React, TypeScript, and Tailwind CSS with AI integration for resume evaluation.</li>
+        </ul>
+      </div>
+
+      <div class="cv-entry">
+        <div class="cv-entry-header">
+          <span class="cv-entry-title">Covenant & Co <span class="cv-entry-link">— instagram.com/covenantwatch</span></span>
+          <span class="cv-entry-date">2024 – 2026</span>
+        </div>
+        <div class="cv-entry-role">Founder, B2B Product Outsourcing — South Korea / China Operations</div>
+        <ul>
+          <li>Operated a minimalist luxury watch e-commerce storefront with 100,000+ all-time visitors, managing B2B sourcing, supplier negotiations, and cross-border logistics across China and South Korea.</li>
+        </ul>
+      </div>
+
+      <div class="cv-entry">
+        <div class="cv-entry-header">
+          <span class="cv-entry-title">VisionRare</span>
+          <span class="cv-entry-date">2021</span>
+        </div>
+        <div class="cv-entry-role">Junior Principal Backend Software Engineer — Remote</div>
+        <ul>
+          <li>Built and maintained REST APIs, worked on core backend features, and handled debugging and performance issues in an Agile development environment.</li>
+        </ul>
+      </div>
+
+      <div class="cv-entry">
+        <div class="cv-entry-header">
+          <span class="cv-entry-title">Python Automation Developer</span>
+          <span class="cv-entry-date">2020</span>
+        </div>
+        <ul>
+          <li>Developed desktop automation tools for Pokémon Revolution Online using Python, PyAutoGUI, and OpenCV, combining screen automation with sub-pixel image recognition to automate repetitive tasks for thousands of users.</li>
+        </ul>
+      </div>
+
+      <div class="cv-entry">
+        <div class="cv-entry-header">
+          <span class="cv-entry-title">TextVision, Image Text Extractor</span>
+          <span class="cv-entry-date">2019</span>
+        </div>
+        <ul>
+          <li>Built a web application with Python and Flask that extracts text from images using Microsoft Azure Computer Vision OCR.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cv-section">
+      <h2 class="cv-section-title">Education</h2>
+      <div class="cv-entry">
+        <div class="cv-entry-header">
+          <span class="cv-entry-title">Ajou University, Suwon, South Korea</span>
+          <span class="cv-entry-date">2024 – Present</span>
+        </div>
+        <div class="cv-entry-role">Sophomore, Bachelor of Science in Software Engineering</div>
+        <p style="font-size: 12.5px; color: #444;">• <strong>Global Korea Scholarship (GKS) Recipient</strong> — Fully funded prestigious scholarship granted by the Korean Government.</p>
+      </div>
+
+      <div class="cv-entry">
+        <div class="cv-entry-header">
+          <span class="cv-entry-title">Fazaia Degree College, PAF Base Faisal, Pakistan</span>
+          <span class="cv-entry-date">Graduated</span>
+        </div>
+        <div class="cv-entry-role">Secondary & High School (Pre-Engineering)</div>
+      </div>
+    </section>
+
+    <section class="cv-section">
+      <h2 class="cv-section-title">Skills & Competencies</h2>
+      <div class="cv-grid-2">
+        <div>
+          <div class="skill-group">
+            <strong>AI/ML Engineering:</strong>
+            <span>LLM development, RAG pipelines, vector databases (pgvector), API integration (OpenAI, Anthropic, Groq).</span>
+          </div>
+          <div class="skill-group">
+            <strong>Programming:</strong>
+            <span>Python, TypeScript, JavaScript, C, C++, Java, Swift, HTML5/CSS3.</span>
+          </div>
+          <div class="skill-group">
+            <strong>Frameworks:</strong>
+            <span>Next.js 15, React, Node.js, Django REST, Tailwind CSS, TensorFlow, NumPy.</span>
+          </div>
+        </div>
+        <div>
+          <div class="skill-group">
+            <strong>Cloud & DevOps:</strong>
+            <span>AWS, Microsoft Azure, Cloudflare, Docker, Vercel.</span>
+          </div>
+          <div class="skill-group">
+            <strong>Databases:</strong>
+            <span>Supabase, PostgreSQL, MySQL, MariaDB, SQLite, MSSQL.</span>
+          </div>
+          <div class="skill-group">
+            <strong>Growth & Leadership:</strong>
+            <span>SEO, B2B supply chain management, Agile, UI/UX architecture.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cv-section">
+      <h2 class="cv-section-title">Roles & Community Leadership</h2>
+      <div class="cv-entry">
+        <div class="cv-entry-header">
+          <span class="cv-entry-title">Microsoft Learn Student Ambassador</span>
+          <span class="cv-entry-date">2020 – 2022</span>
+        </div>
+        <p style="font-size: 12.5px; color: #444;">Represented Microsoft's developer community; organized technical events, workshops, and student outreach.</p>
+      </div>
+
+      <div class="cv-entry">
+        <div class="cv-entry-header">
+          <span class="cv-entry-title">Ajou International Student Council</span>
+          <span class="cv-entry-date">Elected Member</span>
+        </div>
+        <p style="font-size: 12.5px; color: #444;">Elected representative advocating for international student body in university administration.</p>
+      </div>
+
+      <div class="cv-entry">
+        <div class="cv-entry-header">
+          <span class="cv-entry-title">Community Volunteer, Suwon Global Center, South Korea</span>
+          <span class="cv-entry-date">Volunteer</span>
+        </div>
+        <p style="font-size: 12.5px; color: #444;">Korean–English interpreter and cultural liaison assisting foreign residents with legal documentation and integration.</p>
+      </div>
+    </section>
+
+    <section class="cv-section">
+      <h2 class="cv-section-title">Certifications & Honors</h2>
+      <ul style="margin-left: 18px; font-size: 12.5px; color: #333; line-height: 1.6;">
+        <li><strong>Placed Top 20</strong>, Incheon Foreign Start-up Challenge 2026 — OASIS</li>
+        <li><strong>Research Paper:</strong> <em>Comprehensive Study of Dijkstra's Algorithm</em> — Global Scientific Journal</li>
+        <li><strong>Microsoft Technical Exam AI-900:</strong> Azure AI Fundamentals — Microsoft</li>
+        <li><strong>CS50:</strong> Introduction to Computer Science — Harvard University Online</li>
+        <li><strong>Supervised Machine Learning:</strong> Regression & Classification — Stanford Online & DeepLearning.AI</li>
+        <li><strong>IT Automation with Python</strong> — Google Professional Certificate</li>
+        <li><strong>Azure Data Scientist Associate Preparation</strong> — LinkedIn & Microsoft</li>
+        <li><strong>Data Science</strong> — IBM Professional Certification</li>
+        <li><strong>Elements of AI</strong> — University of Helsinki</li>
+        <li><strong>Introduction to Back-End Development</strong> — Meta</li>
+      </ul>
+    </section>
+
+    <section class="cv-section">
+      <h2 class="cv-section-title">Languages</h2>
+      <p style="font-size: 12.5px; color: #333;">
+        <strong>English:</strong> IELTS Band 8.0 (Expert) &nbsp;|&nbsp; 
+        <strong>Korean:</strong> TOPIK Level 4 (Advanced) &nbsp;|&nbsp; 
+        <strong>Urdu:</strong> Native
+      </p>
+    </section>
+
+  </article>
+
+</body>
+</html>
