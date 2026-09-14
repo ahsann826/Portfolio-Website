@@ -1,16 +1,14 @@
-// Modern main.js: Smooth scrolling navigation, scrollspy, copy email, back-to-top
+// Modern main.js: Capsule navigation with smooth scrolling, scrollspy, copy email, back-to-top
 document.addEventListener('DOMContentLoaded', () => {
-  const navLinks = document.querySelectorAll('.nav-link');
+  const navLinks = document.querySelectorAll('.capsule-link, .nav-link');
   const sections = document.querySelectorAll('section[id]');
   const header = document.querySelector('header');
-  const tabsContainer = document.getElementById('tabs-container');
 
   // Calculate sticky offset
   function getStickyOffset() {
     let offset = 0;
     if (header) offset += header.offsetHeight;
-    if (tabsContainer) offset += tabsContainer.offsetHeight;
-    return offset + 16;
+    return offset + 56;
   }
 
   // 1. Smooth Scroll with Sticky Offset
@@ -26,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
             top: Math.max(0, targetPosition),
             behavior: 'smooth'
           });
-          // Update URL hash without jumping
           history.replaceState(null, '', href);
           updateActiveLink(href);
         }
@@ -37,16 +34,14 @@ document.addEventListener('DOMContentLoaded', () => {
   function updateActiveLink(targetId) {
     navLinks.forEach(link => {
       if (link.getAttribute('href') === targetId) {
-        link.classList.add('active', 'text-indigo-600');
-        link.classList.remove('text-gray-700');
+        link.classList.add('active');
       } else {
-        link.classList.remove('active', 'text-indigo-600');
-        link.classList.add('text-gray-700');
+        link.classList.remove('active');
       }
     });
   }
 
-  // 2. ScrollSpy: Highlight current section in navigation on scroll
+  // 2. ScrollSpy: Highlight current section in capsule navigation on scroll
   function onScroll() {
     const scrollPos = window.pageYOffset + getStickyOffset() + 60;
     let currentId = '#summary';
@@ -60,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // If at the bottom of the page, activate #contact
-    if (window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 50) {
+    if (window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 60) {
       currentId = '#contact';
     }
 

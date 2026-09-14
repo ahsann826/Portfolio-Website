@@ -4,13 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Khan Muhammad Ahsan — Software Engineer &amp; AI Founder</title>
-  <meta name="description" content="Personal portfolio of Khan Muhammad Ahsan — Software Engineer &amp; AI Founder studying at Ajou University under the Global Korea Scholarship." />
+  <meta name="description" content="Software engineering student with a strong business acumen and a sharp focus on user experience, currently studying at Ajou University in South Korea under the prestigious Global Korea Scholarship." />
   <meta name="author" content="Khan Muhammad Ahsan" />
   <meta name="robots" content="index, follow" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Khan Muhammad Ahsan — Software Engineer &amp; AI Founder" />
-  <meta property="og:description" content="Software Engineer &amp; AI Founder studying at Ajou University under the Global Korea Scholarship (GKS). CEO @ Preplit AI." />
+  <meta property="og:description" content="Software engineering student with a strong business acumen and a sharp focus on user experience, currently studying at Ajou University in South Korea under the prestigious Global Korea Scholarship. CEO @ Preplit AI." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://ahsann826.github.io/Portfolio-Website/" />
 
@@ -25,20 +25,44 @@
   <link rel="icon" href="favicon.ico" />
 
   <style>
+    :root {
+      --bg-canvas: #FBF9F5;
+      --accent-blue: #0071e3;
+    }
     html {
       scroll-behavior: smooth;
+      background-color: #FBF9F5;
     }
-    /* Sticky nav active indicator */
-    .nav-link {
-      padding-bottom: 8px;
-      border-bottom: 2px solid transparent;
-      transition: color 0.15s ease, border-color 0.15s ease;
+    body {
+      background-color: #FBF9F5;
+      color: #1c1c1a;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Inter", sans-serif;
     }
-    .nav-link:hover, .nav-link.active {
-      border-bottom-color: #4f46e5;
-      color: #4f46e5;
+    /* Capsule nav link styles */
+    .capsule-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 16px;
+      border-radius: 9999px;
+      font-size: 13.5px;
+      font-weight: 500;
+      color: #605d56;
+      transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+      white-space: nowrap;
+      user-select: none;
     }
-    /* Hide scrollbar for tabs navigation on mobile */
+    .capsule-link:hover {
+      color: #1a1918;
+      background-color: rgba(255, 255, 255, 0.6);
+    }
+    .capsule-link.active {
+      color: #1a1918;
+      background-color: #ffffff;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.04);
+      font-weight: 600;
+    }
+    /* Hide scrollbar for mobile capsule nav */
     .no-scrollbar::-webkit-scrollbar {
       display: none;
     }
@@ -48,21 +72,21 @@
     }
     /* Window Chrome Styles */
     .window-chrome {
-      height: 36px;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      height: 38px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
       display: flex;
       align-items: center;
       padding: 0 16px;
       gap: 12px;
-      background: rgba(0, 0, 0, 0.03);
+      background: #F8F6F0;
     }
     .window-dots {
       display: flex;
       gap: 6px;
     }
     .window-dot {
-      width: 9px;
-      height: 9px;
+      width: 10px;
+      height: 10px;
       border-radius: 50%;
     }
     .window-dot-red { background: #ff5f56; }
@@ -70,92 +94,118 @@
     .window-dot-green { background: #27c93f; }
   </style>
 </head>
-<body class="font-sans antialiased text-gray-800" style="background-color: #F0EDE8;">
+<body class="font-sans antialiased">
 
-  <!-- Progressive 10-Layer Blurred Sticky Header -->
-  <header class="sticky top-0 z-50 w-full" style="background-color: rgba(240, 237, 232, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);">
-    <div class="relative flex items-center justify-between h-[84px] px-6 md:px-12 max-w-[1200px] mx-auto border-b border-stroke-secondary/60">
-      <div class="flex items-center gap-3">
-        <a class="flex items-center gap-3" href="#summary">
-          <img src="assets/avatar.jpg" alt="Khan Muhammad Ahsan" width="40" height="40" class="rounded-full object-cover object-top border border-stroke-secondary shadow-sm" style="width:40px;height:40px;" />
-          <div class="flex flex-col">
-            <span class="text-title font-medium leading-tight">Khan Muhammad Ahsan</span>
-            <span class="text-xs text-gray-500 font-mono">Suwon, South Korea</span>
+  <!-- Minimal Sleek Sticky Header -->
+  <header class="sticky top-0 z-50 w-full" style="background-color: rgba(251, 249, 245, 0.88); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid rgba(0, 0, 0, 0.05);">
+    <div class="flex items-center justify-between h-[72px] px-6 md:px-12 max-w-[1240px] mx-auto">
+      
+      <!-- Brand & Avatar -->
+      <a href="#summary" class="flex items-center gap-3.5 group">
+        <img src="assets/avatar.jpg" alt="Khan Muhammad Ahsan" width="38" height="38" class="rounded-full object-cover object-top border border-black/10 shadow-sm transition-transform duration-200 group-hover:scale-105" style="width:38px;height:38px;" />
+        <div class="flex flex-col">
+          <div class="flex items-center gap-2">
+            <span class="text-sm font-semibold text-gray-900 tracking-tight">Khan Muhammad Ahsan</span>
+            <span class="hidden sm:inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-mono font-medium bg-black/[0.04] text-gray-600 border border-black/[0.06]">
+              GKS FELLOW
+            </span>
           </div>
-        </a>
-      </div>
+          <span class="text-xs text-gray-500 font-mono">Ajou University • Suwon, South Korea</span>
+        </div>
+      </a>
+
+      <!-- Right Header Actions -->
       <div class="flex items-center gap-3">
-        <a href="https://www.linkedin.com/in/455ahsankhan" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center justify-center gap-1 rounded-full px-4 py-2 text-sm font-medium text-gray-700 bg-white/80 border border-gray-300 hover:bg-white transition-all shadow-sm">
+        <div class="hidden md:inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-mono text-gray-500 bg-black/[0.03] border border-black/[0.05]">
+          <span class="size-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span>AVAILABLE FOR SELECT ROLES</span>
+        </div>
+        <a href="https://www.linkedin.com/in/455ahsankhan" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center justify-center gap-1.5 rounded-full px-4 py-2 text-xs font-medium text-gray-700 bg-white border border-black/[0.08] hover:bg-gray-50 transition-all shadow-sm">
           <span>LinkedIn</span>
-          <span class="text-xs">↗</span>
+          <span class="text-[11px] text-gray-400">↗</span>
         </a>
-        <a href="#contact" class="inline-flex items-center justify-center gap-1 rounded-full px-4 py-2 text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 transition-colors shadow-sm">
-          <span>Get in Touch</span>
-          <span class="text-xs">→</span>
+        <a href="#contact" class="inline-flex items-center justify-center gap-1.5 rounded-full px-4 py-2 text-xs font-medium text-white transition-all shadow-sm hover:brightness-105 active:scale-95" style="background-color: #0071e3;">
+          <span>Get in touch</span>
+          <span class="text-[11px]">→</span>
         </a>
       </div>
+
     </div>
   </header>
 
-  <!-- Sticky Top Navigation Bar -->
-  <div id="tabs-container" class="sticky top-[84px] z-40 w-full px-6 md:px-12 border-b border-stroke-secondary" style="background-color: rgba(240, 237, 232, 0.95); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);">
-    <nav class="max-w-[1200px] mx-auto flex items-center justify-start sm:justify-center gap-6 md:gap-8 overflow-x-auto no-scrollbar py-3.5" aria-label="Main navigation">
-      <a href="#summary" class="nav-link text-sm font-medium whitespace-nowrap text-gray-700 hover:text-indigo-600 active">Summary</a>
-      <a href="#projects" class="nav-link text-sm font-medium whitespace-nowrap text-gray-700 hover:text-indigo-600">Projects</a>
-      <a href="#experience" class="nav-link text-sm font-medium whitespace-nowrap text-gray-700 hover:text-indigo-600">Experience</a>
-      <a href="#education" class="nav-link text-sm font-medium whitespace-nowrap text-gray-700 hover:text-indigo-600">Education</a>
-      <a href="#skills" class="nav-link text-sm font-medium whitespace-nowrap text-gray-700 hover:text-indigo-600">Skills</a>
-      <a href="#contact" class="nav-link text-sm font-medium whitespace-nowrap text-gray-700 hover:text-indigo-600">Contact</a>
-    </nav>
+  <!-- Capsule Segmented Navigation Bar (CampusRank-style) -->
+  <div class="sticky top-[72px] z-40 w-full px-4 py-3 flex justify-center pointer-events-none">
+    <div class="pointer-events-auto p-1.5 rounded-full bg-black/[0.05] border border-black/[0.07] shadow-sm backdrop-blur-md max-w-full overflow-x-auto no-scrollbar" style="background-color: rgba(244, 241, 234, 0.85);">
+      <nav class="flex items-center gap-1" aria-label="Sections">
+        <a href="#summary" class="capsule-link active" data-section="summary">
+          <span>Summary</span>
+        </a>
+        <a href="#projects" class="capsule-link" data-section="projects">
+          <span>Projects</span>
+        </a>
+        <a href="#experience" class="capsule-link" data-section="experience">
+          <span>Experience</span>
+        </a>
+        <a href="#education" class="capsule-link" data-section="education">
+          <span>Education</span>
+        </a>
+        <a href="#skills" class="capsule-link" data-section="skills">
+          <span>Skills</span>
+        </a>
+        <a href="#contact" class="capsule-link" data-section="contact">
+          <span>Contact</span>
+        </a>
+      </nav>
+    </div>
   </div>
 
-  <div class="min-h-screen flex flex-col text-gray-800">
+  <div class="min-h-screen flex flex-col">
     <main class="relative z-10 flex min-h-dvh flex-1 flex-col">
       <div class="w-full flex flex-col mb-24 max-w-[1100px] mx-auto px-6 md:px-12">
 
-        <!-- ================= SECTION 1: SUMMARY ================= -->
-        <section id="summary" class="pt-16 pb-16 border-b border-stroke-secondary">
-          <div class="flex flex-col gap-6">
+        <!-- ================= SECTION 1: SUMMARY / LANDING INTRO ================= -->
+        <section id="summary" class="pt-12 pb-20 border-b border-black/[0.06]">
+          <div class="flex flex-col gap-8">
             
-            <div class="flex flex-wrap items-center gap-2">
-              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-medium bg-amber-100 text-amber-900 border border-amber-300">
+            <!-- CampusRank-style Metadata Pill Row -->
+            <div class="flex flex-wrap items-center gap-2.5">
+              <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-mono font-medium bg-amber-50 text-amber-900 border border-amber-200/80 shadow-xs">
                 ✦ Global Korea Scholarship (GKS) Fellow
               </span>
-              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-medium bg-indigo-100 text-indigo-900 border border-indigo-300">
+              <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-mono font-medium text-white shadow-xs" style="background-color: #0071e3;">
                 CEO @ Preplit AI
               </span>
-              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-medium bg-stone-200/80 text-stone-800 border border-stone-300">
+              <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-mono font-medium bg-white text-gray-800 border border-black/[0.07] shadow-xs">
                 Ajou University (GPA: 3.8/4.5)
               </span>
-              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-medium bg-emerald-100 text-emerald-900 border border-emerald-300">
-                Top 20 • Incheon Startup Challenge 2026
+              <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-mono font-medium bg-emerald-50 text-emerald-900 border border-emerald-200/80 shadow-xs">
+                <span class="size-1.5 rounded-full bg-emerald-500 animate-pulse"></span> Top 20 • Incheon Startup Challenge 2026
               </span>
             </div>
 
-            <h1 class="text-3xl md:text-5xl font-medium tracking-tight text-gray-900 leading-[1.25]">
-              Software engineering student with a sharp focus on user experience &amp; AI systems.
-            </h1>
+            <!-- Main Introduction Statement (Verbatim User Request) -->
+            <div class="flex flex-col gap-4 max-w-[960px]">
+              <h1 class="text-2xl sm:text-3xl md:text-[38px] font-semibold text-gray-950 tracking-tight leading-[1.35]">
+                Software engineering student with a strong business acumen and a sharp focus on user experience, currently studying at <span class="underline underline-offset-4 decoration-black/20">Ajou University</span> in South Korea under the prestigious Global Korea Scholarship.
+              </h1>
+              <p class="text-xl sm:text-2xl md:text-[28px] font-medium text-gray-600 tracking-tight leading-[1.4]">
+                My dream is to contribute to the world by shipping products that simplify people's lives as technology rapidly advances.
+              </p>
+            </div>
 
-            <p class="text-base md:text-lg text-gray-700 max-w-[800px] leading-relaxed">
-              Currently studying Software Engineering at <a href="https://www.ajou.ac.kr/en/" target="_blank" rel="noopener noreferrer" class="underline underline-offset-4 decoration-gray-400 hover:text-indigo-600 font-medium">Ajou University</a> in South Korea under the prestigious Global Korea Scholarship (GKS). Chief Executive Officer of <a href="https://preplitai.com" target="_blank" rel="noopener noreferrer" class="underline underline-offset-4 text-indigo-600 hover:text-indigo-800 font-medium">Preplit AI</a>. My dream is to contribute to the world by shipping products that simplify people's lives as technology rapidly advances.
-            </p>
-
-            <div class="flex flex-wrap items-center gap-3 pt-4">
-              <a href="#projects" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium bg-gray-900 text-white hover:bg-black transition-colors shadow-sm">
-                <span>View Projects</span>
-                <span aria-hidden="true">↓</span>
-              </a>
-              <a href="#contact" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium bg-white/90 text-gray-800 border border-gray-300 hover:bg-white transition-colors shadow-sm">
-                <span>Get in Touch</span>
+            <!-- CampusRank-style Action Buttons -->
+            <div class="flex flex-wrap items-center gap-3 pt-2">
+              <a href="#projects" class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full text-sm font-medium text-white shadow-sm hover:brightness-105 active:scale-95 transition-all" style="background-color: #0071e3;">
+                <span>Claim position &amp; view projects</span>
                 <span aria-hidden="true">→</span>
               </a>
-              <a href="https://www.linkedin.com/in/455ahsankhan" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full text-sm font-medium text-gray-600 hover:text-indigo-600 transition-colors">
-                <span>LinkedIn</span>
-                <span class="text-xs">↗</span>
+              <a href="#contact" class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full text-sm font-medium text-gray-800 bg-white border border-black/[0.08] hover:bg-gray-50 active:scale-95 transition-all shadow-sm">
+                <span>Get in touch</span>
+                <span aria-hidden="true">↗</span>
               </a>
-              <a href="https://github.com/ahsann826" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full text-sm font-medium text-gray-600 hover:text-indigo-600 transition-colors">
-                <span>GitHub</span>
-                <span class="text-xs">↗</span>
+              <a href="https://github.com/ahsann826" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full text-sm font-medium text-gray-600 hover:text-gray-950 transition-colors">
+                <span>GitHub @ahsann826</span>
+                <span class="text-xs text-gray-400">↗</span>
               </a>
             </div>
 
@@ -163,48 +213,58 @@
         </section>
 
         <!-- ================= SECTION 2: PROJECTS ================= -->
-        <section id="projects" class="pt-16 pb-16 border-b border-stroke-secondary">
+        <section id="projects" class="pt-20 pb-20 border-b border-black/[0.06]">
           <div class="flex flex-col gap-12">
             
-            <div class="flex flex-col gap-2">
-              <h2 class="text-2xl md:text-3xl font-medium tracking-tight text-gray-900">Featured Projects &amp; Ventures</h2>
-              <p class="text-base text-gray-600">Production software, AI agent platforms, and engineered web systems.</p>
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+              <div class="flex flex-col gap-2">
+                <div class="flex items-center gap-2">
+                  <span class="text-xs font-mono font-semibold uppercase tracking-wider text-[#0071e3]">PORTFOLIO OF SHIPMENTS</span>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-gray-950">Featured Projects &amp; Ventures</h2>
+                <p class="text-base text-gray-600 max-w-xl">Production platforms, agentic AI systems, and engineered software tools.</p>
+              </div>
+              <a href="https://github.com/ahsann826" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm font-medium text-[#0071e3] hover:underline">
+                <span>View all repos on GitHub</span>
+                <span>→</span>
+              </a>
             </div>
 
-            <div class="flex flex-col gap-16">
+            <div class="flex flex-col gap-12">
 
               <!-- Project 1: Preplit AI -->
-              <article class="flex flex-col gap-6 p-6 md:p-8 rounded-2xl bg-white/70 border border-stroke-secondary shadow-sm">
-                <div class="work-preview-stage rounded-xl overflow-hidden border border-gray-200 bg-stone-50">
+              <article class="flex flex-col gap-6 p-7 md:p-9 rounded-3xl bg-white border border-black/[0.06] shadow-[0_4px_24px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.06)] transition-all">
+                <div class="rounded-2xl overflow-hidden border border-black/[0.06] bg-[#FBF9F5]">
                   <div class="window-chrome">
                     <div class="window-dots">
                       <span class="window-dot window-dot-red"></span>
                       <span class="window-dot window-dot-yellow"></span>
                       <span class="window-dot window-dot-green"></span>
                     </div>
-                    <span class="window-title font-mono text-xs text-gray-500">preplitai.com — AI Education Workspace &amp; Agentic Tutor</span>
-                    <span class="ml-auto inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-mono bg-emerald-100 text-emerald-800">
+                    <span class="font-mono text-xs text-gray-600">preplitai.com — AI Education Workspace &amp; Agentic Tutor</span>
+                    <span class="ml-auto inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-mono font-medium bg-emerald-50 text-emerald-700 border border-emerald-200">
                       <span class="size-1.5 rounded-full bg-emerald-500 animate-pulse"></span> LIVE IN PRODUCTION
                     </span>
                   </div>
                   <div class="p-6 md:p-8 flex flex-col justify-between gap-6 bg-white">
                     <div class="flex flex-col gap-2">
-                      <span class="text-xs font-mono text-indigo-600 uppercase tracking-wider font-semibold">Flagship Venture • AI Agentic Platform</span>
-                      <h4 class="text-xl md:text-2xl font-semibold text-gray-900">Personalized AI Tutor &amp; Lecture Distillation Engine</h4>
-                      <p class="text-sm text-gray-600 max-w-2xl">End-to-end multi-agent AI architecture processing lecture notes, structured study workflows, and high-precision academic tutoring.</p>
+                      <span class="text-xs font-mono text-[#0071e3] uppercase tracking-wider font-semibold">Flagship Venture • AI Agentic Platform</span>
+                      <h4 class="text-2xl md:text-3xl font-semibold text-gray-950 tracking-tight">Personalized AI Tutor &amp; Lecture Distillation Engine</h4>
+                      <p class="text-sm text-gray-600 max-w-2xl leading-relaxed">End-to-end multi-agent AI architecture processing lecture notes, structured study workflows, and high-precision academic tutoring.</p>
                     </div>
-                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4 border-t border-gray-100">
-                      <div class="p-3 rounded-lg bg-stone-50 border border-gray-100">
+                    
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3.5 pt-4 border-t border-gray-100">
+                      <div class="p-3.5 rounded-xl bg-[#FAF9F6] border border-black/[0.04]">
                         <span class="text-[11px] font-mono text-gray-500 uppercase">Architecture</span>
-                        <p class="text-sm font-semibold text-gray-900 mt-0.5">Next.js 15 &amp; Supabase</p>
+                        <p class="text-sm font-semibold text-gray-950 mt-1">Next.js 15 &amp; Supabase</p>
                       </div>
-                      <div class="p-3 rounded-lg bg-stone-50 border border-gray-100">
+                      <div class="p-3.5 rounded-xl bg-[#FAF9F6] border border-black/[0.04]">
                         <span class="text-[11px] font-mono text-gray-500 uppercase">Vector Database</span>
-                        <p class="text-sm font-semibold text-gray-900 mt-0.5">pgvector Semantic Search</p>
+                        <p class="text-sm font-semibold text-gray-950 mt-1">pgvector Semantic Search</p>
                       </div>
-                      <div class="p-3 rounded-lg bg-stone-50 border border-gray-100 col-span-2 sm:col-span-1">
+                      <div class="p-3.5 rounded-xl bg-[#FAF9F6] border border-black/[0.04] col-span-2 sm:col-span-1">
                         <span class="text-[11px] font-mono text-gray-500 uppercase">AI Pipeline</span>
-                        <p class="text-sm font-semibold text-emerald-600 mt-0.5">Sub-second Streaming</p>
+                        <p class="text-sm font-semibold text-emerald-600 mt-1">Sub-second Streaming</p>
                       </div>
                     </div>
                   </div>
@@ -213,25 +273,25 @@
                 <div class="flex flex-col md:flex-row md:items-start justify-between gap-6">
                   <div class="flex flex-col gap-3 max-w-2xl">
                     <div class="flex items-center gap-3">
-                      <h3 class="text-xl font-semibold text-gray-900">Preplit AI</h3>
-                      <span class="text-xs font-mono text-gray-500">2026 – Present</span>
+                      <h3 class="text-xl font-semibold text-gray-950">Preplit AI</h3>
+                      <span class="text-xs font-mono text-gray-500 bg-gray-100 px-2.5 py-0.5 rounded-full">2026 – Present</span>
                     </div>
                     <p class="text-sm text-gray-600 leading-relaxed">
                       Architecting and developing an AI-powered education workspace using Next.js, React, TypeScript, Tailwind CSS, and AI APIs, with features for AI tutoring, note processing, study tools, and academic productivity. Building full-stack workflows including AI agent pipelines, API integrations, authentication, file processing, and database connectivity.
                     </p>
                     <div class="flex flex-wrap gap-2 pt-1">
-                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">Next.js 15</span>
-                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">React</span>
-                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">TypeScript</span>
-                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">Tailwind CSS</span>
-                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">pgvector</span>
-                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">Supabase</span>
-                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">AI APIs</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-mono bg-stone-100 text-stone-800 border border-black/[0.04]">Next.js 15</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-mono bg-stone-100 text-stone-800 border border-black/[0.04]">React</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-mono bg-stone-100 text-stone-800 border border-black/[0.04]">TypeScript</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-mono bg-stone-100 text-stone-800 border border-black/[0.04]">Tailwind CSS</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-mono bg-stone-100 text-stone-800 border border-black/[0.04]">pgvector</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-mono bg-stone-100 text-stone-800 border border-black/[0.04]">Supabase</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-mono bg-stone-100 text-stone-800 border border-black/[0.04]">AI APIs</span>
                     </div>
                   </div>
 
-                  <div class="flex flex-row md:flex-col gap-2 shrink-0">
-                    <a href="https://preplitai.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-full text-xs font-medium text-white bg-indigo-600 hover:bg-indigo-700 transition-colors shadow-sm">
+                  <div class="shrink-0">
+                    <a href="https://preplitai.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-full text-xs font-medium text-white shadow-sm hover:brightness-105 active:scale-95 transition-all" style="background-color: #0071e3;">
                       <span>Visit Live Site</span>
                       <span>↗</span>
                     </a>
@@ -240,37 +300,37 @@
               </article>
 
               <!-- Project 2: CampusRank -->
-              <article class="flex flex-col gap-6 p-6 md:p-8 rounded-2xl bg-white/70 border border-stroke-secondary shadow-sm">
-                <div class="work-preview-stage rounded-xl overflow-hidden border border-gray-200 bg-stone-50">
+              <article class="flex flex-col gap-6 p-7 md:p-9 rounded-3xl bg-white border border-black/[0.06] shadow-[0_4px_24px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.06)] transition-all">
+                <div class="rounded-2xl overflow-hidden border border-black/[0.06] bg-[#FBF9F5]">
                   <div class="window-chrome">
                     <div class="window-dots">
                       <span class="window-dot window-dot-red"></span>
                       <span class="window-dot window-dot-yellow"></span>
                       <span class="window-dot window-dot-green"></span>
                     </div>
-                    <span class="window-title font-mono text-xs text-gray-500">campusrank-ruby.vercel.app — University Competitive Platform</span>
-                    <span class="ml-auto inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-mono bg-emerald-100 text-emerald-800">
+                    <span class="font-mono text-xs text-gray-600">campusrank-ruby.vercel.app — Global University Leaderboard</span>
+                    <span class="ml-auto inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-mono font-medium bg-emerald-50 text-emerald-700 border border-emerald-200">
                       LIVE
                     </span>
                   </div>
                   <div class="p-6 md:p-8 flex flex-col justify-between gap-6 bg-white">
                     <div class="flex flex-col gap-2">
-                      <span class="text-xs font-mono text-indigo-600 uppercase tracking-wider font-semibold">Competitive Ranking System</span>
-                      <h4 class="text-xl md:text-2xl font-semibold text-gray-900">University Tournament &amp; Global Student Leaderboard</h4>
-                      <p class="text-sm text-gray-600 max-w-2xl">Competitive platform for university students featuring verified credentials, university tier standings, and automated ranking algorithms.</p>
+                      <span class="text-xs font-mono text-[#0071e3] uppercase tracking-wider font-semibold">Competitive Ranking Platform</span>
+                      <h4 class="text-2xl md:text-3xl font-semibold text-gray-950 tracking-tight">University Tournament &amp; Global Student Leaderboard</h4>
+                      <p class="text-sm text-gray-600 max-w-2xl leading-relaxed">Competitive ranking platform for university students. Claim your position, connect your socials, and climb the verified university leaderboard.</p>
                     </div>
-                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4 border-t border-gray-100">
-                      <div class="p-3 rounded-lg bg-stone-50 border border-gray-100">
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3.5 pt-4 border-t border-gray-100">
+                      <div class="p-3.5 rounded-xl bg-[#FAF9F6] border border-black/[0.04]">
                         <span class="text-[11px] font-mono text-gray-500 uppercase">Scoring Engine</span>
-                        <p class="text-sm font-semibold text-gray-900 mt-0.5">Dynamic Elo Scoring</p>
+                        <p class="text-sm font-semibold text-gray-950 mt-1">Dynamic Elo Scoring</p>
                       </div>
-                      <div class="p-3 rounded-lg bg-stone-50 border border-gray-100">
+                      <div class="p-3.5 rounded-xl bg-[#FAF9F6] border border-black/[0.04]">
                         <span class="text-[11px] font-mono text-gray-500 uppercase">Deployment</span>
-                        <p class="text-sm font-semibold text-gray-900 mt-0.5">Vercel &amp; Edge API</p>
+                        <p class="text-sm font-semibold text-gray-950 mt-1">Vercel &amp; Edge API</p>
                       </div>
-                      <div class="p-3 rounded-lg bg-stone-50 border border-gray-100 col-span-2 sm:col-span-1">
+                      <div class="p-3.5 rounded-xl bg-[#FAF9F6] border border-black/[0.04] col-span-2 sm:col-span-1">
                         <span class="text-[11px] font-mono text-gray-500 uppercase">Status</span>
-                        <p class="text-sm font-semibold text-emerald-600 mt-0.5">Active Arena</p>
+                        <p class="text-sm font-semibold text-emerald-600 mt-1">Active Arena</p>
                       </div>
                     </div>
                   </div>
@@ -279,24 +339,24 @@
                 <div class="flex flex-col md:flex-row md:items-start justify-between gap-6">
                   <div class="flex flex-col gap-3 max-w-2xl">
                     <div class="flex items-center gap-3">
-                      <h3 class="text-xl font-semibold text-gray-900">CampusRank</h3>
-                      <span class="text-xs font-mono text-gray-500">2026 – Present</span>
+                      <h3 class="text-xl font-semibold text-gray-950">CampusRank</h3>
+                      <span class="text-xs font-mono text-gray-500 bg-gray-100 px-2.5 py-0.5 rounded-full">2026 – Present</span>
                     </div>
                     <p class="text-sm text-gray-600 leading-relaxed">
                       A global student and university competitive ranking platform with leaderboards, verifiable user profiles, university tiers, and algorithmic scoring for tech competitions and academic achievements.
                     </p>
                     <div class="flex flex-wrap gap-2 pt-1">
-                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">Next.js</span>
-                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">TypeScript</span>
-                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">Tailwind CSS</span>
-                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">PostgreSQL</span>
-                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">Algorithmic Scoring</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-mono bg-stone-100 text-stone-800 border border-black/[0.04]">Next.js</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-mono bg-stone-100 text-stone-800 border border-black/[0.04]">TypeScript</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-mono bg-stone-100 text-stone-800 border border-black/[0.04]">Tailwind CSS</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-mono bg-stone-100 text-stone-800 border border-black/[0.04]">PostgreSQL</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-mono bg-stone-100 text-stone-800 border border-black/[0.04]">Algorithmic Scoring</span>
                     </div>
                   </div>
 
-                  <div class="flex flex-row md:flex-col gap-2 shrink-0">
-                    <a href="https://campusrank-ruby.vercel.app" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-full text-xs font-medium text-white bg-indigo-600 hover:bg-indigo-700 transition-colors shadow-sm">
-                      <span>View Live App</span>
+                  <div class="shrink-0">
+                    <a href="https://campusrank-ruby.vercel.app" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-full text-xs font-medium text-white shadow-sm hover:brightness-105 active:scale-95 transition-all" style="background-color: #0071e3;">
+                      <span>Claim rank / View App</span>
                       <span>↗</span>
                     </a>
                   </div>
@@ -304,37 +364,37 @@
               </article>
 
               <!-- Project 3: Resumate -->
-              <article class="flex flex-col gap-6 p-6 md:p-8 rounded-2xl bg-white/70 border border-stroke-secondary shadow-sm">
-                <div class="work-preview-stage rounded-xl overflow-hidden border border-gray-200 bg-stone-50">
+              <article class="flex flex-col gap-6 p-7 md:p-9 rounded-3xl bg-white border border-black/[0.06] shadow-[0_4px_24px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.06)] transition-all">
+                <div class="rounded-2xl overflow-hidden border border-black/[0.06] bg-[#FBF9F5]">
                   <div class="window-chrome">
                     <div class="window-dots">
                       <span class="window-dot window-dot-red"></span>
                       <span class="window-dot window-dot-yellow"></span>
                       <span class="window-dot window-dot-green"></span>
                     </div>
-                    <span class="window-title font-mono text-xs text-gray-500">resumate-ai-lake.vercel.app — AI Resume Intelligence</span>
-                    <span class="ml-auto inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-mono bg-emerald-100 text-emerald-800">
+                    <span class="font-mono text-xs text-gray-600">resumate-ai-lake.vercel.app — AI Resume Intelligence</span>
+                    <span class="ml-auto inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-mono font-medium bg-emerald-50 text-emerald-700 border border-emerald-200">
                       LIVE
                     </span>
                   </div>
                   <div class="p-6 md:p-8 flex flex-col justify-between gap-6 bg-white">
                     <div class="flex flex-col gap-2">
-                      <span class="text-xs font-mono text-indigo-600 uppercase tracking-wider font-semibold">AI Resume Intelligence</span>
-                      <h4 class="text-xl md:text-2xl font-semibold text-gray-900">ATS Optimization &amp; Automated Career Critique</h4>
-                      <p class="text-sm text-gray-600 max-w-2xl">Performs comprehensive resume analysis, ATS compatibility scoring, action-verb enhancement, and line-by-line automated critique for technical candidates.</p>
+                      <span class="text-xs font-mono text-[#0071e3] uppercase tracking-wider font-semibold">AI Resume Intelligence</span>
+                      <h4 class="text-2xl md:text-3xl font-semibold text-gray-950 tracking-tight">ATS Optimization &amp; Automated Career Critique</h4>
+                      <p class="text-sm text-gray-600 max-w-2xl leading-relaxed">Performs comprehensive resume analysis, ATS compatibility scoring, action-verb enhancement, and line-by-line automated critique for technical candidates.</p>
                     </div>
-                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4 border-t border-gray-100">
-                      <div class="p-3 rounded-lg bg-stone-50 border border-gray-100">
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3.5 pt-4 border-t border-gray-100">
+                      <div class="p-3.5 rounded-xl bg-[#FAF9F6] border border-black/[0.04]">
                         <span class="text-[11px] font-mono text-gray-500 uppercase">Analysis Engine</span>
-                        <p class="text-sm font-semibold text-gray-900 mt-0.5">NLP Resume Parser</p>
+                        <p class="text-sm font-semibold text-gray-950 mt-1">NLP Resume Parser</p>
                       </div>
-                      <div class="p-3 rounded-lg bg-stone-50 border border-gray-100">
+                      <div class="p-3.5 rounded-xl bg-[#FAF9F6] border border-black/[0.04]">
                         <span class="text-[11px] font-mono text-gray-500 uppercase">Target Score</span>
-                        <p class="text-sm font-semibold text-indigo-600 mt-0.5">96/100 ATS Compatibility</p>
+                        <p class="text-sm font-semibold text-[#0071e3] mt-1">96/100 ATS Compatibility</p>
                       </div>
-                      <div class="p-3 rounded-lg bg-stone-50 border border-gray-100 col-span-2 sm:col-span-1">
+                      <div class="p-3.5 rounded-xl bg-[#FAF9F6] border border-black/[0.04] col-span-2 sm:col-span-1">
                         <span class="text-[11px] font-mono text-gray-500 uppercase">Feedback</span>
-                        <p class="text-sm font-semibold text-gray-900 mt-0.5">Instant Actionable Fixes</p>
+                        <p class="text-sm font-semibold text-gray-950 mt-1">Instant Actionable Fixes</p>
                       </div>
                     </div>
                   </div>
@@ -343,23 +403,23 @@
                 <div class="flex flex-col md:flex-row md:items-start justify-between gap-6">
                   <div class="flex flex-col gap-3 max-w-2xl">
                     <div class="flex items-center gap-3">
-                      <h3 class="text-xl font-semibold text-gray-900">Resumate</h3>
-                      <span class="text-xs font-mono text-gray-500">2026 – Present</span>
+                      <h3 class="text-xl font-semibold text-gray-950">Resumate</h3>
+                      <span class="text-xs font-mono text-gray-500 bg-gray-100 px-2.5 py-0.5 rounded-full">2026 – Present</span>
                     </div>
                     <p class="text-sm text-gray-600 leading-relaxed">
                       AI-driven platform performing deep resume analysis, ATS compatibility scoring, action-verb enhancement, and line-by-line automated critique to maximize interview callback rates for software engineers.
                     </p>
                     <div class="flex flex-wrap gap-2 pt-1">
-                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">Next.js</span>
-                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">TypeScript</span>
-                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">Tailwind CSS</span>
-                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">AI Analysis Engine</span>
-                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">NLP Feedback</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-mono bg-stone-100 text-stone-800 border border-black/[0.04]">Next.js</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-mono bg-stone-100 text-stone-800 border border-black/[0.04]">TypeScript</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-mono bg-stone-100 text-stone-800 border border-black/[0.04]">Tailwind CSS</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-mono bg-stone-100 text-stone-800 border border-black/[0.04]">AI Analysis Engine</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-mono bg-stone-100 text-stone-800 border border-black/[0.04]">NLP Feedback</span>
                     </div>
                   </div>
 
-                  <div class="flex flex-row md:flex-col gap-2 shrink-0">
-                    <a href="https://resumate-ai-lake.vercel.app" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-full text-xs font-medium text-white bg-indigo-600 hover:bg-indigo-700 transition-colors shadow-sm">
+                  <div class="shrink-0">
+                    <a href="https://resumate-ai-lake.vercel.app" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-full text-xs font-medium text-white shadow-sm hover:brightness-105 active:scale-95 transition-all" style="background-color: #0071e3;">
                       <span>View Live App</span>
                       <span>↗</span>
                     </a>
@@ -368,37 +428,37 @@
               </article>
 
               <!-- Project 4: Covenant & Co -->
-              <article class="flex flex-col gap-6 p-6 md:p-8 rounded-2xl bg-white/70 border border-stroke-secondary shadow-sm">
-                <div class="work-preview-stage rounded-xl overflow-hidden border border-gray-200 bg-stone-50">
+              <article class="flex flex-col gap-6 p-7 md:p-9 rounded-3xl bg-white border border-black/[0.06] shadow-[0_4px_24px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.06)] transition-all">
+                <div class="rounded-2xl overflow-hidden border border-black/[0.06] bg-[#FBF9F5]">
                   <div class="window-chrome">
                     <div class="window-dots">
                       <span class="window-dot window-dot-red"></span>
                       <span class="window-dot window-dot-yellow"></span>
                       <span class="window-dot window-dot-green"></span>
                     </div>
-                    <span class="window-title font-mono text-xs text-gray-500">covenantwatch — Minimalist Horology Brand</span>
-                    <span class="ml-auto inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-mono bg-stone-200 text-stone-800">
+                    <span class="font-mono text-xs text-gray-600">covenantwatch — Minimalist Horology Brand</span>
+                    <span class="ml-auto inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-mono font-medium bg-stone-100 text-stone-700 border border-stone-200">
                       VENTURE
                     </span>
                   </div>
                   <div class="p-6 md:p-8 flex flex-col justify-between gap-6 bg-white">
                     <div class="flex flex-col gap-2">
-                      <span class="text-xs font-mono text-indigo-600 uppercase tracking-wider font-semibold">Direct-to-Consumer Horology</span>
-                      <h4 class="text-xl md:text-2xl font-semibold text-gray-900">Minimalist Timepieces &amp; International Supply Chain</h4>
-                      <p class="text-sm text-gray-600 max-w-2xl">Scaled an international timepiece brand with 100,000+ all-time storefront visitors, coordinating precision B2B supply chains across South Korea and China.</p>
+                      <span class="text-xs font-mono text-[#0071e3] uppercase tracking-wider font-semibold">Direct-to-Consumer Horology</span>
+                      <h4 class="text-2xl md:text-3xl font-semibold text-gray-950 tracking-tight">Minimalist Timepieces &amp; International Supply Chain</h4>
+                      <p class="text-sm text-gray-600 max-w-2xl leading-relaxed">Scaled an international timepiece brand with 100,000+ all-time storefront visitors, coordinating precision B2B supply chains across South Korea and China.</p>
                     </div>
-                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4 border-t border-gray-100">
-                      <div class="p-3 rounded-lg bg-stone-50 border border-gray-100">
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3.5 pt-4 border-t border-gray-100">
+                      <div class="p-3.5 rounded-xl bg-[#FAF9F6] border border-black/[0.04]">
                         <span class="text-[11px] font-mono text-gray-500 uppercase">Traffic</span>
-                        <p class="text-sm font-semibold text-gray-900 mt-0.5">100k+ Visitors</p>
+                        <p class="text-sm font-semibold text-gray-950 mt-1">100k+ Visitors</p>
                       </div>
-                      <div class="p-3 rounded-lg bg-stone-50 border border-gray-100">
+                      <div class="p-3.5 rounded-xl bg-[#FAF9F6] border border-black/[0.04]">
                         <span class="text-[11px] font-mono text-gray-500 uppercase">Operations</span>
-                        <p class="text-sm font-semibold text-gray-900 mt-0.5">Cross-Border Logistics</p>
+                        <p class="text-sm font-semibold text-gray-950 mt-1">Cross-Border Logistics</p>
                       </div>
-                      <div class="p-3 rounded-lg bg-stone-50 border border-gray-100 col-span-2 sm:col-span-1">
+                      <div class="p-3.5 rounded-xl bg-[#FAF9F6] border border-black/[0.04] col-span-2 sm:col-span-1">
                         <span class="text-[11px] font-mono text-gray-500 uppercase">Supply Chain</span>
-                        <p class="text-sm font-semibold text-stone-700 mt-0.5">Direct Manufacturer</p>
+                        <p class="text-sm font-semibold text-stone-700 mt-1">Direct Manufacturer</p>
                       </div>
                     </div>
                   </div>
@@ -407,22 +467,22 @@
                 <div class="flex flex-col md:flex-row md:items-start justify-between gap-6">
                   <div class="flex flex-col gap-3 max-w-2xl">
                     <div class="flex items-center gap-3">
-                      <h3 class="text-xl font-semibold text-gray-900">Covenant &amp; Co</h3>
-                      <span class="text-xs font-mono text-gray-500">2024 – 2026</span>
+                      <h3 class="text-xl font-semibold text-gray-950">Covenant &amp; Co</h3>
+                      <span class="text-xs font-mono text-gray-500 bg-gray-100 px-2.5 py-0.5 rounded-full">2024 – 2026</span>
                     </div>
                     <p class="text-sm text-gray-600 leading-relaxed">
                       Founded and scaled an e-commerce storefront for minimalist luxury timepieces, garnering 100,000+ all-time visitors. Managed cross-border B2B supply chain procurement and manufacturing negotiations across China and South Korea.
                     </p>
                     <div class="flex flex-wrap gap-2 pt-1">
-                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">E-Commerce</span>
-                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">B2B Supply Chain</span>
-                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">China Sourcing</span>
-                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">Brand Strategy</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-mono bg-stone-100 text-stone-800 border border-black/[0.04]">E-Commerce</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-mono bg-stone-100 text-stone-800 border border-black/[0.04]">B2B Supply Chain</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-mono bg-stone-100 text-stone-800 border border-black/[0.04]">China Sourcing</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-mono bg-stone-100 text-stone-800 border border-black/[0.04]">Brand Strategy</span>
                     </div>
                   </div>
 
-                  <div class="flex flex-row md:flex-col gap-2 shrink-0">
-                    <a href="https://instagram.com/covenantwatch" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-full text-xs font-medium text-gray-700 bg-white border border-gray-300 hover:bg-stone-50 transition-colors shadow-sm">
+                  <div class="shrink-0">
+                    <a href="https://instagram.com/covenantwatch" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-full text-xs font-medium text-gray-800 bg-white border border-black/[0.08] hover:bg-gray-50 transition-all shadow-sm">
                       <span>View Brand</span>
                       <span>↗</span>
                     </a>
@@ -431,114 +491,110 @@
               </article>
 
               <!-- Project 5: Autonomous Screen Automation -->
-              <article class="flex flex-col gap-6 p-6 md:p-8 rounded-2xl bg-white/70 border border-stroke-secondary shadow-sm">
-                <div class="work-preview-stage rounded-xl overflow-hidden border border-gray-200 bg-stone-50">
+              <article class="flex flex-col gap-6 p-7 md:p-9 rounded-3xl bg-white border border-black/[0.06] shadow-[0_4px_24px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.06)] transition-all">
+                <div class="rounded-2xl overflow-hidden border border-black/[0.06] bg-[#FBF9F5]">
                   <div class="window-chrome">
                     <div class="window-dots">
                       <span class="window-dot window-dot-red"></span>
                       <span class="window-dot window-dot-yellow"></span>
                       <span class="window-dot window-dot-green"></span>
                     </div>
-                    <span class="window-title font-mono text-xs text-gray-500">vision_bot.py — Computer Vision Automation Engine</span>
-                    <span class="ml-auto inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-mono bg-stone-200 text-stone-800">
+                    <span class="font-mono text-xs text-gray-600">vision_bot.py — Computer Vision Automation Engine</span>
+                    <span class="ml-auto inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-mono font-medium bg-stone-100 text-stone-700 border border-stone-200">
                       CV SYSTEM
                     </span>
                   </div>
                   <div class="p-6 md:p-8 flex flex-col justify-between gap-6 bg-white">
                     <div class="flex flex-col gap-2">
-                      <span class="text-xs font-mono text-indigo-600 uppercase tracking-wider font-semibold">Computer Vision &amp; Telemetry</span>
-                      <h4 class="text-xl md:text-2xl font-semibold text-gray-900">Sub-Pixel Template Matching &amp; Desktop Pathfinding</h4>
-                      <p class="text-sm text-gray-600 max-w-2xl">Robust screen automation bot designed for Pokémon Revolution Online with real-time frame inspection, heuristic pathfinding, and state machine recovery.</p>
+                      <span class="text-xs font-mono text-[#0071e3] uppercase tracking-wider font-semibold">Computer Vision &amp; Telemetry</span>
+                      <h4 class="text-2xl md:text-3xl font-semibold text-gray-950 tracking-tight">Sub-Pixel Template Matching &amp; Desktop Pathfinding</h4>
+                      <p class="text-sm text-gray-600 max-w-2xl leading-relaxed">Robust screen automation bot designed for Pokémon Revolution Online with real-time frame inspection, heuristic pathfinding, and state machine recovery.</p>
                     </div>
-                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4 border-t border-gray-100">
-                      <div class="p-3 rounded-lg bg-stone-50 border border-gray-100">
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3.5 pt-4 border-t border-gray-100">
+                      <div class="p-3.5 rounded-xl bg-[#FAF9F6] border border-black/[0.04]">
                         <span class="text-[11px] font-mono text-gray-500 uppercase">Frame Rate</span>
-                        <p class="text-sm font-semibold text-gray-900 mt-0.5">60 FPS Real-Time</p>
+                        <p class="text-sm font-semibold text-gray-950 mt-1">60 FPS Real-Time</p>
                       </div>
-                      <div class="p-3 rounded-lg bg-stone-50 border border-gray-100">
+                      <div class="p-3.5 rounded-xl bg-[#FAF9F6] border border-black/[0.04]">
                         <span class="text-[11px] font-mono text-gray-500 uppercase">Precision</span>
-                        <p class="text-sm font-semibold text-gray-900 mt-0.5">Sub-Pixel Confidence</p>
+                        <p class="text-sm font-semibold text-gray-950 mt-1">Sub-Pixel Confidence</p>
                       </div>
-                      <div class="p-3 rounded-lg bg-stone-50 border border-gray-100 col-span-2 sm:col-span-1">
+                      <div class="p-3.5 rounded-xl bg-[#FAF9F6] border border-black/[0.04] col-span-2 sm:col-span-1">
                         <span class="text-[11px] font-mono text-gray-500 uppercase">Fault Tolerance</span>
-                        <p class="text-sm font-semibold text-emerald-600 mt-0.5">Automated Recovery</p>
+                        <p class="text-sm font-semibold text-emerald-600 mt-1">Automated Recovery</p>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <div class="flex flex-col md:flex-row md:items-start justify-between gap-6">
-                  <div class="flex flex-col gap-3 max-w-2xl">
-                    <div class="flex items-center gap-3">
-                      <h3 class="text-xl font-semibold text-gray-900">Autonomous Screen Automation</h3>
-                      <span class="text-xs font-mono text-gray-500">2020</span>
-                    </div>
-                    <p class="text-sm text-gray-600 leading-relaxed">
-                      Engineered desktop screen automation systems for Pokémon Revolution Online utilizing Python, PyAutoGUI, and OpenCV. Implemented sub-pixel template matching, automated pathfinding, and fault-tolerant state recovery across thousands of active sessions.
-                    </p>
-                    <div class="flex flex-wrap gap-2 pt-1">
-                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">Python</span>
-                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">OpenCV</span>
-                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">PyAutoGUI</span>
-                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">Computer Vision</span>
-                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">State Machines</span>
-                    </div>
+                <div class="flex flex-col gap-3 max-w-2xl">
+                  <div class="flex items-center gap-3">
+                    <h3 class="text-xl font-semibold text-gray-950">Autonomous Screen Automation</h3>
+                    <span class="text-xs font-mono text-gray-500 bg-gray-100 px-2.5 py-0.5 rounded-full">2020</span>
+                  </div>
+                  <p class="text-sm text-gray-600 leading-relaxed">
+                    Engineered desktop screen automation systems for Pokémon Revolution Online utilizing Python, PyAutoGUI, and OpenCV. Implemented sub-pixel template matching, automated pathfinding, and fault-tolerant state recovery across thousands of active sessions.
+                  </p>
+                  <div class="flex flex-wrap gap-2 pt-1">
+                    <span class="px-3 py-1 rounded-full text-xs font-mono bg-stone-100 text-stone-800 border border-black/[0.04]">Python</span>
+                    <span class="px-3 py-1 rounded-full text-xs font-mono bg-stone-100 text-stone-800 border border-black/[0.04]">OpenCV</span>
+                    <span class="px-3 py-1 rounded-full text-xs font-mono bg-stone-100 text-stone-800 border border-black/[0.04]">PyAutoGUI</span>
+                    <span class="px-3 py-1 rounded-full text-xs font-mono bg-stone-100 text-stone-800 border border-black/[0.04]">Computer Vision</span>
+                    <span class="px-3 py-1 rounded-full text-xs font-mono bg-stone-100 text-stone-800 border border-black/[0.04]">State Machines</span>
                   </div>
                 </div>
               </article>
 
               <!-- Project 6: TextVision OCR -->
-              <article class="flex flex-col gap-6 p-6 md:p-8 rounded-2xl bg-white/70 border border-stroke-secondary shadow-sm">
-                <div class="work-preview-stage rounded-xl overflow-hidden border border-gray-200 bg-stone-50">
+              <article class="flex flex-col gap-6 p-7 md:p-9 rounded-3xl bg-white border border-black/[0.06] shadow-[0_4px_24px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.06)] transition-all">
+                <div class="rounded-2xl overflow-hidden border border-black/[0.06] bg-[#FBF9F5]">
                   <div class="window-chrome">
                     <div class="window-dots">
                       <span class="window-dot window-dot-red"></span>
                       <span class="window-dot window-dot-yellow"></span>
                       <span class="window-dot window-dot-green"></span>
                     </div>
-                    <span class="window-title font-mono text-xs text-gray-500">api/v1/ocr — Azure Cloud Vision Pipeline</span>
-                    <span class="ml-auto inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-mono bg-stone-200 text-stone-800">
+                    <span class="font-mono text-xs text-gray-600">api/v1/ocr — Azure Cloud Vision Pipeline</span>
+                    <span class="ml-auto inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-mono font-medium bg-stone-100 text-stone-700 border border-stone-200">
                       OCR API
                     </span>
                   </div>
                   <div class="p-6 md:p-8 flex flex-col justify-between gap-6 bg-white">
                     <div class="flex flex-col gap-2">
-                      <span class="text-xs font-mono text-indigo-600 uppercase tracking-wider font-semibold">Cloud Vision Extraction</span>
-                      <h4 class="text-xl md:text-2xl font-semibold text-gray-900">Multilingual Document &amp; Tabular Data Extractor</h4>
-                      <p class="text-sm text-gray-600 max-w-2xl">High-throughput web service extracting text, tables, and handwritten documents utilizing Microsoft Azure Computer Vision OCR with REST API endpoints.</p>
+                      <span class="text-xs font-mono text-[#0071e3] uppercase tracking-wider font-semibold">Cloud Vision Extraction</span>
+                      <h4 class="text-2xl md:text-3xl font-semibold text-gray-950 tracking-tight">Multilingual Document &amp; Tabular Data Extractor</h4>
+                      <p class="text-sm text-gray-600 max-w-2xl leading-relaxed">High-throughput web service extracting text, tables, and handwritten documents utilizing Microsoft Azure Computer Vision OCR with REST API endpoints.</p>
                     </div>
-                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4 border-t border-gray-100">
-                      <div class="p-3 rounded-lg bg-stone-50 border border-gray-100">
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3.5 pt-4 border-t border-gray-100">
+                      <div class="p-3.5 rounded-xl bg-[#FAF9F6] border border-black/[0.04]">
                         <span class="text-[11px] font-mono text-gray-500 uppercase">Cloud Engine</span>
-                        <p class="text-sm font-semibold text-gray-900 mt-0.5">Azure Cognitive Vision</p>
+                        <p class="text-sm font-semibold text-gray-950 mt-1">Azure Cognitive Vision</p>
                       </div>
-                      <div class="p-3 rounded-lg bg-stone-50 border border-gray-100">
+                      <div class="p-3.5 rounded-xl bg-[#FAF9F6] border border-black/[0.04]">
                         <span class="text-[11px] font-mono text-gray-500 uppercase">Accuracy</span>
-                        <p class="text-sm font-semibold text-emerald-600 mt-0.5">98.8% Recognition</p>
+                        <p class="text-sm font-semibold text-emerald-600 mt-1">98.8% Recognition</p>
                       </div>
-                      <div class="p-3 rounded-lg bg-stone-50 border border-gray-100 col-span-2 sm:col-span-1">
+                      <div class="p-3.5 rounded-xl bg-[#FAF9F6] border border-black/[0.04] col-span-2 sm:col-span-1">
                         <span class="text-[11px] font-mono text-gray-500 uppercase">Backend</span>
-                        <p class="text-sm font-semibold text-gray-900 mt-0.5">Flask REST API</p>
+                        <p class="text-sm font-semibold text-gray-950 mt-1">Flask REST API</p>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <div class="flex flex-col md:flex-row md:items-start justify-between gap-6">
-                  <div class="flex flex-col gap-3 max-w-2xl">
-                    <div class="flex items-center gap-3">
-                      <h3 class="text-xl font-semibold text-gray-900">TextVision OCR</h3>
-                      <span class="text-xs font-mono text-gray-500">2019</span>
-                    </div>
-                    <p class="text-sm text-gray-600 leading-relaxed">
-                      Built a high-performance web application extracting multi-lingual text and tabular data from images using Microsoft Azure Computer Vision OCR, packaged with a lightweight Flask backend and REST API.
-                    </p>
-                    <div class="flex flex-wrap gap-2 pt-1">
-                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">Python</span>
-                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">Flask</span>
-                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">Azure Computer Vision</span>
-                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">REST API</span>
-                    </div>
+                <div class="flex flex-col gap-3 max-w-2xl">
+                  <div class="flex items-center gap-3">
+                    <h3 class="text-xl font-semibold text-gray-950">TextVision OCR</h3>
+                    <span class="text-xs font-mono text-gray-500 bg-gray-100 px-2.5 py-0.5 rounded-full">2019</span>
+                  </div>
+                  <p class="text-sm text-gray-600 leading-relaxed">
+                    Built a high-performance web application extracting multi-lingual text and tabular data from images using Microsoft Azure Computer Vision OCR, packaged with a lightweight Flask backend and REST API.
+                  </p>
+                  <div class="flex flex-wrap gap-2 pt-1">
+                    <span class="px-3 py-1 rounded-full text-xs font-mono bg-stone-100 text-stone-800 border border-black/[0.04]">Python</span>
+                    <span class="px-3 py-1 rounded-full text-xs font-mono bg-stone-100 text-stone-800 border border-black/[0.04]">Flask</span>
+                    <span class="px-3 py-1 rounded-full text-xs font-mono bg-stone-100 text-stone-800 border border-black/[0.04]">Azure Computer Vision</span>
+                    <span class="px-3 py-1 rounded-full text-xs font-mono bg-stone-100 text-stone-800 border border-black/[0.04]">REST API</span>
                   </div>
                 </div>
               </article>
@@ -549,22 +605,25 @@
         </section>
 
         <!-- ================= SECTION 3: EXPERIENCE ================= -->
-        <section id="experience" class="pt-16 pb-16 border-b border-stroke-secondary">
+        <section id="experience" class="pt-20 pb-20 border-b border-black/[0.06]">
           <div class="flex flex-col gap-10">
             
             <div class="flex flex-col gap-2">
-              <h2 class="text-2xl md:text-3xl font-medium tracking-tight text-gray-900">Professional Experience</h2>
-              <p class="text-base text-gray-600">Track record of building startups, architectural leadership, and technical execution.</p>
+              <div class="flex items-center gap-2">
+                <span class="text-xs font-mono font-semibold uppercase tracking-wider text-[#0071e3]">CAREER TRACK</span>
+              </div>
+              <h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-gray-950">Professional Experience</h2>
+              <p class="text-base text-gray-600">Track record of founding ventures, software architecture, and technical execution.</p>
             </div>
 
-            <div class="flex flex-col divide-y divide-stroke-secondary border-t border-stroke-secondary">
+            <div class="flex flex-col divide-y divide-black/[0.06] border-t border-black/[0.06]">
               
               <!-- Role 1: Preplit AI -->
               <div class="py-8 flex flex-col md:flex-row md:items-start justify-between gap-4">
                 <div class="flex flex-col gap-2 max-w-2xl">
-                  <div class="flex items-baseline gap-3">
-                    <h3 class="text-lg font-semibold text-gray-900">Chief Executive Officer &amp; Full-Stack Architect</h3>
-                    <span class="text-sm font-medium text-indigo-600">Preplit AI</span>
+                  <div class="flex flex-wrap items-baseline gap-2.5">
+                    <h3 class="text-lg font-semibold text-gray-950">Chief Executive Officer &amp; Full-Stack Architect</h3>
+                    <span class="text-sm font-medium text-[#0071e3]">Preplit AI</span>
                   </div>
                   <p class="text-xs font-mono text-gray-500">Seoul, South Korea • Full-time</p>
                   <ul class="mt-2 text-sm text-gray-600 space-y-1.5 list-disc list-inside leading-relaxed">
@@ -572,7 +631,7 @@
                     <li>Building full-stack workflows including AI agent pipelines, API integrations, authentication, file processing, and database connectivity.</li>
                   </ul>
                 </div>
-                <span class="text-xs font-mono text-gray-500 whitespace-nowrap bg-stone-100 px-3 py-1 rounded-full border border-stone-200 self-start">
+                <span class="text-xs font-mono text-gray-600 whitespace-nowrap bg-white px-3 py-1 rounded-full border border-black/[0.08] shadow-xs self-start">
                   2026 – Present
                 </span>
               </div>
@@ -580,9 +639,9 @@
               <!-- Role 2: CampusRank -->
               <div class="py-8 flex flex-col md:flex-row md:items-start justify-between gap-4">
                 <div class="flex flex-col gap-2 max-w-2xl">
-                  <div class="flex items-baseline gap-3">
-                    <h3 class="text-lg font-semibold text-gray-900">Founder &amp; Sole Developer</h3>
-                    <span class="text-sm font-medium text-indigo-600">CampusRank</span>
+                  <div class="flex flex-wrap items-baseline gap-2.5">
+                    <h3 class="text-lg font-semibold text-gray-950">Founder &amp; Sole Developer</h3>
+                    <span class="text-sm font-medium text-[#0071e3]">CampusRank</span>
                   </div>
                   <p class="text-xs font-mono text-gray-500">Suwon, South Korea</p>
                   <ul class="mt-2 text-sm text-gray-600 space-y-1.5 list-disc list-inside leading-relaxed">
@@ -590,7 +649,7 @@
                     <li>Developed responsive full-stack interfaces in Next.js and Tailwind CSS deployed on Vercel with serverless data processing.</li>
                   </ul>
                 </div>
-                <span class="text-xs font-mono text-gray-500 whitespace-nowrap bg-stone-100 px-3 py-1 rounded-full border border-stone-200 self-start">
+                <span class="text-xs font-mono text-gray-600 whitespace-nowrap bg-white px-3 py-1 rounded-full border border-black/[0.08] shadow-xs self-start">
                   2026 – Present
                 </span>
               </div>
@@ -598,9 +657,9 @@
               <!-- Role 3: Resumate -->
               <div class="py-8 flex flex-col md:flex-row md:items-start justify-between gap-4">
                 <div class="flex flex-col gap-2 max-w-2xl">
-                  <div class="flex items-baseline gap-3">
-                    <h3 class="text-lg font-semibold text-gray-900">Founder &amp; Full-Stack Developer</h3>
-                    <span class="text-sm font-medium text-indigo-600">Resumate</span>
+                  <div class="flex flex-wrap items-baseline gap-2.5">
+                    <h3 class="text-lg font-semibold text-gray-950">Founder &amp; Full-Stack Developer</h3>
+                    <span class="text-sm font-medium text-[#0071e3]">Resumate</span>
                   </div>
                   <p class="text-xs font-mono text-gray-500">Suwon, South Korea</p>
                   <ul class="mt-2 text-sm text-gray-600 space-y-1.5 list-disc list-inside leading-relaxed">
@@ -608,7 +667,7 @@
                     <li>Built intuitive, zero-latency feedback interfaces enabling students to instantly optimize their industry application success rate.</li>
                   </ul>
                 </div>
-                <span class="text-xs font-mono text-gray-500 whitespace-nowrap bg-stone-100 px-3 py-1 rounded-full border border-stone-200 self-start">
+                <span class="text-xs font-mono text-gray-600 whitespace-nowrap bg-white px-3 py-1 rounded-full border border-black/[0.08] shadow-xs self-start">
                   2026 – Present
                 </span>
               </div>
@@ -616,9 +675,9 @@
               <!-- Role 4: Covenant & Co -->
               <div class="py-8 flex flex-col md:flex-row md:items-start justify-between gap-4">
                 <div class="flex flex-col gap-2 max-w-2xl">
-                  <div class="flex items-baseline gap-3">
-                    <h3 class="text-lg font-semibold text-gray-900">Founder &amp; Supply Chain Lead</h3>
-                    <span class="text-sm font-medium text-indigo-600">Covenant &amp; Co</span>
+                  <div class="flex flex-wrap items-baseline gap-2.5">
+                    <h3 class="text-lg font-semibold text-gray-950">Founder &amp; Supply Chain Lead</h3>
+                    <span class="text-sm font-medium text-[#0071e3]">Covenant &amp; Co</span>
                   </div>
                   <p class="text-xs font-mono text-gray-500">South Korea &amp; China Operations</p>
                   <ul class="mt-2 text-sm text-gray-600 space-y-1.5 list-disc list-inside leading-relaxed">
@@ -626,7 +685,7 @@
                     <li>Managed cross-border manufacturing relations, quality assurance, logistics pipelines, and vendor negotiations.</li>
                   </ul>
                 </div>
-                <span class="text-xs font-mono text-gray-500 whitespace-nowrap bg-stone-100 px-3 py-1 rounded-full border border-stone-200 self-start">
+                <span class="text-xs font-mono text-gray-600 whitespace-nowrap bg-white px-3 py-1 rounded-full border border-black/[0.08] shadow-xs self-start">
                   2024 – 2026
                 </span>
               </div>
@@ -634,16 +693,16 @@
               <!-- Role 5: VisionRare -->
               <div class="py-8 flex flex-col md:flex-row md:items-start justify-between gap-4">
                 <div class="flex flex-col gap-2 max-w-2xl">
-                  <div class="flex items-baseline gap-3">
-                    <h3 class="text-lg font-semibold text-gray-900">Junior Principal Backend Software Engineer</h3>
-                    <span class="text-sm font-medium text-indigo-600">VisionRare</span>
+                  <div class="flex flex-wrap items-baseline gap-2.5">
+                    <h3 class="text-lg font-semibold text-gray-950">Junior Principal Backend Software Engineer</h3>
+                    <span class="text-sm font-medium text-[#0071e3]">VisionRare</span>
                   </div>
                   <p class="text-xs font-mono text-gray-500">Remote</p>
                   <ul class="mt-2 text-sm text-gray-600 space-y-1.5 list-disc list-inside leading-relaxed">
                     <li>Engineered backend application logic in an agile team environment, developing clean REST APIs and database queries.</li>
                   </ul>
                 </div>
-                <span class="text-xs font-mono text-gray-500 whitespace-nowrap bg-stone-100 px-3 py-1 rounded-full border border-stone-200 self-start">
+                <span class="text-xs font-mono text-gray-600 whitespace-nowrap bg-white px-3 py-1 rounded-full border border-black/[0.08] shadow-xs self-start">
                   2021 – 2021
                 </span>
               </div>
@@ -651,16 +710,16 @@
               <!-- Role 6: Microsoft Ambassador -->
               <div class="py-8 flex flex-col md:flex-row md:items-start justify-between gap-4">
                 <div class="flex flex-col gap-2 max-w-2xl">
-                  <div class="flex items-baseline gap-3">
-                    <h3 class="text-lg font-semibold text-gray-900">Microsoft Learn Student Ambassador</h3>
-                    <span class="text-sm font-medium text-indigo-600">Microsoft Community</span>
+                  <div class="flex flex-wrap items-baseline gap-2.5">
+                    <h3 class="text-lg font-semibold text-gray-950">Microsoft Learn Student Ambassador</h3>
+                    <span class="text-sm font-medium text-[#0071e3]">Microsoft Community</span>
                   </div>
                   <p class="text-xs font-mono text-gray-500">Global Developer Program</p>
                   <ul class="mt-2 text-sm text-gray-600 space-y-1.5 list-disc list-inside leading-relaxed">
                     <li>Organized technical workshops on Azure AI tools, cloud fundamentals, and modern developer workflows for university students.</li>
                   </ul>
                 </div>
-                <span class="text-xs font-mono text-gray-500 whitespace-nowrap bg-stone-100 px-3 py-1 rounded-full border border-stone-200 self-start">
+                <span class="text-xs font-mono text-gray-600 whitespace-nowrap bg-white px-3 py-1 rounded-full border border-black/[0.08] shadow-xs self-start">
                   2020 – 2022
                 </span>
               </div>
@@ -671,88 +730,91 @@
         </section>
 
         <!-- ================= SECTION 4: EDUCATION ================= -->
-        <section id="education" class="pt-16 pb-16 border-b border-stroke-secondary">
+        <section id="education" class="pt-20 pb-20 border-b border-black/[0.06]">
           <div class="flex flex-col gap-10">
             
             <div class="flex flex-col gap-2">
-              <h2 class="text-2xl md:text-3xl font-medium tracking-tight text-gray-900">Education &amp; Global Leadership</h2>
-              <p class="text-base text-gray-600">Academic foundations, government fellowships, and university governance.</p>
+              <div class="flex items-center gap-2">
+                <span class="text-xs font-mono font-semibold uppercase tracking-wider text-[#0071e3]">ACADEMIC FOUNDATION</span>
+              </div>
+              <h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-gray-950">Education &amp; Global Leadership</h2>
+              <p class="text-base text-gray-600">Academic rigor, competitive government fellowships, and student governance.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
               <!-- University Card -->
-              <div class="p-6 md:p-8 rounded-2xl bg-white/70 border border-stroke-secondary shadow-sm flex flex-col justify-between gap-4">
-                <div class="flex flex-col gap-2">
+              <div class="p-7 md:p-8 rounded-3xl bg-white border border-black/[0.06] shadow-[0_4px_24px_rgba(0,0,0,0.03)] flex flex-col justify-between gap-6">
+                <div class="flex flex-col gap-2.5">
                   <div class="flex items-center justify-between">
-                    <span class="text-xs font-mono text-indigo-600 font-semibold uppercase">Ajou University</span>
+                    <span class="text-xs font-mono text-[#0071e3] font-semibold uppercase">Ajou University</span>
                     <span class="text-xs font-mono text-gray-500">2024 – Present</span>
                   </div>
-                  <h3 class="text-xl font-semibold text-gray-900">Bachelor of Science in Software Engineering</h3>
+                  <h3 class="text-xl font-semibold text-gray-950">Bachelor of Science in Software Engineering</h3>
                   <p class="text-xs font-mono text-gray-500">Suwon, South Korea • GPA: 3.8 / 4.5</p>
                   <p class="text-sm text-gray-600 mt-2 leading-relaxed">
-                    Awarded the prestigious <strong class="text-gray-900 font-medium">Global Korea Scholarship (GKS)</strong>, a competitive merit-based government fellowship covering full undergraduate tuition, research grants, and monthly stipend.
+                    Awarded the prestigious <strong class="text-gray-950 font-semibold">Global Korea Scholarship (GKS)</strong>, a competitive merit-based government fellowship covering full undergraduate tuition, research grants, and monthly stipend.
                   </p>
                 </div>
                 <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
-                  <span class="text-xs font-medium text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">GKS Fellow</span>
-                  <a href="https://www.ajou.ac.kr/en/" target="_blank" rel="noopener noreferrer" class="text-xs font-medium text-gray-500 hover:text-indigo-600">ajou.ac.kr ↗</a>
+                  <span class="text-xs font-medium text-amber-900 bg-amber-50 px-3 py-1 rounded-full border border-amber-200">GKS Fellow</span>
+                  <a href="https://www.ajou.ac.kr/en/" target="_blank" rel="noopener noreferrer" class="text-xs font-medium text-[#0071e3] hover:underline">ajou.ac.kr ↗</a>
                 </div>
               </div>
 
               <!-- Student Council -->
-              <div class="p-6 md:p-8 rounded-2xl bg-white/70 border border-stroke-secondary shadow-sm flex flex-col justify-between gap-4">
-                <div class="flex flex-col gap-2">
+              <div class="p-7 md:p-8 rounded-3xl bg-white border border-black/[0.06] shadow-[0_4px_24px_rgba(0,0,0,0.03)] flex flex-col justify-between gap-6">
+                <div class="flex flex-col gap-2.5">
                   <div class="flex items-center justify-between">
-                    <span class="text-xs font-mono text-indigo-600 font-semibold uppercase">Ajou University</span>
+                    <span class="text-xs font-mono text-[#0071e3] font-semibold uppercase">Ajou University</span>
                     <span class="text-xs font-mono text-gray-500">Elected Member</span>
                   </div>
-                  <h3 class="text-xl font-semibold text-gray-900">Ajou International Student Council</h3>
+                  <h3 class="text-xl font-semibold text-gray-950">Ajou International Student Council</h3>
                   <p class="text-xs font-mono text-gray-500">Student Representation &amp; Administration</p>
                   <p class="text-sm text-gray-600 mt-2 leading-relaxed">
                     Elected member actively representing the global student body in university administrative deliberations, academic policy feedback, and international community initiatives.
                   </p>
                 </div>
                 <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
-                  <span class="text-xs font-medium text-indigo-700 bg-indigo-50 px-2.5 py-1 rounded-full border border-indigo-200">University Leadership</span>
+                  <span class="text-xs font-medium text-indigo-800 bg-indigo-50 px-3 py-1 rounded-full border border-indigo-200">University Leadership</span>
                   <span class="text-xs text-gray-400 font-mono">Governance</span>
                 </div>
               </div>
 
               <!-- Suwon Global Center -->
-              <div class="p-6 md:p-8 rounded-2xl bg-white/70 border border-stroke-secondary shadow-sm flex flex-col justify-between gap-4">
-                <div class="flex flex-col gap-2">
+              <div class="p-7 md:p-8 rounded-3xl bg-white border border-black/[0.06] shadow-[0_4px_24px_rgba(0,0,0,0.03)] flex flex-col justify-between gap-6">
+                <div class="flex flex-col gap-2.5">
                   <div class="flex items-center justify-between">
-                    <span class="text-xs font-mono text-indigo-600 font-semibold uppercase">Suwon Global Center</span>
+                    <span class="text-xs font-mono text-[#0071e3] font-semibold uppercase">Suwon Global Center</span>
                     <span class="text-xs font-mono text-gray-500">Volunteer</span>
                   </div>
-                  <h3 class="text-xl font-semibold text-gray-900">Community Volunteer &amp; Cultural Liaison</h3>
+                  <h3 class="text-xl font-semibold text-gray-950">Community Volunteer &amp; Cultural Liaison</h3>
                   <p class="text-xs font-mono text-gray-500">Suwon, South Korea</p>
                   <p class="text-sm text-gray-600 mt-2 leading-relaxed">
                     Volunteered as a Korean–English translator and cultural liaison, assisting international residents with civic integration, documentation, and community navigation.
                   </p>
                 </div>
                 <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
-                  <span class="text-xs font-medium text-stone-700 bg-stone-100 px-2.5 py-1 rounded-full border border-stone-200">Civic Engagement</span>
+                  <span class="text-xs font-medium text-stone-700 bg-stone-100 px-3 py-1 rounded-full border border-stone-200">Civic Service</span>
                   <span class="text-xs text-gray-400 font-mono">Bilingual Service</span>
                 </div>
               </div>
 
               <!-- High School -->
-              <div class="p-6 md:p-8 rounded-2xl bg-white/70 border border-stroke-secondary shadow-sm flex flex-col justify-between gap-4">
-                <div class="flex flex-col gap-2">
+              <div class="p-7 md:p-8 rounded-3xl bg-white border border-black/[0.06] shadow-[0_4px_24px_rgba(0,0,0,0.03)] flex flex-col justify-between gap-6">
+                <div class="flex flex-col gap-2.5">
                   <div class="flex items-center justify-between">
-                    <span class="text-xs font-mono text-indigo-600 font-semibold uppercase">Fazaia Degree College</span>
+                    <span class="text-xs font-mono text-[#0071e3] font-semibold uppercase">Fazaia Degree College</span>
                     <span class="text-xs font-mono text-gray-500">Graduate</span>
                   </div>
-                  <h3 class="text-xl font-semibold text-gray-900">Secondary &amp; Higher Secondary School</h3>
+                  <h3 class="text-xl font-semibold text-gray-950">Secondary &amp; Higher Secondary School</h3>
                   <p class="text-xs font-mono text-gray-500">PAF Base Faisal, Pakistan</p>
                   <p class="text-sm text-gray-600 mt-2 leading-relaxed">
                     Completed Pre-Engineering academic curriculum with distinction, building a rigorous foundation in advanced mathematics, physics, and computer science fundamentals.
                   </p>
                 </div>
                 <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
-                  <span class="text-xs font-medium text-stone-700 bg-stone-100 px-2.5 py-1 rounded-full border border-stone-200">Pre-Engineering</span>
+                  <span class="text-xs font-medium text-stone-700 bg-stone-100 px-3 py-1 rounded-full border border-stone-200">Pre-Engineering</span>
                   <span class="text-xs text-gray-400 font-mono">Distinction</span>
                 </div>
               </div>
@@ -762,60 +824,63 @@
           </div>
         </section>
 
-        <!-- ================= SECTION 5: SKILLS ================= -->
-        <section id="skills" class="pt-16 pb-16 border-b border-stroke-secondary">
+        <!-- ================= SECTION 5: SKILLS & HONORS ================= -->
+        <section id="skills" class="pt-20 pb-20 border-b border-black/[0.06]">
           <div class="flex flex-col gap-10">
             
             <div class="flex flex-col gap-2">
-              <h2 class="text-2xl md:text-3xl font-medium tracking-tight text-gray-900">Technical Arsenal &amp; Honors</h2>
+              <div class="flex items-center gap-2">
+                <span class="text-xs font-mono font-semibold uppercase tracking-wider text-[#0071e3]">ARSENAL &amp; CREDENTIALS</span>
+              </div>
+              <h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-gray-950">Technical Stack &amp; Honors</h2>
               <p class="text-base text-gray-600">Core technologies, research publications, verified credentials, and languages.</p>
             </div>
 
             <!-- Tech Stack Categories -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-              <div class="p-6 rounded-2xl bg-white/70 border border-stroke-secondary shadow-sm flex flex-col gap-4">
-                <h3 class="text-sm font-semibold uppercase tracking-wider text-indigo-600 font-mono">Core &amp; AI Engineering</h3>
+              <div class="p-7 rounded-3xl bg-white border border-black/[0.06] shadow-[0_4px_24px_rgba(0,0,0,0.03)] flex flex-col gap-4">
+                <h3 class="text-xs font-semibold uppercase tracking-wider text-[#0071e3] font-mono">Core &amp; AI Engineering</h3>
                 <div class="flex flex-wrap gap-2">
-                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-800 border border-stone-200">Python</span>
-                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-800 border border-stone-200">TypeScript</span>
-                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-800 border border-stone-200">JavaScript</span>
-                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-800 border border-stone-200">C++</span>
-                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-800 border border-stone-200">C</span>
-                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-800 border border-stone-200">SQL</span>
-                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-indigo-50 text-indigo-800 border border-indigo-200 font-semibold">LLM Orchestration</span>
-                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-indigo-50 text-indigo-800 border border-indigo-200 font-semibold">Agentic Workflows</span>
-                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-800 border border-stone-200">OpenCV</span>
-                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-800 border border-stone-200">TensorFlow</span>
-                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-800 border border-stone-200">NumPy</span>
+                  <span class="px-3 py-1 rounded-full text-xs font-mono bg-stone-100 text-stone-800 border border-black/[0.04]">Python</span>
+                  <span class="px-3 py-1 rounded-full text-xs font-mono bg-stone-100 text-stone-800 border border-black/[0.04]">TypeScript</span>
+                  <span class="px-3 py-1 rounded-full text-xs font-mono bg-stone-100 text-stone-800 border border-black/[0.04]">JavaScript</span>
+                  <span class="px-3 py-1 rounded-full text-xs font-mono bg-stone-100 text-stone-800 border border-black/[0.04]">C++</span>
+                  <span class="px-3 py-1 rounded-full text-xs font-mono bg-stone-100 text-stone-800 border border-black/[0.04]">C</span>
+                  <span class="px-3 py-1 rounded-full text-xs font-mono bg-stone-100 text-stone-800 border border-black/[0.04]">SQL</span>
+                  <span class="px-3 py-1 rounded-full text-xs font-mono bg-blue-50 text-[#0071e3] border border-blue-200 font-semibold">LLM Orchestration</span>
+                  <span class="px-3 py-1 rounded-full text-xs font-mono bg-blue-50 text-[#0071e3] border border-blue-200 font-semibold">Agentic Workflows</span>
+                  <span class="px-3 py-1 rounded-full text-xs font-mono bg-stone-100 text-stone-800 border border-black/[0.04]">OpenCV</span>
+                  <span class="px-3 py-1 rounded-full text-xs font-mono bg-stone-100 text-stone-800 border border-black/[0.04]">TensorFlow</span>
+                  <span class="px-3 py-1 rounded-full text-xs font-mono bg-stone-100 text-stone-800 border border-black/[0.04]">NumPy</span>
                 </div>
               </div>
 
-              <div class="p-6 rounded-2xl bg-white/70 border border-stroke-secondary shadow-sm flex flex-col gap-4">
-                <h3 class="text-sm font-semibold uppercase tracking-wider text-indigo-600 font-mono">Full-Stack &amp; Frameworks</h3>
+              <div class="p-7 rounded-3xl bg-white border border-black/[0.06] shadow-[0_4px_24px_rgba(0,0,0,0.03)] flex flex-col gap-4">
+                <h3 class="text-xs font-semibold uppercase tracking-wider text-[#0071e3] font-mono">Full-Stack &amp; Frameworks</h3>
                 <div class="flex flex-wrap gap-2">
-                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-indigo-50 text-indigo-800 border border-indigo-200 font-semibold">Next.js 15 (App Router)</span>
-                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-800 border border-stone-200">React</span>
-                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-800 border border-stone-200">Node.js</span>
-                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-800 border border-stone-200">Tailwind CSS</span>
-                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-800 border border-stone-200">Django REST</span>
-                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-800 border border-stone-200">Supabase</span>
-                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-800 border border-stone-200">RESTful APIs</span>
-                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-800 border border-stone-200">HTML5 / CSS3</span>
+                  <span class="px-3 py-1 rounded-full text-xs font-mono bg-blue-50 text-[#0071e3] border border-blue-200 font-semibold">Next.js 15 (App Router)</span>
+                  <span class="px-3 py-1 rounded-full text-xs font-mono bg-stone-100 text-stone-800 border border-black/[0.04]">React</span>
+                  <span class="px-3 py-1 rounded-full text-xs font-mono bg-stone-100 text-stone-800 border border-black/[0.04]">Node.js</span>
+                  <span class="px-3 py-1 rounded-full text-xs font-mono bg-stone-100 text-stone-800 border border-black/[0.04]">Tailwind CSS</span>
+                  <span class="px-3 py-1 rounded-full text-xs font-mono bg-stone-100 text-stone-800 border border-black/[0.04]">Django REST</span>
+                  <span class="px-3 py-1 rounded-full text-xs font-mono bg-stone-100 text-stone-800 border border-black/[0.04]">Supabase</span>
+                  <span class="px-3 py-1 rounded-full text-xs font-mono bg-stone-100 text-stone-800 border border-black/[0.04]">RESTful APIs</span>
+                  <span class="px-3 py-1 rounded-full text-xs font-mono bg-stone-100 text-stone-800 border border-black/[0.04]">HTML5 / CSS3</span>
                 </div>
               </div>
 
-              <div class="p-6 rounded-2xl bg-white/70 border border-stroke-secondary shadow-sm flex flex-col gap-4">
-                <h3 class="text-sm font-semibold uppercase tracking-wider text-indigo-600 font-mono">Cloud, Systems &amp; Data</h3>
+              <div class="p-7 rounded-3xl bg-white border border-black/[0.06] shadow-[0_4px_24px_rgba(0,0,0,0.03)] flex flex-col gap-4">
+                <h3 class="text-xs font-semibold uppercase tracking-wider text-[#0071e3] font-mono">Cloud, Systems &amp; Data</h3>
                 <div class="flex flex-wrap gap-2">
-                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-800 border border-stone-200">Microsoft Azure</span>
-                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-800 border border-stone-200">AWS</span>
-                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-800 border border-stone-200">Docker</span>
-                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-indigo-50 text-indigo-800 border border-indigo-200 font-semibold">pgvector</span>
-                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-800 border border-stone-200">PostgreSQL</span>
-                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-800 border border-stone-200">MySQL</span>
-                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-800 border border-stone-200">Vercel</span>
-                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-800 border border-stone-200">Git / GitHub</span>
+                  <span class="px-3 py-1 rounded-full text-xs font-mono bg-stone-100 text-stone-800 border border-black/[0.04]">Microsoft Azure</span>
+                  <span class="px-3 py-1 rounded-full text-xs font-mono bg-stone-100 text-stone-800 border border-black/[0.04]">AWS</span>
+                  <span class="px-3 py-1 rounded-full text-xs font-mono bg-stone-100 text-stone-800 border border-black/[0.04]">Docker</span>
+                  <span class="px-3 py-1 rounded-full text-xs font-mono bg-blue-50 text-[#0071e3] border border-blue-200 font-semibold">pgvector</span>
+                  <span class="px-3 py-1 rounded-full text-xs font-mono bg-stone-100 text-stone-800 border border-black/[0.04]">PostgreSQL</span>
+                  <span class="px-3 py-1 rounded-full text-xs font-mono bg-stone-100 text-stone-800 border border-black/[0.04]">MySQL</span>
+                  <span class="px-3 py-1 rounded-full text-xs font-mono bg-stone-100 text-stone-800 border border-black/[0.04]">Vercel</span>
+                  <span class="px-3 py-1 rounded-full text-xs font-mono bg-stone-100 text-stone-800 border border-black/[0.04]">Git / GitHub</span>
                 </div>
               </div>
 
@@ -823,71 +888,71 @@
 
             <!-- Research & Certifications Grid -->
             <div class="flex flex-col gap-4 pt-4">
-              <h3 class="text-lg font-semibold text-gray-900">Research &amp; Verified Certifications</h3>
+              <h3 class="text-lg font-semibold text-gray-950">Research Publications &amp; Verified Certifications</h3>
               
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
-                <div class="p-4 rounded-xl bg-white/70 border border-stroke-secondary flex items-start gap-3">
-                  <span class="text-indigo-600 text-lg">📄</span>
+                <div class="p-4 rounded-2xl bg-white border border-black/[0.06] shadow-xs flex items-start gap-3.5">
+                  <span class="text-lg">📄</span>
                   <div class="flex flex-col">
-                    <h4 class="text-sm font-semibold text-gray-900">Research Paper: Comprehensive Study of Dijkstra's Algorithm</h4>
-                    <p class="text-xs text-gray-500">Published in Global Scientific Journal (GSJ)</p>
+                    <h4 class="text-sm font-semibold text-gray-950">Research Paper: Comprehensive Study of Dijkstra's Algorithm</h4>
+                    <p class="text-xs text-gray-500 mt-0.5">Published in Global Scientific Journal (GSJ)</p>
                   </div>
                 </div>
 
-                <div class="p-4 rounded-xl bg-white/70 border border-stroke-secondary flex items-start gap-3">
-                  <span class="text-amber-600 text-lg">🏆</span>
+                <div class="p-4 rounded-2xl bg-white border border-black/[0.06] shadow-xs flex items-start gap-3.5">
+                  <span class="text-lg">🏆</span>
                   <div class="flex flex-col">
-                    <h4 class="text-sm font-semibold text-gray-900">Top 20 • Incheon Foreign Start-up Challenge 2026</h4>
-                    <p class="text-xs text-gray-500">OASIS Korea Start-up Incubation Program</p>
+                    <h4 class="text-sm font-semibold text-gray-950">Top 20 • Incheon Foreign Start-up Challenge 2026</h4>
+                    <p class="text-xs text-gray-500 mt-0.5">OASIS Korea Start-up Incubation Program</p>
                   </div>
                 </div>
 
-                <div class="p-4 rounded-xl bg-white/70 border border-stroke-secondary flex items-start gap-3">
-                  <span class="text-blue-600 text-lg">☁️</span>
+                <div class="p-4 rounded-2xl bg-white border border-black/[0.06] shadow-xs flex items-start gap-3.5">
+                  <span class="text-lg">☁️</span>
                   <div class="flex flex-col">
-                    <h4 class="text-sm font-semibold text-gray-900">Microsoft Certified: Azure AI Fundamentals (AI-900)</h4>
-                    <p class="text-xs text-gray-500">Official Microsoft Technical Certification</p>
+                    <h4 class="text-sm font-semibold text-gray-950">Microsoft Certified: Azure AI Fundamentals (AI-900)</h4>
+                    <p class="text-xs text-gray-500 mt-0.5">Official Microsoft Technical Credential</p>
                   </div>
                 </div>
 
-                <div class="p-4 rounded-xl bg-white/70 border border-stroke-secondary flex items-start gap-3">
-                  <span class="text-rose-600 text-lg">🎓</span>
+                <div class="p-4 rounded-2xl bg-white border border-black/[0.06] shadow-xs flex items-start gap-3.5">
+                  <span class="text-lg">🎓</span>
                   <div class="flex flex-col">
-                    <h4 class="text-sm font-semibold text-gray-900">CS50: Introduction to Computer Science</h4>
-                    <p class="text-xs text-gray-500">Harvard University Online (edX Verified)</p>
+                    <h4 class="text-sm font-semibold text-gray-950">CS50: Introduction to Computer Science</h4>
+                    <p class="text-xs text-gray-500 mt-0.5">Harvard University Online (edX Verified)</p>
                   </div>
                 </div>
 
-                <div class="p-4 rounded-xl bg-white/70 border border-stroke-secondary flex items-start gap-3">
-                  <span class="text-purple-600 text-lg">🧠</span>
+                <div class="p-4 rounded-2xl bg-white border border-black/[0.06] shadow-xs flex items-start gap-3.5">
+                  <span class="text-lg">🧠</span>
                   <div class="flex flex-col">
-                    <h4 class="text-sm font-semibold text-gray-900">Supervised Machine Learning: Regression &amp; Classification</h4>
-                    <p class="text-xs text-gray-500">Stanford University Online &amp; DeepLearning.AI</p>
+                    <h4 class="text-sm font-semibold text-gray-950">Supervised Machine Learning: Regression &amp; Classification</h4>
+                    <p class="text-xs text-gray-500 mt-0.5">Stanford University Online &amp; DeepLearning.AI</p>
                   </div>
                 </div>
 
-                <div class="p-4 rounded-xl bg-white/70 border border-stroke-secondary flex items-start gap-3">
-                  <span class="text-emerald-600 text-lg">⚙️</span>
+                <div class="p-4 rounded-2xl bg-white border border-black/[0.06] shadow-xs flex items-start gap-3.5">
+                  <span class="text-lg">⚙️</span>
                   <div class="flex flex-col">
-                    <h4 class="text-sm font-semibold text-gray-900">Google IT Automation with Python</h4>
-                    <p class="text-xs text-gray-500">Professional Certificate — Google</p>
+                    <h4 class="text-sm font-semibold text-gray-950">Google IT Automation with Python</h4>
+                    <p class="text-xs text-gray-500 mt-0.5">Professional Certificate — Google</p>
                   </div>
                 </div>
 
-                <div class="p-4 rounded-xl bg-white/70 border border-stroke-secondary flex items-start gap-3">
-                  <span class="text-cyan-600 text-lg">🌐</span>
+                <div class="p-4 rounded-2xl bg-white border border-black/[0.06] shadow-xs flex items-start gap-3.5">
+                  <span class="text-lg">🌐</span>
                   <div class="flex flex-col">
-                    <h4 class="text-sm font-semibold text-gray-900">Elements of AI</h4>
-                    <p class="text-xs text-gray-500">University of Helsinki &amp; MinnaLearn</p>
+                    <h4 class="text-sm font-semibold text-gray-950">Elements of AI</h4>
+                    <p class="text-xs text-gray-500 mt-0.5">University of Helsinki &amp; MinnaLearn</p>
                   </div>
                 </div>
 
-                <div class="p-4 rounded-xl bg-white/70 border border-stroke-secondary flex items-start gap-3">
-                  <span class="text-blue-700 text-lg">💻</span>
+                <div class="p-4 rounded-2xl bg-white border border-black/[0.06] shadow-xs flex items-start gap-3.5">
+                  <span class="text-lg">💻</span>
                   <div class="flex flex-col">
-                    <h4 class="text-sm font-semibold text-gray-900">Introduction to Back-End Development</h4>
-                    <p class="text-xs text-gray-500">Meta Certified Professional Program</p>
+                    <h4 class="text-sm font-semibold text-gray-950">Introduction to Back-End Development</h4>
+                    <p class="text-xs text-gray-500 mt-0.5">Meta Certified Professional Program</p>
                   </div>
                 </div>
 
@@ -896,22 +961,22 @@
 
             <!-- Languages -->
             <div class="flex flex-col gap-4 pt-4">
-              <h3 class="text-lg font-semibold text-gray-900">Spoken Languages</h3>
+              <h3 class="text-lg font-semibold text-gray-950">Spoken Languages</h3>
               <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                <div class="p-4 rounded-xl bg-white/70 border border-stroke-secondary flex flex-col gap-1">
-                  <span class="text-sm font-semibold text-gray-900">English</span>
-                  <span class="text-xs text-indigo-600 font-mono font-medium">IELTS Band 8.0 (Expert)</span>
-                  <p class="text-xs text-gray-500">Full professional and academic fluency</p>
+                <div class="p-5 rounded-2xl bg-white border border-black/[0.06] shadow-xs flex flex-col gap-1">
+                  <span class="text-sm font-semibold text-gray-950">English</span>
+                  <span class="text-xs text-[#0071e3] font-mono font-medium">IELTS Band 8.0 (Expert)</span>
+                  <p class="text-xs text-gray-500 mt-1">Full professional and academic fluency</p>
                 </div>
-                <div class="p-4 rounded-xl bg-white/70 border border-stroke-secondary flex flex-col gap-1">
-                  <span class="text-sm font-semibold text-gray-900">Korean (한국어)</span>
-                  <span class="text-xs text-indigo-600 font-mono font-medium">TOPIK Level 4</span>
-                  <p class="text-xs text-gray-500">Advanced professional proficiency in South Korea</p>
+                <div class="p-5 rounded-2xl bg-white border border-black/[0.06] shadow-xs flex flex-col gap-1">
+                  <span class="text-sm font-semibold text-gray-950">Korean (한국어)</span>
+                  <span class="text-xs text-[#0071e3] font-mono font-medium">TOPIK Level 4</span>
+                  <p class="text-xs text-gray-500 mt-1">Advanced professional proficiency in South Korea</p>
                 </div>
-                <div class="p-4 rounded-xl bg-white/70 border border-stroke-secondary flex flex-col gap-1">
-                  <span class="text-sm font-semibold text-gray-900">Urdu (اردو)</span>
-                  <span class="text-xs text-indigo-600 font-mono font-medium">Native Fluency</span>
-                  <p class="text-xs text-gray-500">First language</p>
+                <div class="p-5 rounded-2xl bg-white border border-black/[0.06] shadow-xs flex flex-col gap-1">
+                  <span class="text-sm font-semibold text-gray-950">Urdu (اردو)</span>
+                  <span class="text-xs text-[#0071e3] font-mono font-medium">Native Fluency</span>
+                  <p class="text-xs text-gray-500 mt-1">First language</p>
                 </div>
               </div>
             </div>
@@ -920,62 +985,65 @@
         </section>
 
         <!-- ================= SECTION 6: CONTACT ================= -->
-        <section id="contact" class="pt-16 pb-8">
+        <section id="contact" class="pt-20 pb-12">
           <div class="flex flex-col gap-8">
             
             <div class="flex flex-col gap-2">
-              <h2 class="text-2xl md:text-3xl font-medium tracking-tight text-gray-900">Let&#x27;s build something extraordinary together.</h2>
+              <div class="flex items-center gap-2">
+                <span class="text-xs font-mono font-semibold uppercase tracking-wider text-[#0071e3]">GET IN TOUCH</span>
+              </div>
+              <h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-gray-950">Let&#x27;s build something extraordinary together.</h2>
               <p class="text-base text-gray-600">Open to engineering opportunities, founder discussions, research, and product collaborations.</p>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               
               <!-- Email Card with Copy Button -->
-              <div class="p-6 rounded-2xl bg-white/80 border border-stroke-secondary flex flex-col justify-between gap-4 shadow-sm">
-                <div class="flex flex-col gap-1">
-                  <span class="text-xs font-mono text-gray-500 uppercase">Direct Email</span>
-                  <a href="mailto:455ahsankhan@gmail.com" class="text-base font-semibold text-gray-900 hover:text-indigo-600 break-all">
+              <div class="p-7 rounded-3xl bg-white border border-black/[0.06] flex flex-col justify-between gap-5 shadow-[0_4px_24px_rgba(0,0,0,0.03)]">
+                <div class="flex flex-col gap-1.5">
+                  <span class="text-xs font-mono text-gray-500 uppercase tracking-wider">Direct Email</span>
+                  <a href="mailto:455ahsankhan@gmail.com" class="text-base font-semibold text-gray-950 hover:text-[#0071e3] break-all transition-colors">
                     455ahsankhan@gmail.com
                   </a>
                 </div>
-                <button type="button" id="copy-email-btn" data-email="455ahsankhan@gmail.com" class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full text-xs font-medium text-gray-800 bg-stone-100 hover:bg-stone-200 transition-colors self-start border border-stone-300">
+                <button type="button" id="copy-email-btn" data-email="455ahsankhan@gmail.com" class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full text-xs font-medium text-gray-800 bg-[#F4F2EC] hover:bg-[#EAE7DF] transition-colors self-start border border-black/[0.06]">
                   <span>Copy Email Address</span>
-                  <span id="copy-check" class="hidden text-emerald-600">✓</span>
+                  <span id="copy-check" class="hidden text-emerald-600 font-semibold">✓ Copied</span>
                 </button>
               </div>
 
               <!-- Phone Card -->
-              <div class="p-6 rounded-2xl bg-white/80 border border-stroke-secondary flex flex-col justify-between gap-4 shadow-sm">
-                <div class="flex flex-col gap-1">
-                  <span class="text-xs font-mono text-gray-500 uppercase">Phone / Contact</span>
-                  <a href="tel:+821066513148" class="text-base font-semibold text-gray-900 hover:text-indigo-600">
+              <div class="p-7 rounded-3xl bg-white border border-black/[0.06] flex flex-col justify-between gap-5 shadow-[0_4px_24px_rgba(0,0,0,0.03)]">
+                <div class="flex flex-col gap-1.5">
+                  <span class="text-xs font-mono text-gray-500 uppercase tracking-wider">Phone / Location</span>
+                  <a href="tel:+821066513148" class="text-base font-semibold text-gray-950 hover:text-[#0071e3] transition-colors">
                     +82 10-6651-3148
                   </a>
                   <p class="text-xs text-gray-500">Suwon / Seoul, South Korea (KST)</p>
                 </div>
-                <a href="tel:+821066513148" class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full text-xs font-medium text-gray-800 bg-stone-100 hover:bg-stone-200 transition-colors self-start border border-stone-300">
+                <a href="tel:+821066513148" class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full text-xs font-medium text-gray-800 bg-[#F4F2EC] hover:bg-[#EAE7DF] transition-colors self-start border border-black/[0.06]">
                   <span>Call ↗</span>
                 </a>
               </div>
 
               <!-- LinkedIn -->
-              <a href="https://www.linkedin.com/in/455ahsankhan" target="_blank" rel="noopener noreferrer" class="p-6 rounded-2xl bg-white/80 border border-stroke-secondary flex items-center justify-between gap-4 shadow-sm hover:border-indigo-300 transition-colors group">
+              <a href="https://www.linkedin.com/in/455ahsankhan" target="_blank" rel="noopener noreferrer" class="p-7 rounded-3xl bg-white border border-black/[0.06] flex items-center justify-between gap-4 shadow-[0_4px_24px_rgba(0,0,0,0.03)] hover:border-[#0071e3]/40 transition-colors group">
                 <div class="flex flex-col gap-1">
-                  <span class="text-xs font-mono text-gray-500 uppercase">Professional Network</span>
-                  <span class="text-base font-semibold text-gray-900 group-hover:text-indigo-600">LinkedIn</span>
-                  <span class="text-xs text-gray-500">linkedin.com/in/455ahsankhan</span>
+                  <span class="text-xs font-mono text-gray-500 uppercase tracking-wider">Professional Network</span>
+                  <span class="text-base font-semibold text-gray-950 group-hover:text-[#0071e3] transition-colors">LinkedIn</span>
+                  <span class="text-xs text-gray-500 font-mono">linkedin.com/in/455ahsankhan</span>
                 </div>
-                <span class="text-gray-400 group-hover:text-indigo-600 text-lg">↗</span>
+                <span class="text-gray-400 group-hover:text-[#0071e3] text-xl transition-colors">↗</span>
               </a>
 
               <!-- GitHub -->
-              <a href="https://github.com/ahsann826" target="_blank" rel="noopener noreferrer" class="p-6 rounded-2xl bg-white/80 border border-stroke-secondary flex items-center justify-between gap-4 shadow-sm hover:border-indigo-300 transition-colors group">
+              <a href="https://github.com/ahsann826" target="_blank" rel="noopener noreferrer" class="p-7 rounded-3xl bg-white border border-black/[0.06] flex items-center justify-between gap-4 shadow-[0_4px_24px_rgba(0,0,0,0.03)] hover:border-[#0071e3]/40 transition-colors group">
                 <div class="flex flex-col gap-1">
-                  <span class="text-xs font-mono text-gray-500 uppercase">Open Source &amp; Code</span>
-                  <span class="text-base font-semibold text-gray-900 group-hover:text-indigo-600">GitHub</span>
-                  <span class="text-xs text-gray-500">@ahsann826</span>
+                  <span class="text-xs font-mono text-gray-500 uppercase tracking-wider">Source Code &amp; Repositories</span>
+                  <span class="text-base font-semibold text-gray-950 group-hover:text-[#0071e3] transition-colors">GitHub</span>
+                  <span class="text-xs text-gray-500 font-mono">github.com/ahsann826</span>
                 </div>
-                <span class="text-gray-400 group-hover:text-indigo-600 text-lg">↗</span>
+                <span class="text-gray-400 group-hover:text-[#0071e3] text-xl transition-colors">↗</span>
               </a>
 
             </div>
@@ -987,16 +1055,16 @@
 
       <!-- Footer -->
       <footer class="flex w-full flex-col px-6 md:px-12 max-w-[1100px] mx-auto pb-12">
-        <div class="text-gray-800 flex flex-col sm:flex-row gap-6 border-t border-stroke-secondary pt-8 items-center justify-between">
+        <div class="text-gray-800 flex flex-col sm:flex-row gap-6 border-t border-black/[0.06] pt-8 items-center justify-between">
           <div class="flex items-center gap-3">
-            <span class="text-sm font-semibold text-gray-900">Khan Muhammad Ahsan</span>
+            <span class="text-sm font-semibold text-gray-950">Khan Muhammad Ahsan</span>
             <span class="text-xs text-gray-500 font-mono">© 2026</span>
           </div>
           <nav aria-label="Footer links" class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-gray-600">
-            <a href="mailto:455ahsankhan@gmail.com" class="hover:text-indigo-600">Email</a>
-            <a href="https://www.linkedin.com/in/455ahsankhan" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600">LinkedIn</a>
-            <a href="https://github.com/ahsann826" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600">GitHub</a>
-            <a href="https://preplitai.com" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600">Preplit AI</a>
+            <a href="mailto:455ahsankhan@gmail.com" class="hover:text-[#0071e3]">Email</a>
+            <a href="https://www.linkedin.com/in/455ahsankhan" target="_blank" rel="noopener noreferrer" class="hover:text-[#0071e3]">LinkedIn</a>
+            <a href="https://github.com/ahsann826" target="_blank" rel="noopener noreferrer" class="hover:text-[#0071e3]">GitHub</a>
+            <a href="https://preplitai.com" target="_blank" rel="noopener noreferrer" class="hover:text-[#0071e3]">Preplit AI</a>
           </nav>
         </div>
       </footer>
@@ -1004,7 +1072,7 @@
   </div>
 
   <!-- Floating Back to top Button -->
-  <button id="back-to-top" type="button" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 inline-flex items-center justify-center gap-1.5 rounded-full px-5 py-2 select-none text-xs font-medium whitespace-nowrap transition-all duration-200 text-gray-800 bg-white/90 backdrop-blur border border-gray-300 shadow-md hover:bg-white active:scale-95 opacity-0 pointer-events-none">
+  <button id="back-to-top" type="button" class="fixed bottom-6 right-6 z-40 inline-flex items-center justify-center gap-1.5 rounded-full px-4 py-2.5 select-none text-xs font-medium whitespace-nowrap transition-all duration-200 text-gray-800 bg-white/95 backdrop-blur border border-black/[0.08] shadow-md hover:bg-white active:scale-95 opacity-0 pointer-events-none">
     <span>Back to top</span>
     <span aria-hidden="true">↑</span>
   </button>
