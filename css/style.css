@@ -4,18 +4,18 @@
 
 :root {
   /* Radix Sand scale - Light */
-  --sand-1: #fdfdfc;
-  --sand-2: #f9f9f8;
-  --sand-3: #f1f0ef;
-  --sand-4: #e9e8e6;
-  --sand-5: #e2e1de;
-  --sand-6: #dad9d6;
-  --sand-7: #cfceca;
-  --sand-8: #bcbbb5;
-  --sand-9: #8d8d86;
-  --sand-10: #82827c;
-  --sand-11: #63635e;
-  --sand-12: #21201c;
+  --sand-1: #F0EDE8;
+  --sand-2: #e8e4de;
+  --sand-3: #e0dcd6;
+  --sand-4: #d7d3cc;
+  --sand-5: #cdc8c0;
+  --sand-6: #bfbab2;
+  --sand-7: #b0aaa1;
+  --sand-8: #9a9389;
+  --sand-9: #7d766c;
+  --sand-10: #726b62;
+  --sand-11: #55504a;
+  --sand-12: #1e1c19;
   --mark-color: #b0e64c;
 
   --color-surface-background: var(--sand-1);
