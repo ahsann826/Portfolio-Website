@@ -1,79 +1,80 @@
-// Main JavaScript for interactive tabs, tactile buttons, and back-to-top behavior
+// Modern main.js: Smooth scrolling navigation, scrollspy, copy email, back-to-top
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Tab Switching
-  const tabButtons = document.querySelectorAll('.tab-btn');
-  const tabPanels = document.querySelectorAll('.tab-panel');
+  const navLinks = document.querySelectorAll('.nav-link');
+  const sections = document.querySelectorAll('section[id]');
+  const header = document.querySelector('header');
+  const tabsContainer = document.getElementById('tabs-container');
 
-  const activeClasses = [
-    'text-content-primary',
-    'after:absolute',
-    'after:inset-x-0',
-    'after:-bottom-px',
-    'after:h-px',
-    'after:bg-content-primary'
-  ];
-  const inactiveClasses = [
-    'text-content-tertiary',
-    'hover:text-content-primary'
-  ];
-
-  function setActiveTab(targetTab) {
-    tabButtons.forEach(btn => {
-      const isMatch = btn.getAttribute('data-tab') === targetTab;
-      btn.setAttribute('aria-pressed', isMatch ? 'true' : 'false');
-      if (isMatch) {
-        inactiveClasses.forEach(c => btn.classList.remove(c));
-        activeClasses.forEach(c => btn.classList.add(c));
-      } else {
-        activeClasses.forEach(c => btn.classList.remove(c));
-        inactiveClasses.forEach(c => btn.classList.add(c));
-      }
-    });
-
-    tabPanels.forEach(panel => {
-      if (panel.getAttribute('id') === `tab-panel-${targetTab}`) {
-        panel.classList.remove('hidden');
-        panel.style.opacity = '1';
-      } else {
-        panel.classList.add('hidden');
-        panel.style.opacity = '0';
-      }
-    });
-
-    // If switched from another section, smoothly align to tabs if scrolled deep
-    const tabsNav = document.getElementById('tabs-container');
-    if (tabsNav && window.scrollY > tabsNav.offsetTop + 100) {
-      window.scrollTo({
-        top: tabsNav.offsetTop - 100,
-        behavior: 'smooth'
-      });
-    }
+  // Calculate sticky offset
+  function getStickyOffset() {
+    let offset = 0;
+    if (header) offset += header.offsetHeight;
+    if (tabsContainer) offset += tabsContainer.offsetHeight;
+    return offset + 16;
   }
 
-  tabButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const tabId = btn.getAttribute('data-tab');
-      if (tabId) {
-        setActiveTab(tabId);
-        history.replaceState(null, '', `#${tabId}`);
+  // 1. Smooth Scroll with Sticky Offset
+  navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      const href = link.getAttribute('href');
+      if (href && href.startsWith('#')) {
+        const targetSection = document.querySelector(href);
+        if (targetSection) {
+          e.preventDefault();
+          const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset - getStickyOffset();
+          window.scrollTo({
+            top: Math.max(0, targetPosition),
+            behavior: 'smooth'
+          });
+          // Update URL hash without jumping
+          history.replaceState(null, '', href);
+          updateActiveLink(href);
+        }
       }
     });
   });
 
-  // Handle URL hash on load
-  if (window.location.hash) {
-    const initialTab = window.location.hash.replace('#', '');
-    const validBtn = document.querySelector(`.tab-btn[data-tab="${initialTab}"]`);
-    if (validBtn) {
-      setActiveTab(initialTab);
-    }
+  function updateActiveLink(targetId) {
+    navLinks.forEach(link => {
+      if (link.getAttribute('href') === targetId) {
+        link.classList.add('active', 'text-indigo-600');
+        link.classList.remove('text-gray-700');
+      } else {
+        link.classList.remove('active', 'text-indigo-600');
+        link.classList.add('text-gray-700');
+      }
+    });
   }
 
-  // 2. Back to top button
+  // 2. ScrollSpy: Highlight current section in navigation on scroll
+  function onScroll() {
+    const scrollPos = window.pageYOffset + getStickyOffset() + 60;
+    let currentId = '#summary';
+
+    sections.forEach(section => {
+      const top = section.offsetTop;
+      const height = section.offsetHeight;
+      if (scrollPos >= top && scrollPos < top + height) {
+        currentId = '#' + section.getAttribute('id');
+      }
+    });
+
+    // If at the bottom of the page, activate #contact
+    if (window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 50) {
+      currentId = '#contact';
+    }
+
+    updateActiveLink(currentId);
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll(); // initial check
+
+  // 3. Back to Top Button
   const backToTopBtn = document.getElementById('back-to-top');
   if (backToTopBtn) {
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 350) {
+      if (window.pageYOffset > 400) {
         backToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
         backToTopBtn.classList.add('opacity-100');
       } else {
@@ -90,18 +91,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 3. Tactile Skeuomorphic Button Press Handler (Play tab buttons)
-  const tactileButtons = document.querySelectorAll('.tactile-btn');
-  tactileButtons.forEach(btn => {
-    const press = () => {
-      btn.dataset.pressed = 'true';
-    };
-    const release = () => {
-      btn.dataset.pressed = 'false';
-    };
-    btn.addEventListener('pointerdown', press);
-    btn.addEventListener('pointerup', release);
-    btn.addEventListener('pointerleave', release);
-    btn.addEventListener('pointercancel', release);
-  });
+  // 4. One-Click Copy Email Button
+  const copyBtn = document.getElementById('copy-email-btn');
+  const copyCheck = document.getElementById('copy-check');
+  if (copyBtn) {
+    copyBtn.addEventListener('click', async () => {
+      const email = copyBtn.getAttribute('data-email') || '455ahsankhan@gmail.com';
+      try {
+        await navigator.clipboard.writeText(email);
+        if (copyCheck) {
+          copyCheck.classList.remove('hidden');
+          setTimeout(() => {
+            copyCheck.classList.add('hidden');
+          }, 2500);
+        }
+      } catch (err) {
+        console.error('Failed to copy email: ', err);
+      }
+    });
+  }
 });

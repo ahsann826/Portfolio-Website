@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Khan Muhammad Ahsan, Software Engineer &amp; AI Founder</title>
-  <meta name="description" content="The personal portfolio of Khan Muhammad Ahsan — Software Engineer &amp; AI Founder studying at Ajou University." />
+  <title>Khan Muhammad Ahsan — Software Engineer &amp; AI Founder</title>
+  <meta name="description" content="Personal portfolio of Khan Muhammad Ahsan — Software Engineer &amp; AI Founder studying at Ajou University under the Global Korea Scholarship." />
   <meta name="author" content="Khan Muhammad Ahsan" />
   <meta name="robots" content="index, follow" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Khan Muhammad Ahsan, Software Engineer &amp; AI Founder" />
-  <meta property="og:description" content="The personal portfolio of Khan Muhammad Ahsan — Software Engineer &amp; AI Founder studying at Ajou University." />
+  <meta property="og:title" content="Khan Muhammad Ahsan — Software Engineer &amp; AI Founder" />
+  <meta property="og:description" content="Software Engineer &amp; AI Founder studying at Ajou University under the Global Korea Scholarship (GKS). CEO @ Preplit AI." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://ahsann826.github.io/Portfolio-Website/" />
 
@@ -25,601 +25,978 @@
   <link rel="icon" href="favicon.ico" />
 
   <style>
-    /* Nav link active indicator */
+    html {
+      scroll-behavior: smooth;
+    }
+    /* Sticky nav active indicator */
     .nav-link {
-      padding-bottom: 12px;
+      padding-bottom: 8px;
       border-bottom: 2px solid transparent;
       transition: color 0.15s ease, border-color 0.15s ease;
     }
     .nav-link:hover, .nav-link.active {
       border-bottom-color: #4f46e5;
+      color: #4f46e5;
     }
+    /* Hide scrollbar for tabs navigation on mobile */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    /* Window Chrome Styles */
+    .window-chrome {
+      height: 36px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      display: flex;
+      align-items: center;
+      padding: 0 16px;
+      gap: 12px;
+      background: rgba(0, 0, 0, 0.03);
+    }
+    .window-dots {
+      display: flex;
+      gap: 6px;
+    }
+    .window-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+    }
+    .window-dot-red { background: #ff5f56; }
+    .window-dot-yellow { background: #ffbd2e; }
+    .window-dot-green { background: #27c93f; }
   </style>
 </head>
-<body class="font-sans antialiased">
+<body class="font-sans antialiased text-gray-800" style="background-color: #F0EDE8;">
 
   <!-- Progressive 10-Layer Blurred Sticky Header -->
-  <header class="sticky top-0 z-50 w-full">
-    <div class="pointer-events-none absolute inset-x-0 top-0" style="height:100%" aria-hidden="true">
-      <div class="absolute inset-x-0 top-0" style="height:100%;backdrop-filter:blur(1px);-webkit-backdrop-filter:blur(1px);mask-image:linear-gradient(to bottom, black, transparent);-webkit-mask-image:linear-gradient(to bottom, black, transparent)"></div>
-      <div class="absolute inset-x-0 top-0" style="height:90%;backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px);mask-image:linear-gradient(to bottom, black, transparent);-webkit-mask-image:linear-gradient(to bottom, black, transparent)"></div>
-      <div class="absolute inset-x-0 top-0" style="height:80%;backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);mask-image:linear-gradient(to bottom, black, transparent);-webkit-mask-image:linear-gradient(to bottom, black, transparent)"></div>
-      <div class="absolute inset-x-0 top-0" style="height:70%;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);mask-image:linear-gradient(to bottom, black, transparent);-webkit-mask-image:linear-gradient(to bottom, black, transparent)"></div>
-      <div class="absolute inset-x-0 top-0" style="height:60%;backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);mask-image:linear-gradient(to bottom, black, transparent);-webkit-mask-image:linear-gradient(to bottom, black, transparent)"></div>
-      <div class="absolute inset-x-0 top-0" style="height:50%;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);mask-image:linear-gradient(to bottom, black, transparent);-webkit-mask-image:linear-gradient(to bottom, black, transparent)"></div>
-      <div class="absolute inset-x-0 top-0" style="height:40%;backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);mask-image:linear-gradient(to bottom, black, transparent);-webkit-mask-image:linear-gradient(to bottom, black, transparent)"></div>
-      <div class="absolute inset-x-0 top-0" style="height:30%;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);mask-image:linear-gradient(to bottom, black, transparent);-webkit-mask-image:linear-gradient(to bottom, black, transparent)"></div>
-      <div class="absolute inset-x-0 top-0" style="height:20%;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);mask-image:linear-gradient(to bottom, black, transparent);-webkit-mask-image:linear-gradient(to bottom, black, transparent)"></div>
-      <div class="absolute inset-x-0 top-0" style="height:10%;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);mask-image:linear-gradient(to bottom, black, transparent);-webkit-mask-image:linear-gradient(to bottom, black, transparent)"></div>
-    </div>
-    <div class="relative flex items-center justify-between h-[84px] px-6 md:px-10">
-      <div class="flex items-center gap-[5px]">
-        <a class="flex items-center gap-3" href="index.html">
-          <img src="assets/avatar.jpg" alt="Khan Muhammad Ahsan" width="40" height="40" class="rounded-full object-cover object-top" style="width:40px;height:40px;object-fit:cover;" />
-          <span class="text-title leading-[normal]">Khan Muhammad Ahsan</span>
+  <header class="sticky top-0 z-50 w-full" style="background-color: rgba(240, 237, 232, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);">
+    <div class="relative flex items-center justify-between h-[84px] px-6 md:px-12 max-w-[1200px] mx-auto border-b border-stroke-secondary/60">
+      <div class="flex items-center gap-3">
+        <a class="flex items-center gap-3" href="#summary">
+          <img src="assets/avatar.jpg" alt="Khan Muhammad Ahsan" width="40" height="40" class="rounded-full object-cover object-top border border-stroke-secondary shadow-sm" style="width:40px;height:40px;" />
+          <div class="flex flex-col">
+            <span class="text-title font-medium leading-tight">Khan Muhammad Ahsan</span>
+            <span class="text-xs text-gray-500 font-mono">Suwon, South Korea</span>
+          </div>
         </a>
       </div>
-      <a href="https://linkedin.com/in/khan-ahsan" target="_blank" rel="noopener noreferrer" style="border:2px solid transparent;background-image:linear-gradient(180deg, #ededed 0%, #cccccc 75%, #c2c2c2 100%), linear-gradient(180deg, #ffffff 0%, #bdbdbd 30%, #e1e1e1 100%);background-origin:padding-box, border-box;background-clip:padding-box, border-box;box-shadow:0px 0px 0px 0.5px rgba(0,0,0,0.25),0px 1px 2px -1px rgba(0,0,0,0.06),0px 2px 4px 0px rgba(0,0,0,0.04)" class="inline-flex items-center justify-center gap-1 rounded-full px-[16px] py-[8px] select-none text-body1 font-medium leading-[1.4] whitespace-nowrap transition-[transform,background-color,color,filter] duration-150 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 disabled:pointer-events-none disabled:opacity-50 text-[#4a4a47] bg-no-repeat hover:brightness-[1.04] active:scale-[0.97]">
-        <span class="bg-gradient-to-b from-[#75756f] to-[#4a4a47] bg-clip-text text-transparent">More on X</span>
-        <span aria-hidden="true" class="inline-flex size-4 shrink-0 items-center justify-center [&_svg]:size-4">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"><path stroke="currentColor" stroke-linecap="square" stroke-width="1.2" d="M11.667 4.333 4 12M5.333 4H12v6.667"></path></svg>
-        </span>
-      </a>
+      <div class="flex items-center gap-3">
+        <a href="https://www.linkedin.com/in/455ahsankhan" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center justify-center gap-1 rounded-full px-4 py-2 text-sm font-medium text-gray-700 bg-white/80 border border-gray-300 hover:bg-white transition-all shadow-sm">
+          <span>LinkedIn</span>
+          <span class="text-xs">↗</span>
+        </a>
+        <a href="#contact" class="inline-flex items-center justify-center gap-1 rounded-full px-4 py-2 text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 transition-colors shadow-sm">
+          <span>Get in Touch</span>
+          <span class="text-xs">→</span>
+        </a>
+      </div>
     </div>
   </header>
 
+  <!-- Sticky Top Navigation Bar -->
+  <div id="tabs-container" class="sticky top-[84px] z-40 w-full px-6 md:px-12 border-b border-stroke-secondary" style="background-color: rgba(240, 237, 232, 0.95); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);">
+    <nav class="max-w-[1200px] mx-auto flex items-center justify-start sm:justify-center gap-6 md:gap-8 overflow-x-auto no-scrollbar py-3.5" aria-label="Main navigation">
+      <a href="#summary" class="nav-link text-sm font-medium whitespace-nowrap text-gray-700 hover:text-indigo-600 active">Summary</a>
+      <a href="#projects" class="nav-link text-sm font-medium whitespace-nowrap text-gray-700 hover:text-indigo-600">Projects</a>
+      <a href="#experience" class="nav-link text-sm font-medium whitespace-nowrap text-gray-700 hover:text-indigo-600">Experience</a>
+      <a href="#education" class="nav-link text-sm font-medium whitespace-nowrap text-gray-700 hover:text-indigo-600">Education</a>
+      <a href="#skills" class="nav-link text-sm font-medium whitespace-nowrap text-gray-700 hover:text-indigo-600">Skills</a>
+      <a href="#contact" class="nav-link text-sm font-medium whitespace-nowrap text-gray-700 hover:text-indigo-600">Contact</a>
+    </nav>
+  </div>
+
   <div class="min-h-screen flex flex-col text-gray-800">
     <main class="relative z-10 flex min-h-dvh flex-1 flex-col">
-      <div class="w-full flex flex-col mb-[120px]">
+      <div class="w-full flex flex-col mb-24 max-w-[1100px] mx-auto px-6 md:px-12">
 
-        <!-- Intro Section -->
-        <section class="w-full px-6 md:px-10 pt-8">
-          <div class="flex flex-col gap-8 pt-15">
-            <div class="flex flex-col gap-0">
-              <p class="text-body1 max-w-[600px] text-balance">I&#x27;m a Software Engineer &amp; AI Founder studying at <a href="https://www.ajou.ac.kr/en/" target="_blank" rel="noopener noreferrer" class="underline">Ajou University</a>.</p>
-              <p class="text-body1 max-w-[600px] text-balance">I believe we&#x27;ll all be happier when software is designed with care.</p>
+        <!-- ================= SECTION 1: SUMMARY ================= -->
+        <section id="summary" class="pt-16 pb-16 border-b border-stroke-secondary">
+          <div class="flex flex-col gap-6">
+            
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-medium bg-amber-100 text-amber-900 border border-amber-300">
+                ✦ Global Korea Scholarship (GKS) Fellow
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-medium bg-indigo-100 text-indigo-900 border border-indigo-300">
+                CEO @ Preplit AI
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-medium bg-stone-200/80 text-stone-800 border border-stone-300">
+                Ajou University (GPA: 3.8/4.5)
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-medium bg-emerald-100 text-emerald-900 border border-emerald-300">
+                Top 20 • Incheon Startup Challenge 2026
+              </span>
             </div>
+
+            <h1 class="text-3xl md:text-5xl font-medium tracking-tight text-gray-900 leading-[1.25]">
+              Software engineering student with a sharp focus on user experience &amp; AI systems.
+            </h1>
+
+            <p class="text-base md:text-lg text-gray-700 max-w-[800px] leading-relaxed">
+              Currently studying Software Engineering at <a href="https://www.ajou.ac.kr/en/" target="_blank" rel="noopener noreferrer" class="underline underline-offset-4 decoration-gray-400 hover:text-indigo-600 font-medium">Ajou University</a> in South Korea under the prestigious Global Korea Scholarship (GKS). Chief Executive Officer of <a href="https://preplitai.com" target="_blank" rel="noopener noreferrer" class="underline underline-offset-4 text-indigo-600 hover:text-indigo-800 font-medium">Preplit AI</a>. My dream is to contribute to the world by shipping products that simplify people's lives as technology rapidly advances.
+            </p>
+
+            <div class="flex flex-wrap items-center gap-3 pt-4">
+              <a href="#projects" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium bg-gray-900 text-white hover:bg-black transition-colors shadow-sm">
+                <span>View Projects</span>
+                <span aria-hidden="true">↓</span>
+              </a>
+              <a href="#contact" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium bg-white/90 text-gray-800 border border-gray-300 hover:bg-white transition-colors shadow-sm">
+                <span>Get in Touch</span>
+                <span aria-hidden="true">→</span>
+              </a>
+              <a href="https://www.linkedin.com/in/455ahsankhan" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full text-sm font-medium text-gray-600 hover:text-indigo-600 transition-colors">
+                <span>LinkedIn</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://github.com/ahsann826" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full text-sm font-medium text-gray-600 hover:text-indigo-600 transition-colors">
+                <span>GitHub</span>
+                <span class="text-xs">↗</span>
+              </a>
+            </div>
+
           </div>
         </section>
 
-        <!-- Navigation Tabs Bar -->
-        <div id="tabs-container" class="mt-14 w-auto px-6 md:px-10">
-          <nav class="w-full flex justify-center gap-6 border-b border-stroke-secondary" aria-label="Main navigation">
-            <a href="#summary" class="nav-link text-body1 font-medium whitespace-nowrap text-gray-800 hover:text-indigo-600">Summary</a>
-            <a href="#projects" class="nav-link text-body1 font-medium whitespace-nowrap text-gray-800 hover:text-indigo-600">Projects</a>
-            <a href="#experience" class="nav-link text-body1 font-medium whitespace-nowrap text-gray-800 hover:text-indigo-600">Experience</a>
-            <a href="#education" class="nav-link text-body1 font-medium whitespace-nowrap text-gray-800 hover:text-indigo-600">Education</a>
-            <a href="#skills" class="nav-link text-body1 font-medium whitespace-nowrap text-gray-800 hover:text-indigo-600">Skills</a>
-            <a href="#contact" class="nav-link text-body1 font-medium whitespace-nowrap text-gray-800 hover:text-indigo-600">Contact</a>
-          </nav>
-        </div>
+        <!-- ================= SECTION 2: PROJECTS ================= -->
+        <section id="projects" class="pt-16 pb-16 border-b border-stroke-secondary">
+          <div class="flex flex-col gap-12">
+            
+            <div class="flex flex-col gap-2">
+              <h2 class="text-2xl md:text-3xl font-medium tracking-tight text-gray-900">Featured Projects &amp; Ventures</h2>
+              <p class="text-base text-gray-600">Production software, AI agent platforms, and engineered web systems.</p>
+            </div>
 
-        <!-- ================= TAB 1: WORK ================= -->
-        <section id="tab-panel-work" class="tab-panel mt-6 w-full overflow-x-hidden">
-          <div class="w-full">
-            <div class="flex flex-col gap-30">
+            <div class="flex flex-col gap-16">
 
-              <!-- Project 1: Sanctum App -->
-              <section class="flex flex-col gap-3">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  <div class="relative aspect-[16/9] bg-indigo-50 overflow-hidden">
-                    <img alt="Sanctum App 1" loading="lazy" decoding="async" class="object-cover absolute inset-0 w-full h-full" src="https://via.placeholder.com/400x300?text=Project+Image" />
-                  </div>
-                  <div class="relative aspect-[16/9] bg-indigo-50 overflow-hidden">
-                    <img alt="Sanctum App 2" loading="lazy" decoding="async" class="object-cover absolute inset-0 w-full h-full" src="_next/02223c.png" />
-                  </div>
-                  <div class="relative aspect-[16/9] bg-indigo-50 overflow-hidden">
-                    <img alt="Sanctum App 3" loading="lazy" decoding="async" class="object-cover absolute inset-0 w-full h-full" src="_next/03b1ff.png" />
-                  </div>
-                  <div class="relative aspect-[16/9] bg-indigo-50 overflow-hidden">
-                    <img alt="Sanctum App 4" loading="lazy" decoding="async" class="object-cover absolute inset-0 w-full h-full" src="_next/04043a.png" />
-                  </div>
-                  <div class="relative aspect-[16/9] bg-indigo-50 overflow-hidden">
-                    <img alt="Sanctum App 5" loading="lazy" decoding="async" class="object-cover absolute inset-0 w-full h-full" src="_next/051e31.png" />
-                  </div>
-                  <div class="relative aspect-[16/9] bg-indigo-50 overflow-hidden">
-                    <img alt="Sanctum App 6" loading="lazy" decoding="async" class="object-cover absolute inset-0 w-full h-full" src="_next/06065f.png" />
-                  </div>
-                </div>
-                <div class="px-6 md:px-10 pt-4 grid grid-cols-1 md:grid-cols-2 gap-3 mt-3">
-                  <div class="flex md:flex-col gap-3 md:gap-2 items-center md:items-start">
-                    <h3 class="text-display">
-                      <a href="https://sanctum.so/app" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-1">
-                        Sanctum App
-                        <span class="relative inline-block overflow-hidden">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" class="block transition-transform duration-200 ease-in-out group-hover:translate-x-full group-hover:-translate-y-full"><path stroke="currentColor" stroke-linecap="square" stroke-width="1.2" d="M11.667 4.333 4 12M5.333 4H12v6.667"></path></svg>
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" class="absolute inset-0 block transition-transform duration-200 ease-in-out -translate-x-full translate-y-full group-hover:translate-x-0 group-hover:translate-y-0"><path stroke="currentColor" stroke-linecap="square" stroke-width="1.2" d="M11.667 4.333 4 12M5.333 4H12v6.667"></path></svg>
-                        </span>
-                      </a>
-                    </h3>
-                    <p class="text-body1 text-content-tertiary">Work</p>
-                  </div>
-                  <div class="flex flex-col items-start gap-5">
-                    <p class="text-body1 text-content-secondary text-balance max-w-[500px] whitespace-pre-line">End-to-end product design for Sanctum’s mobile app, from icons and design system to product flows and features, marking Sanctum’s entry into consumer mobile.</p>
-                    <div class="flex flex-wrap items-center gap-2">
-                      <a href="https://sanctum.so/app" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1 rounded-full px-[14px] py-[6px] select-none text-body1 font-medium leading-[1.4] whitespace-nowrap transition-[transform,background-color,color,filter] duration-150 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-surface-secondary text-gray-800 hover:bg-sand-4 active:scale-[0.97]">
-                        <span>View project</span>
-                        <span aria-hidden="true" class="inline-flex size-4 shrink-0 items-center justify-center [&_svg]:size-4">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" class="size-4 rotate-180" aria-hidden="true"><path stroke="currentColor" stroke-linecap="square" stroke-width="1.2" d="m7.333 12.002-4-4 4-4m-3.667 4h9"></path></svg>
-                        </span>
-                      </a>
+              <!-- Project 1: Preplit AI -->
+              <article class="flex flex-col gap-6 p-6 md:p-8 rounded-2xl bg-white/70 border border-stroke-secondary shadow-sm">
+                <div class="work-preview-stage rounded-xl overflow-hidden border border-gray-200 bg-stone-50">
+                  <div class="window-chrome">
+                    <div class="window-dots">
+                      <span class="window-dot window-dot-red"></span>
+                      <span class="window-dot window-dot-yellow"></span>
+                      <span class="window-dot window-dot-green"></span>
                     </div>
+                    <span class="window-title font-mono text-xs text-gray-500">preplitai.com — AI Education Workspace &amp; Agentic Tutor</span>
+                    <span class="ml-auto inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-mono bg-emerald-100 text-emerald-800">
+                      <span class="size-1.5 rounded-full bg-emerald-500 animate-pulse"></span> LIVE IN PRODUCTION
+                    </span>
                   </div>
-                </div>
-              </section>
-
-              <!-- Project 2: Sanctum Web -->
-              <section class="flex flex-col gap-3">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  <div class="relative aspect-[16/9] bg-sand-2 overflow-hidden">
-                    <video src="assets/work/sanctum-website/01.mp4" autoPlay="" loop="" muted="" playsInline="" class="absolute inset-0 m-auto h-[71.25%] object-contain border-[0.3px] border-stroke-secondary"></video>
-                  </div>
-                  <div class="relative aspect-[16/9] bg-indigo-50 overflow-hidden">
-                    <img alt="Sanctum Web 2" loading="lazy" decoding="async" class="object-cover absolute inset-0 w-full h-full" src="_next/022da4.png" />
-                  </div>
-                  <div class="relative aspect-[16/9] bg-indigo-50 overflow-hidden">
-                    <img alt="Sanctum Web 3" loading="lazy" decoding="async" class="object-cover absolute inset-0 w-full h-full" src="_next/03a312.png" />
-                  </div>
-                  <div class="relative aspect-[16/9] bg-indigo-50 overflow-hidden">
-                    <img alt="Sanctum Web 4" loading="lazy" decoding="async" class="object-cover absolute inset-0 w-full h-full" src="_next/042458.png" />
-                  </div>
-                </div>
-                <div class="px-6 md:px-10 pt-4 grid grid-cols-1 md:grid-cols-2 gap-3 mt-3">
-                  <div class="flex md:flex-col gap-3 md:gap-2 items-center md:items-start">
-                    <h3 class="text-display">
-                      <a href="https://www.sanctum.so/" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-1">
-                        Sanctum Web
-                        <span class="relative inline-block overflow-hidden">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" class="block transition-transform duration-200 ease-in-out group-hover:translate-x-full group-hover:-translate-y-full"><path stroke="currentColor" stroke-linecap="square" stroke-width="1.2" d="M11.667 4.333 4 12M5.333 4H12v6.667"></path></svg>
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" class="absolute inset-0 block transition-transform duration-200 ease-in-out -translate-x-full translate-y-full group-hover:translate-x-0 group-hover:translate-y-0"><path stroke="currentColor" stroke-linecap="square" stroke-width="1.2" d="M11.667 4.333 4 12M5.333 4H12v6.667"></path></svg>
-                        </span>
-                      </a>
-                    </h3>
-                    <p class="text-body1 text-content-tertiary">Work</p>
-                  </div>
-                  <div class="flex flex-col items-start gap-5">
-                    <p class="text-body1 text-content-secondary text-balance max-w-[500px] whitespace-pre-line">Responsive web design, brand and design system for Sanctum, spanning identity, landing pages and the core web app. Built the design foundations and team from zero as Sanctum grew into one of the largest protocols on Solana.</p>
-                  </div>
-                </div>
-              </section>
-
-              <!-- Project 3: Focus Island -->
-              <section class="flex flex-col gap-3">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  <div class="relative aspect-[16/9] bg-sand-2 overflow-hidden">
-                    <video src="assets/work/misc/01.mp4" autoPlay="" loop="" muted="" playsInline="" class="absolute inset-0 m-auto h-[71.25%] object-contain border-[0.3px] border-stroke-secondary"></video>
-                  </div>
-                  <div class="relative aspect-[16/9] bg-indigo-50 overflow-hidden">
-                    <img alt="Focus Island 2" loading="lazy" decoding="async" class="object-cover absolute inset-0 w-full h-full" src="_next/02c1ac.png" />
-                  </div>
-                </div>
-                <div class="px-6 md:px-10 pt-4 grid grid-cols-1 md:grid-cols-2 gap-3 mt-3">
-                  <div class="flex md:flex-col gap-3 md:gap-2 items-center md:items-start">
-                    <h3 class="text-display">Focus Island</h3>
-                    <p class="text-body1 text-content-tertiary">Personal Project</p>
-                  </div>
-                  <div class="flex flex-col items-start gap-5">
-                    <p class="text-body1 text-content-secondary text-balance max-w-[500px] whitespace-pre-line">Designed and built a dynamic-island-style macOS app to help with my focus.</p>
-                    <div class="flex flex-wrap items-center gap-2">
-                      <div class="flex flex-row gap-2 items-center">
-                        <button type="button" class="inline-flex items-center justify-center gap-1 rounded-full px-[14px] py-[6px] select-none text-body1 font-medium leading-[1.4] whitespace-nowrap transition-[transform,background-color,color,filter] duration-150 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-surface-secondary text-gray-800 hover:bg-sand-4 active:scale-[0.97]">
-                          <span>Download</span>
-                        </button>
-                        <p class="text-body2 text-content-tertiary">Latest version: v0.2.1, desktop only</p>
+                  <div class="p-6 md:p-8 flex flex-col justify-between gap-6 bg-white">
+                    <div class="flex flex-col gap-2">
+                      <span class="text-xs font-mono text-indigo-600 uppercase tracking-wider font-semibold">Flagship Venture • AI Agentic Platform</span>
+                      <h4 class="text-xl md:text-2xl font-semibold text-gray-900">Personalized AI Tutor &amp; Lecture Distillation Engine</h4>
+                      <p class="text-sm text-gray-600 max-w-2xl">End-to-end multi-agent AI architecture processing lecture notes, structured study workflows, and high-precision academic tutoring.</p>
+                    </div>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4 border-t border-gray-100">
+                      <div class="p-3 rounded-lg bg-stone-50 border border-gray-100">
+                        <span class="text-[11px] font-mono text-gray-500 uppercase">Architecture</span>
+                        <p class="text-sm font-semibold text-gray-900 mt-0.5">Next.js 15 &amp; Supabase</p>
+                      </div>
+                      <div class="p-3 rounded-lg bg-stone-50 border border-gray-100">
+                        <span class="text-[11px] font-mono text-gray-500 uppercase">Vector Database</span>
+                        <p class="text-sm font-semibold text-gray-900 mt-0.5">pgvector Semantic Search</p>
+                      </div>
+                      <div class="p-3 rounded-lg bg-stone-50 border border-gray-100 col-span-2 sm:col-span-1">
+                        <span class="text-[11px] font-mono text-gray-500 uppercase">AI Pipeline</span>
+                        <p class="text-sm font-semibold text-emerald-600 mt-0.5">Sub-second Streaming</p>
                       </div>
                     </div>
                   </div>
                 </div>
-              </section>
 
-              <!-- Project 4: Gateway -->
-              <section class="flex flex-col gap-3">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  <div class="relative aspect-[16/9] bg-indigo-50 overflow-hidden">
-                    <img alt="Gateway 1" loading="lazy" decoding="async" class="object-cover absolute inset-0 w-full h-full" src="_next/015e25.png" />
+                <div class="flex flex-col md:flex-row md:items-start justify-between gap-6">
+                  <div class="flex flex-col gap-3 max-w-2xl">
+                    <div class="flex items-center gap-3">
+                      <h3 class="text-xl font-semibold text-gray-900">Preplit AI</h3>
+                      <span class="text-xs font-mono text-gray-500">2026 – Present</span>
+                    </div>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                      Architecting and developing an AI-powered education workspace using Next.js, React, TypeScript, Tailwind CSS, and AI APIs, with features for AI tutoring, note processing, study tools, and academic productivity. Building full-stack workflows including AI agent pipelines, API integrations, authentication, file processing, and database connectivity.
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-1">
+                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">Next.js 15</span>
+                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">React</span>
+                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">TypeScript</span>
+                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">Tailwind CSS</span>
+                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">pgvector</span>
+                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">Supabase</span>
+                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">AI APIs</span>
+                    </div>
                   </div>
-                  <div class="relative aspect-[16/9] bg-indigo-50 overflow-hidden">
-                    <img alt="Gateway 2" loading="lazy" decoding="async" class="object-cover absolute inset-0 w-full h-full" src="_next/022327.png" />
-                  </div>
-                </div>
-                <div class="px-6 md:px-10 pt-4 grid grid-cols-1 md:grid-cols-2 gap-3 mt-3">
-                  <div class="flex md:flex-col gap-3 md:gap-2 items-center md:items-start">
-                    <h3 class="text-display">
-                      <a href="https://gateway.sanctum.so/" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-1">
-                        Gateway
-                        <span class="relative inline-block overflow-hidden">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" class="block transition-transform duration-200 ease-in-out group-hover:translate-x-full group-hover:-translate-y-full"><path stroke="currentColor" stroke-linecap="square" stroke-width="1.2" d="M11.667 4.333 4 12M5.333 4H12v6.667"></path></svg>
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" class="absolute inset-0 block transition-transform duration-200 ease-in-out -translate-x-full translate-y-full group-hover:translate-x-0 group-hover:translate-y-0"><path stroke="currentColor" stroke-linecap="square" stroke-width="1.2" d="M11.667 4.333 4 12M5.333 4H12v6.667"></path></svg>
-                        </span>
-                      </a>
-                    </h3>
-                    <p class="text-body1 text-content-tertiary">Work</p>
-                  </div>
-                  <div class="flex flex-col items-start gap-5">
-                    <p class="text-body1 text-content-secondary text-balance max-w-[500px] whitespace-pre-line">Gateway is Sanctum’s expansion into the transaction-landing market. Designed the logo and responsive landing page, working with developers to make a technical product more approachable while staying true to Sanctum’s visual language.</p>
-                  </div>
-                </div>
-              </section>
 
-              <!-- Project 5: Elfa.ai -->
-              <section class="flex flex-col gap-3">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  <div class="relative aspect-[16/9] bg-indigo-50 overflow-hidden">
-                    <img alt="Elfa.ai 1" loading="lazy" decoding="async" class="object-cover absolute inset-0 w-full h-full" src="_next/01e1ca.png" />
-                  </div>
-                  <div class="relative aspect-[16/9] bg-indigo-50 overflow-hidden">
-                    <img alt="Elfa.ai 2" loading="lazy" decoding="async" class="object-cover absolute inset-0 w-full h-full" src="_next/022d46.png" />
+                  <div class="flex flex-row md:flex-col gap-2 shrink-0">
+                    <a href="https://preplitai.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-full text-xs font-medium text-white bg-indigo-600 hover:bg-indigo-700 transition-colors shadow-sm">
+                      <span>Visit Live Site</span>
+                      <span>↗</span>
+                    </a>
                   </div>
                 </div>
-                <div class="px-6 md:px-10 pt-4 grid grid-cols-1 md:grid-cols-2 gap-3 mt-3">
-                  <div class="flex md:flex-col gap-3 md:gap-2 items-center md:items-start">
-                    <h3 class="text-display">
-                      <a href="https://elfa.ai/" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-1">
-                        Elfa.ai
-                        <span class="relative inline-block overflow-hidden">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" class="block transition-transform duration-200 ease-in-out group-hover:translate-x-full group-hover:-translate-y-full"><path stroke="currentColor" stroke-linecap="square" stroke-width="1.2" d="M11.667 4.333 4 12M5.333 4H12v6.667"></path></svg>
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" class="absolute inset-0 block transition-transform duration-200 ease-in-out -translate-x-full translate-y-full group-hover:translate-x-0 group-hover:translate-y-0"><path stroke="currentColor" stroke-linecap="square" stroke-width="1.2" d="M11.667 4.333 4 12M5.333 4H12v6.667"></path></svg>
-                        </span>
-                      </a>
-                    </h3>
-                    <p class="text-body1 text-content-tertiary">Freelance</p>
-                  </div>
-                  <div class="flex flex-col items-start gap-5">
-                    <p class="text-body1 text-content-secondary text-balance max-w-[500px] whitespace-pre-line">Redesigned Elfa.ai&#x27;s design system for a more polished web experience as it scales AI trading to the masses.</p>
-                  </div>
-                </div>
-              </section>
+              </article>
 
-              <!-- Project 6: AYANA -->
-              <section class="flex flex-col gap-3">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  <div class="relative aspect-[16/9] bg-indigo-50 overflow-hidden">
-                    <img alt="AYANA 1" loading="lazy" decoding="async" class="object-cover absolute inset-0 w-full h-full" src="_next/0181e1.png" />
+              <!-- Project 2: CampusRank -->
+              <article class="flex flex-col gap-6 p-6 md:p-8 rounded-2xl bg-white/70 border border-stroke-secondary shadow-sm">
+                <div class="work-preview-stage rounded-xl overflow-hidden border border-gray-200 bg-stone-50">
+                  <div class="window-chrome">
+                    <div class="window-dots">
+                      <span class="window-dot window-dot-red"></span>
+                      <span class="window-dot window-dot-yellow"></span>
+                      <span class="window-dot window-dot-green"></span>
+                    </div>
+                    <span class="window-title font-mono text-xs text-gray-500">campusrank-ruby.vercel.app — University Competitive Platform</span>
+                    <span class="ml-auto inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-mono bg-emerald-100 text-emerald-800">
+                      LIVE
+                    </span>
                   </div>
-                  <div class="relative aspect-[16/9] bg-indigo-50 overflow-hidden">
-                    <img alt="AYANA 2" loading="lazy" decoding="async" class="object-cover absolute inset-0 w-full h-full" src="_next/02908d.png" />
+                  <div class="p-6 md:p-8 flex flex-col justify-between gap-6 bg-white">
+                    <div class="flex flex-col gap-2">
+                      <span class="text-xs font-mono text-indigo-600 uppercase tracking-wider font-semibold">Competitive Ranking System</span>
+                      <h4 class="text-xl md:text-2xl font-semibold text-gray-900">University Tournament &amp; Global Student Leaderboard</h4>
+                      <p class="text-sm text-gray-600 max-w-2xl">Competitive platform for university students featuring verified credentials, university tier standings, and automated ranking algorithms.</p>
+                    </div>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4 border-t border-gray-100">
+                      <div class="p-3 rounded-lg bg-stone-50 border border-gray-100">
+                        <span class="text-[11px] font-mono text-gray-500 uppercase">Scoring Engine</span>
+                        <p class="text-sm font-semibold text-gray-900 mt-0.5">Dynamic Elo Scoring</p>
+                      </div>
+                      <div class="p-3 rounded-lg bg-stone-50 border border-gray-100">
+                        <span class="text-[11px] font-mono text-gray-500 uppercase">Deployment</span>
+                        <p class="text-sm font-semibold text-gray-900 mt-0.5">Vercel &amp; Edge API</p>
+                      </div>
+                      <div class="p-3 rounded-lg bg-stone-50 border border-gray-100 col-span-2 sm:col-span-1">
+                        <span class="text-[11px] font-mono text-gray-500 uppercase">Status</span>
+                        <p class="text-sm font-semibold text-emerald-600 mt-0.5">Active Arena</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="px-6 md:px-10 pt-4 grid grid-cols-1 md:grid-cols-2 gap-3 mt-3">
-                  <div class="flex md:flex-col gap-3 md:gap-2 items-center md:items-start">
-                    <h3 class="text-display">
-                      <a href="https://ayana.com/" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-1">
-                        AYANA
-                        <span class="relative inline-block overflow-hidden">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" class="block transition-transform duration-200 ease-in-out group-hover:translate-x-full group-hover:-translate-y-full"><path stroke="currentColor" stroke-linecap="square" stroke-width="1.2" d="M11.667 4.333 4 12M5.333 4H12v6.667"></path></svg>
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" class="absolute inset-0 block transition-transform duration-200 ease-in-out -translate-x-full translate-y-full group-hover:translate-x-0 group-hover:translate-y-0"><path stroke="currentColor" stroke-linecap="square" stroke-width="1.2" d="M11.667 4.333 4 12M5.333 4H12v6.667"></path></svg>
-                        </span>
-                      </a>
-                    </h3>
-                    <p class="text-body1 text-content-tertiary">Freelance</p>
+
+                <div class="flex flex-col md:flex-row md:items-start justify-between gap-6">
+                  <div class="flex flex-col gap-3 max-w-2xl">
+                    <div class="flex items-center gap-3">
+                      <h3 class="text-xl font-semibold text-gray-900">CampusRank</h3>
+                      <span class="text-xs font-mono text-gray-500">2026 – Present</span>
+                    </div>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                      A global student and university competitive ranking platform with leaderboards, verifiable user profiles, university tiers, and algorithmic scoring for tech competitions and academic achievements.
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-1">
+                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">Next.js</span>
+                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">TypeScript</span>
+                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">Tailwind CSS</span>
+                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">PostgreSQL</span>
+                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">Algorithmic Scoring</span>
+                    </div>
                   </div>
-                  <div class="flex flex-col items-start gap-5">
-                    <p class="text-body1 text-content-secondary text-balance max-w-[500px] whitespace-pre-line">Redesigned the iOS app for AYANA, one of the top luxury resort destinations in the world.</p>
+
+                  <div class="flex flex-row md:flex-col gap-2 shrink-0">
+                    <a href="https://campusrank-ruby.vercel.app" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-full text-xs font-medium text-white bg-indigo-600 hover:bg-indigo-700 transition-colors shadow-sm">
+                      <span>View Live App</span>
+                      <span>↗</span>
+                    </a>
                   </div>
                 </div>
-              </section>
+              </article>
+
+              <!-- Project 3: Resumate -->
+              <article class="flex flex-col gap-6 p-6 md:p-8 rounded-2xl bg-white/70 border border-stroke-secondary shadow-sm">
+                <div class="work-preview-stage rounded-xl overflow-hidden border border-gray-200 bg-stone-50">
+                  <div class="window-chrome">
+                    <div class="window-dots">
+                      <span class="window-dot window-dot-red"></span>
+                      <span class="window-dot window-dot-yellow"></span>
+                      <span class="window-dot window-dot-green"></span>
+                    </div>
+                    <span class="window-title font-mono text-xs text-gray-500">resumate-ai-lake.vercel.app — AI Resume Intelligence</span>
+                    <span class="ml-auto inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-mono bg-emerald-100 text-emerald-800">
+                      LIVE
+                    </span>
+                  </div>
+                  <div class="p-6 md:p-8 flex flex-col justify-between gap-6 bg-white">
+                    <div class="flex flex-col gap-2">
+                      <span class="text-xs font-mono text-indigo-600 uppercase tracking-wider font-semibold">AI Resume Intelligence</span>
+                      <h4 class="text-xl md:text-2xl font-semibold text-gray-900">ATS Optimization &amp; Automated Career Critique</h4>
+                      <p class="text-sm text-gray-600 max-w-2xl">Performs comprehensive resume analysis, ATS compatibility scoring, action-verb enhancement, and line-by-line automated critique for technical candidates.</p>
+                    </div>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4 border-t border-gray-100">
+                      <div class="p-3 rounded-lg bg-stone-50 border border-gray-100">
+                        <span class="text-[11px] font-mono text-gray-500 uppercase">Analysis Engine</span>
+                        <p class="text-sm font-semibold text-gray-900 mt-0.5">NLP Resume Parser</p>
+                      </div>
+                      <div class="p-3 rounded-lg bg-stone-50 border border-gray-100">
+                        <span class="text-[11px] font-mono text-gray-500 uppercase">Target Score</span>
+                        <p class="text-sm font-semibold text-indigo-600 mt-0.5">96/100 ATS Compatibility</p>
+                      </div>
+                      <div class="p-3 rounded-lg bg-stone-50 border border-gray-100 col-span-2 sm:col-span-1">
+                        <span class="text-[11px] font-mono text-gray-500 uppercase">Feedback</span>
+                        <p class="text-sm font-semibold text-gray-900 mt-0.5">Instant Actionable Fixes</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row md:items-start justify-between gap-6">
+                  <div class="flex flex-col gap-3 max-w-2xl">
+                    <div class="flex items-center gap-3">
+                      <h3 class="text-xl font-semibold text-gray-900">Resumate</h3>
+                      <span class="text-xs font-mono text-gray-500">2026 – Present</span>
+                    </div>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                      AI-driven platform performing deep resume analysis, ATS compatibility scoring, action-verb enhancement, and line-by-line automated critique to maximize interview callback rates for software engineers.
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-1">
+                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">Next.js</span>
+                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">TypeScript</span>
+                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">Tailwind CSS</span>
+                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">AI Analysis Engine</span>
+                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">NLP Feedback</span>
+                    </div>
+                  </div>
+
+                  <div class="flex flex-row md:flex-col gap-2 shrink-0">
+                    <a href="https://resumate-ai-lake.vercel.app" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-full text-xs font-medium text-white bg-indigo-600 hover:bg-indigo-700 transition-colors shadow-sm">
+                      <span>View Live App</span>
+                      <span>↗</span>
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Project 4: Covenant & Co -->
+              <article class="flex flex-col gap-6 p-6 md:p-8 rounded-2xl bg-white/70 border border-stroke-secondary shadow-sm">
+                <div class="work-preview-stage rounded-xl overflow-hidden border border-gray-200 bg-stone-50">
+                  <div class="window-chrome">
+                    <div class="window-dots">
+                      <span class="window-dot window-dot-red"></span>
+                      <span class="window-dot window-dot-yellow"></span>
+                      <span class="window-dot window-dot-green"></span>
+                    </div>
+                    <span class="window-title font-mono text-xs text-gray-500">covenantwatch — Minimalist Horology Brand</span>
+                    <span class="ml-auto inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-mono bg-stone-200 text-stone-800">
+                      VENTURE
+                    </span>
+                  </div>
+                  <div class="p-6 md:p-8 flex flex-col justify-between gap-6 bg-white">
+                    <div class="flex flex-col gap-2">
+                      <span class="text-xs font-mono text-indigo-600 uppercase tracking-wider font-semibold">Direct-to-Consumer Horology</span>
+                      <h4 class="text-xl md:text-2xl font-semibold text-gray-900">Minimalist Timepieces &amp; International Supply Chain</h4>
+                      <p class="text-sm text-gray-600 max-w-2xl">Scaled an international timepiece brand with 100,000+ all-time storefront visitors, coordinating precision B2B supply chains across South Korea and China.</p>
+                    </div>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4 border-t border-gray-100">
+                      <div class="p-3 rounded-lg bg-stone-50 border border-gray-100">
+                        <span class="text-[11px] font-mono text-gray-500 uppercase">Traffic</span>
+                        <p class="text-sm font-semibold text-gray-900 mt-0.5">100k+ Visitors</p>
+                      </div>
+                      <div class="p-3 rounded-lg bg-stone-50 border border-gray-100">
+                        <span class="text-[11px] font-mono text-gray-500 uppercase">Operations</span>
+                        <p class="text-sm font-semibold text-gray-900 mt-0.5">Cross-Border Logistics</p>
+                      </div>
+                      <div class="p-3 rounded-lg bg-stone-50 border border-gray-100 col-span-2 sm:col-span-1">
+                        <span class="text-[11px] font-mono text-gray-500 uppercase">Supply Chain</span>
+                        <p class="text-sm font-semibold text-stone-700 mt-0.5">Direct Manufacturer</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row md:items-start justify-between gap-6">
+                  <div class="flex flex-col gap-3 max-w-2xl">
+                    <div class="flex items-center gap-3">
+                      <h3 class="text-xl font-semibold text-gray-900">Covenant &amp; Co</h3>
+                      <span class="text-xs font-mono text-gray-500">2024 – 2026</span>
+                    </div>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                      Founded and scaled an e-commerce storefront for minimalist luxury timepieces, garnering 100,000+ all-time visitors. Managed cross-border B2B supply chain procurement and manufacturing negotiations across China and South Korea.
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-1">
+                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">E-Commerce</span>
+                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">B2B Supply Chain</span>
+                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">China Sourcing</span>
+                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">Brand Strategy</span>
+                    </div>
+                  </div>
+
+                  <div class="flex flex-row md:flex-col gap-2 shrink-0">
+                    <a href="https://instagram.com/covenantwatch" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-full text-xs font-medium text-gray-700 bg-white border border-gray-300 hover:bg-stone-50 transition-colors shadow-sm">
+                      <span>View Brand</span>
+                      <span>↗</span>
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Project 5: Autonomous Screen Automation -->
+              <article class="flex flex-col gap-6 p-6 md:p-8 rounded-2xl bg-white/70 border border-stroke-secondary shadow-sm">
+                <div class="work-preview-stage rounded-xl overflow-hidden border border-gray-200 bg-stone-50">
+                  <div class="window-chrome">
+                    <div class="window-dots">
+                      <span class="window-dot window-dot-red"></span>
+                      <span class="window-dot window-dot-yellow"></span>
+                      <span class="window-dot window-dot-green"></span>
+                    </div>
+                    <span class="window-title font-mono text-xs text-gray-500">vision_bot.py — Computer Vision Automation Engine</span>
+                    <span class="ml-auto inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-mono bg-stone-200 text-stone-800">
+                      CV SYSTEM
+                    </span>
+                  </div>
+                  <div class="p-6 md:p-8 flex flex-col justify-between gap-6 bg-white">
+                    <div class="flex flex-col gap-2">
+                      <span class="text-xs font-mono text-indigo-600 uppercase tracking-wider font-semibold">Computer Vision &amp; Telemetry</span>
+                      <h4 class="text-xl md:text-2xl font-semibold text-gray-900">Sub-Pixel Template Matching &amp; Desktop Pathfinding</h4>
+                      <p class="text-sm text-gray-600 max-w-2xl">Robust screen automation bot designed for Pokémon Revolution Online with real-time frame inspection, heuristic pathfinding, and state machine recovery.</p>
+                    </div>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4 border-t border-gray-100">
+                      <div class="p-3 rounded-lg bg-stone-50 border border-gray-100">
+                        <span class="text-[11px] font-mono text-gray-500 uppercase">Frame Rate</span>
+                        <p class="text-sm font-semibold text-gray-900 mt-0.5">60 FPS Real-Time</p>
+                      </div>
+                      <div class="p-3 rounded-lg bg-stone-50 border border-gray-100">
+                        <span class="text-[11px] font-mono text-gray-500 uppercase">Precision</span>
+                        <p class="text-sm font-semibold text-gray-900 mt-0.5">Sub-Pixel Confidence</p>
+                      </div>
+                      <div class="p-3 rounded-lg bg-stone-50 border border-gray-100 col-span-2 sm:col-span-1">
+                        <span class="text-[11px] font-mono text-gray-500 uppercase">Fault Tolerance</span>
+                        <p class="text-sm font-semibold text-emerald-600 mt-0.5">Automated Recovery</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row md:items-start justify-between gap-6">
+                  <div class="flex flex-col gap-3 max-w-2xl">
+                    <div class="flex items-center gap-3">
+                      <h3 class="text-xl font-semibold text-gray-900">Autonomous Screen Automation</h3>
+                      <span class="text-xs font-mono text-gray-500">2020</span>
+                    </div>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                      Engineered desktop screen automation systems for Pokémon Revolution Online utilizing Python, PyAutoGUI, and OpenCV. Implemented sub-pixel template matching, automated pathfinding, and fault-tolerant state recovery across thousands of active sessions.
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-1">
+                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">Python</span>
+                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">OpenCV</span>
+                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">PyAutoGUI</span>
+                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">Computer Vision</span>
+                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">State Machines</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Project 6: TextVision OCR -->
+              <article class="flex flex-col gap-6 p-6 md:p-8 rounded-2xl bg-white/70 border border-stroke-secondary shadow-sm">
+                <div class="work-preview-stage rounded-xl overflow-hidden border border-gray-200 bg-stone-50">
+                  <div class="window-chrome">
+                    <div class="window-dots">
+                      <span class="window-dot window-dot-red"></span>
+                      <span class="window-dot window-dot-yellow"></span>
+                      <span class="window-dot window-dot-green"></span>
+                    </div>
+                    <span class="window-title font-mono text-xs text-gray-500">api/v1/ocr — Azure Cloud Vision Pipeline</span>
+                    <span class="ml-auto inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-mono bg-stone-200 text-stone-800">
+                      OCR API
+                    </span>
+                  </div>
+                  <div class="p-6 md:p-8 flex flex-col justify-between gap-6 bg-white">
+                    <div class="flex flex-col gap-2">
+                      <span class="text-xs font-mono text-indigo-600 uppercase tracking-wider font-semibold">Cloud Vision Extraction</span>
+                      <h4 class="text-xl md:text-2xl font-semibold text-gray-900">Multilingual Document &amp; Tabular Data Extractor</h4>
+                      <p class="text-sm text-gray-600 max-w-2xl">High-throughput web service extracting text, tables, and handwritten documents utilizing Microsoft Azure Computer Vision OCR with REST API endpoints.</p>
+                    </div>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4 border-t border-gray-100">
+                      <div class="p-3 rounded-lg bg-stone-50 border border-gray-100">
+                        <span class="text-[11px] font-mono text-gray-500 uppercase">Cloud Engine</span>
+                        <p class="text-sm font-semibold text-gray-900 mt-0.5">Azure Cognitive Vision</p>
+                      </div>
+                      <div class="p-3 rounded-lg bg-stone-50 border border-gray-100">
+                        <span class="text-[11px] font-mono text-gray-500 uppercase">Accuracy</span>
+                        <p class="text-sm font-semibold text-emerald-600 mt-0.5">98.8% Recognition</p>
+                      </div>
+                      <div class="p-3 rounded-lg bg-stone-50 border border-gray-100 col-span-2 sm:col-span-1">
+                        <span class="text-[11px] font-mono text-gray-500 uppercase">Backend</span>
+                        <p class="text-sm font-semibold text-gray-900 mt-0.5">Flask REST API</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row md:items-start justify-between gap-6">
+                  <div class="flex flex-col gap-3 max-w-2xl">
+                    <div class="flex items-center gap-3">
+                      <h3 class="text-xl font-semibold text-gray-900">TextVision OCR</h3>
+                      <span class="text-xs font-mono text-gray-500">2019</span>
+                    </div>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                      Built a high-performance web application extracting multi-lingual text and tabular data from images using Microsoft Azure Computer Vision OCR, packaged with a lightweight Flask backend and REST API.
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-1">
+                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">Python</span>
+                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">Flask</span>
+                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">Azure Computer Vision</span>
+                      <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-700 border border-stone-200">REST API</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
 
             </div>
+
           </div>
         </section>
 
-        <!-- ================= TAB 2: PLAY ================= -->
-        <section id="tab-panel-play" class="tab-panel hidden mt-6 w-full px-6 md:px-10">
-          <div class="flex flex-col gap-12 max-w-[900px]">
-            <div class="flex flex-col gap-2">
-              <h2 class="text-display">Interactive Skeuomorphic Buttons</h2>
-              <p class="text-body1 text-content-secondary">Tactile, realistic physics and gradient rendering using pure CSS mathematics.</p>
-            </div>
-
-            <!-- Button Grid -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-8 rounded-2xl bg-indigo-50 border border-stroke-secondary items-center justify-items-center">
-              
-              <!-- 1. Mainframe Button -->
-              <div class="flex flex-col items-center gap-3">
-                <button type="button" style="border:2px solid transparent;background-image:linear-gradient(180deg, #ededed 0%, #cccccc 75%, #c2c2c2 100%), linear-gradient(180deg, #ffffff 0%, #bdbdbd 30%, #e1e1e1 100%);background-origin:padding-box, border-box;background-clip:padding-box, border-box;box-shadow:0px 0px 0px 0.5px rgba(0,0,0,0.25),0px 1px 2px -1px rgba(0,0,0,0.06),0px 2px 4px 0px rgba(0,0,0,0.04)" class="tactile-btn inline-flex items-center justify-center gap-1 rounded-full px-[16px] py-[8px] select-none text-body1 font-medium leading-[1.4] whitespace-nowrap text-[#4a4a47] bg-no-repeat hover:brightness-[1.04]">
-                  <span class="bg-gradient-to-b from-[#75756f] to-[#4a4a47] bg-clip-text text-transparent">Mainframe</span>
-                  <span aria-hidden="true" class="inline-flex size-4 shrink-0 items-center justify-center [&_svg]:size-4"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"><path stroke="currentColor" stroke-linecap="square" stroke-width="1.2" d="M11.667 4.333 4 12M5.333 4H12v6.667"></path></svg></span>
-                </button>
-                <span class="text-body2 text-content-tertiary">Mainframe</span>
-              </div>
-
-              <!-- 2. Luce Button -->
-              <div class="flex flex-col items-center gap-3">
-                <button type="button" class="tactile-btn inline-flex items-center justify-center rounded-full p-[6px] select-none hover:brightness-[1.04]" style="border:2px solid transparent;background-image:radial-gradient(110.91% 84.1% at 50% 84.1%, hsla(0, 0%, 93%, 1) 37.15%, hsla(0, 0%, 86%, 1) 68.58%, hsla(0, 0%, 80%, 1) 100%),linear-gradient(180deg, hsla(0, 0%, 75%, 1) 0%, hsla(0, 0%, 87%, 1) 50%, hsla(0, 0%, 100%, 1) 100%);background-origin:padding-box, border-box;background-clip:padding-box, border-box;box-shadow:0 -1px 0 0 hsla(0, 0%, 100%, 1)">
-                  <div class="flex items-center justify-center gap-1 rounded-full px-4 py-2">
-                    <span class="bg-gradient-to-b from-[hsla(60,2%,18%,1)] to-[hsla(48,3%,34%,1)] bg-clip-text text-transparent text-body1 font-medium leading-[1.4] whitespace-nowrap">Luce</span>
-                  </div>
-                </button>
-                <span class="text-body2 text-content-tertiary">Luce Sheen</span>
-              </div>
-
-              <!-- 3. Soma Button -->
-              <div class="flex flex-col items-center gap-3">
-                <button type="button" class="tactile-btn inline-flex items-center justify-center select-none px-[6px] pt-[7px] pb-1 rounded-[16px] hover:brightness-[1.04]" style="background:linear-gradient(205deg, hsla(47, 100%, 67%, 0.60) 0%, hsla(0, 0%, 100%, 0.5) 55%, hsla(0, 0%, 100%, 0.5) 60%, hsla(42, 100%, 46%, 0.5) 76%) top left / 50% 50% no-repeat,linear-gradient(155deg, hsla(47, 100%, 67%, 0.60) 0%, hsla(0, 0%, 100%, 0.5) 55%, hsla(0, 0%, 100%, 0.5) 60%, hsla(42, 100%, 46%, 0.5) 76%) top right / 50% 50% no-repeat,linear-gradient(155deg, hsla(42, 100%, 46%, 0.5) 0%, hsla(42, 94%, 52%, 0.50) 40%, hsla(26, 97%, 27%, 0.6) 60%, hsla(27, 95%, 23%, 0.60) 70%) bottom left / 50% 50% no-repeat,linear-gradient(205deg, hsla(42, 100%, 46%, 0.5) 0%, hsla(42, 94%, 52%, 0.50) 40%, hsla(26, 97%, 27%, 0.6) 60%, hsla(27, 95%, 23%, 0.60) 70%) bottom right / 50% 50% no-repeat,hsla(53, 100%, 68%, 1)">
-                  <div class="flex items-center justify-center gap-1 px-[10px] py-[6px] rounded-[14px]" style="background-image:radial-gradient(324.32% 89.91% at 50% 10.09%, hsla(39, 93%, 53%, 1) 0%, hsla(43, 93%, 53%, 1) 25%, hsla(45, 99%, 57%, 1) 100%);box-shadow:0 1px 1px 0 hsla(50, 100%, 69%, 1) inset,0 -1.5px 2px 0 hsla(50, 100%, 69%, 1),0 0.5px 1px 0 hsla(50, 100%, 69%, 1),0 -1px 0.5px 0 hsla(0, 0%, 100%, 0.10) inset,0 -1px 4px 0 hsla(0, 0%, 100%, 0.15) inset">
-                    <span class="text-body1 font-medium leading-[1.4] whitespace-nowrap" style="background-image:linear-gradient(180deg, hsla(35, 31%, 35%, 1) 0%, hsla(36, 56%, 23%, 1) 100%);background-clip:text;-webkit-background-clip:text;color:transparent">Soma</span>
-                  </div>
-                </button>
-                <span class="text-body2 text-content-tertiary">Soma Amber</span>
-              </div>
-
-              <!-- 4. TG60 Button -->
-              <div class="flex flex-col items-center gap-3">
-                <button type="button" class="tactile-btn inline-flex items-center justify-center overflow-hidden select-none rounded-[16px] px-3 py-2 hover:brightness-[1.04]" style="border:1px solid hsl(0,0%,38%);background:hsl(0, 0%, 88%);box-shadow:inset 0px -3px 0px 0px rgba(0,0,0,0.25), inset 0px 2px 0px 1px rgba(255,255,255,0.9)">
-                  <div class="flex items-center justify-center gap-1 rounded-full px-3 py-1" style="border:1px solid transparent;background-image:radial-gradient(110.91% 84.1% at 50% 84.1%, hsl(0, 0%, 92%) 37.15%, hsl(0, 0%, 85%) 68.58%, hsl(0, 0%, 80%) 100%),linear-gradient(180deg, hsla(0, 0%, 100%, 0) 0%, hsla(0, 0%, 100%, 0.7) 100%);background-origin:padding-box, border-box;background-clip:padding-box, border-box">
-                    <span class="bg-gradient-to-b from-[hsl(60,3%,49%)] to-[hsl(51,3%,39%)] bg-clip-text text-transparent text-body1 font-medium leading-[1.4] whitespace-nowrap">TG60</span>
-                  </div>
-                </button>
-                <span class="text-body2 text-content-tertiary">TG60 Hardware</span>
-              </div>
-
-            </div>
-
-            <!-- Experiments List -->
-            <div class="flex flex-col gap-6 pt-6 border-t border-stroke-secondary">
-              <h3 class="text-title font-medium">Prototypes &amp; Interactive Demos</h3>
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                
-                <div class="flex flex-col gap-2 p-5 rounded-xl border border-stroke-secondary bg-indigo-50/40">
-                  <div class="flex items-center justify-between">
-                    <h4 class="text-title font-medium">Progressive Blur</h4>
-                    <span class="text-body2 text-content-tertiary">Component</span>
-                  </div>
-                  <p class="text-body1 text-content-secondary">A 10-layer CSS backdrop-filter blur component designed for smooth soft UI transitions.</p>
-                </div>
-
-                <div class="flex flex-col gap-2 p-5 rounded-xl border border-stroke-secondary bg-indigo-50/40">
-                  <div class="flex items-center justify-between">
-                    <h4 class="text-title font-medium">Screenshot Annotation</h4>
-                    <span class="text-body2 text-content-tertiary">Tool</span>
-                  </div>
-                  <p class="text-body1 text-content-secondary">Zero-latency browser canvas for rapid visual feedback and vector drawing.</p>
-                </div>
-
-                <div class="flex flex-col gap-2 p-5 rounded-xl border border-stroke-secondary bg-indigo-50/40">
-                  <div class="flex items-center justify-between">
-                    <h4 class="text-title font-medium">Elastic Scroll Engine</h4>
-                    <span class="text-body2 text-content-tertiary">Physics</span>
-                  </div>
-                  <p class="text-body1 text-content-secondary">Recreation of iOS inertial dampening and momentum physics for luxury web experiences.</p>
-                </div>
-
-                <div class="flex flex-col gap-2 p-5 rounded-xl border border-stroke-secondary bg-indigo-50/40">
-                  <div class="flex items-center justify-between">
-                    <h4 class="text-title font-medium">Explainable AI (XAI)</h4>
-                    <span class="text-body2 text-content-tertiary">Python</span>
-                  </div>
-                  <p class="text-body1 text-content-secondary">Python research library implementing model interpretability and Shapley value visualizations.</p>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- ================= TAB 3: ICON ================= -->
-        <section id="tab-panel-icon" class="tab-panel hidden mt-6 w-full px-6 md:px-10">
-          <div class="flex flex-col gap-8 max-w-[900px]">
-            <div class="flex flex-col gap-2">
-              <h2 class="text-display">Iconography &amp; Marks</h2>
-              <p class="text-body1 text-content-secondary">Pixel-crafted app icons, marks, and tactile symbols.</p>
-            </div>
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-              
-              <div class="flex flex-col items-center gap-3 p-6 rounded-2xl bg-indigo-50 border border-stroke-secondary">
-                <div class="size-24 rounded-2xl overflow-hidden shadow-card border border-stroke-secondary bg-sand-2 flex items-center justify-center">
-                  <video src="assets/avatar.mp4" autoPlay="" loop="" muted="" playsInline="" class="size-full object-cover"></video>
-                </div>
-                <div class="text-center">
-                  <h4 class="text-title font-medium">Avatar Identity</h4>
-                  <p class="text-body2 text-content-tertiary">3D Brand Character</p>
-                </div>
-              </div>
-
-              <div class="flex flex-col items-center gap-3 p-6 rounded-2xl bg-indigo-50 border border-stroke-secondary">
-                <div class="size-24 rounded-2xl overflow-hidden shadow-card border border-stroke-secondary bg-sand-2 flex items-center justify-center p-3">
-                  <img src="_next/02c1ac.png" alt="Focus Island icon" class="size-full object-contain" />
-                </div>
-                <div class="text-center">
-                  <h4 class="text-title font-medium">Focus Island</h4>
-                  <p class="text-body2 text-content-tertiary">macOS App Icon</p>
-                </div>
-              </div>
-
-              <div class="flex flex-col items-center gap-3 p-6 rounded-2xl bg-indigo-50 border border-stroke-secondary">
-                <div class="size-24 rounded-2xl overflow-hidden shadow-card border border-stroke-secondary bg-sand-2 flex items-center justify-center p-3">
-                  <img src="_next/06065f.png" alt="Sanctum App Icon" class="size-full object-contain" />
-                </div>
-                <div class="text-center">
-                  <h4 class="text-title font-medium">Sanctum Mobile</h4>
-                  <p class="text-body2 text-content-tertiary">iOS App Icon</p>
-                </div>
-              </div>
-
-              <div class="flex flex-col items-center gap-3 p-6 rounded-2xl bg-indigo-50 border border-stroke-secondary">
-                <div class="size-24 rounded-2xl overflow-hidden shadow-card border border-stroke-secondary bg-sand-2 flex items-center justify-center p-3">
-                  <img src="_next/015e25.png" alt="Gateway Icon" class="size-full object-contain" />
-                </div>
-                <div class="text-center">
-                  <h4 class="text-title font-medium">Gateway</h4>
-                  <p class="text-body2 text-content-tertiary">Protocol Emblem</p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </section>
-
-        <!-- ================= TAB 4: ESSAY ================= -->
-        <section id="tab-panel-essay" class="tab-panel hidden mt-6 w-full px-6 md:px-10">
-          <div class="flex flex-col gap-8 max-w-[720px]">
-            <div class="flex flex-col gap-2">
-              <h2 class="text-display">Essays &amp; Writing</h2>
-              <p class="text-body1 text-content-secondary">Thoughts on software craftsmanship, artificial intelligence, and building things that last.</p>
-            </div>
+        <!-- ================= SECTION 3: EXPERIENCE ================= -->
+        <section id="experience" class="pt-16 pb-16 border-b border-stroke-secondary">
+          <div class="flex flex-col gap-10">
             
-            <div class="flex flex-col divide-y divide-stroke-secondary">
+            <div class="flex flex-col gap-2">
+              <h2 class="text-2xl md:text-3xl font-medium tracking-tight text-gray-900">Professional Experience</h2>
+              <p class="text-base text-gray-600">Track record of building startups, architectural leadership, and technical execution.</p>
+            </div>
+
+            <div class="flex flex-col divide-y divide-stroke-secondary border-t border-stroke-secondary">
               
-              <article class="py-6 flex flex-col gap-2">
-                <div class="flex items-center justify-between gap-4">
-                  <h3 class="text-display text-[17px]">What Does It Mean to Do Your Best Work?</h3>
-                  <time class="text-body2 text-content-tertiary shrink-0">May 2026</time>
+              <!-- Role 1: Preplit AI -->
+              <div class="py-8 flex flex-col md:flex-row md:items-start justify-between gap-4">
+                <div class="flex flex-col gap-2 max-w-2xl">
+                  <div class="flex items-baseline gap-3">
+                    <h3 class="text-lg font-semibold text-gray-900">Chief Executive Officer &amp; Full-Stack Architect</h3>
+                    <span class="text-sm font-medium text-indigo-600">Preplit AI</span>
+                  </div>
+                  <p class="text-xs font-mono text-gray-500">Seoul, South Korea • Full-time</p>
+                  <ul class="mt-2 text-sm text-gray-600 space-y-1.5 list-disc list-inside leading-relaxed">
+                    <li>Architecting and developing an AI-powered education workspace using Next.js, React, TypeScript, Tailwind CSS, and AI APIs, with features for AI tutoring, note processing, study tools, and academic productivity.</li>
+                    <li>Building full-stack workflows including AI agent pipelines, API integrations, authentication, file processing, and database connectivity.</li>
+                  </ul>
                 </div>
-                <p class="text-body1 text-content-secondary">Reflections on obsessive design standards, craftsmanship, and why software built with genuine care always wins.</p>
-              </article>
+                <span class="text-xs font-mono text-gray-500 whitespace-nowrap bg-stone-100 px-3 py-1 rounded-full border border-stone-200 self-start">
+                  2026 – Present
+                </span>
+              </div>
 
-              <article class="py-6 flex flex-col gap-2">
-                <div class="flex items-center justify-between gap-4">
-                  <h3 class="text-display text-[17px]">Designing Joy into Autonomous Systems</h3>
-                  <time class="text-body2 text-content-tertiary shrink-0">Mar 2026</time>
+              <!-- Role 2: CampusRank -->
+              <div class="py-8 flex flex-col md:flex-row md:items-start justify-between gap-4">
+                <div class="flex flex-col gap-2 max-w-2xl">
+                  <div class="flex items-baseline gap-3">
+                    <h3 class="text-lg font-semibold text-gray-900">Founder &amp; Sole Developer</h3>
+                    <span class="text-sm font-medium text-indigo-600">CampusRank</span>
+                  </div>
+                  <p class="text-xs font-mono text-gray-500">Suwon, South Korea</p>
+                  <ul class="mt-2 text-sm text-gray-600 space-y-1.5 list-disc list-inside leading-relaxed">
+                    <li>Engineered an interactive student and university competitive ranking platform with dynamic leaderboards and user verification.</li>
+                    <li>Developed responsive full-stack interfaces in Next.js and Tailwind CSS deployed on Vercel with serverless data processing.</li>
+                  </ul>
                 </div>
-                <p class="text-body1 text-content-secondary">Can complex AI agents and high-throughput financial protocols feel intuitive and delightful to regular humans?</p>
-              </article>
+                <span class="text-xs font-mono text-gray-500 whitespace-nowrap bg-stone-100 px-3 py-1 rounded-full border border-stone-200 self-start">
+                  2026 – Present
+                </span>
+              </div>
 
-              <article class="py-6 flex flex-col gap-2">
-                <div class="flex items-center justify-between gap-4">
-                  <h3 class="text-display text-[17px]">What Real Artists Don&#x27;t Ship</h3>
-                  <time class="text-body2 text-content-tertiary shrink-0">Jan 2026</time>
+              <!-- Role 3: Resumate -->
+              <div class="py-8 flex flex-col md:flex-row md:items-start justify-between gap-4">
+                <div class="flex flex-col gap-2 max-w-2xl">
+                  <div class="flex items-baseline gap-3">
+                    <h3 class="text-lg font-semibold text-gray-900">Founder &amp; Full-Stack Developer</h3>
+                    <span class="text-sm font-medium text-indigo-600">Resumate</span>
+                  </div>
+                  <p class="text-xs font-mono text-gray-500">Suwon, South Korea</p>
+                  <ul class="mt-2 text-sm text-gray-600 space-y-1.5 list-disc list-inside leading-relaxed">
+                    <li>Developed an automated resume parsing, ATS evaluation, and AI-driven feedback engine tailored to technical candidates.</li>
+                    <li>Built intuitive, zero-latency feedback interfaces enabling students to instantly optimize their industry application success rate.</li>
+                  </ul>
                 </div>
-                <p class="text-body1 text-content-secondary">Taste is fundamentally about restraint: the courage to cut the 90% of features that dilute the core emotion.</p>
-              </article>
+                <span class="text-xs font-mono text-gray-500 whitespace-nowrap bg-stone-100 px-3 py-1 rounded-full border border-stone-200 self-start">
+                  2026 – Present
+                </span>
+              </div>
 
-              <article class="py-6 flex flex-col gap-2">
-                <div class="flex items-center justify-between gap-4">
-                  <h3 class="text-display text-[17px]">Notes: A Conversation With Jony Ive</h3>
-                  <time class="text-body2 text-content-tertiary shrink-0">Aug 2025</time>
+              <!-- Role 4: Covenant & Co -->
+              <div class="py-8 flex flex-col md:flex-row md:items-start justify-between gap-4">
+                <div class="flex flex-col gap-2 max-w-2xl">
+                  <div class="flex items-baseline gap-3">
+                    <h3 class="text-lg font-semibold text-gray-900">Founder &amp; Supply Chain Lead</h3>
+                    <span class="text-sm font-medium text-indigo-600">Covenant &amp; Co</span>
+                  </div>
+                  <p class="text-xs font-mono text-gray-500">South Korea &amp; China Operations</p>
+                  <ul class="mt-2 text-sm text-gray-600 space-y-1.5 list-disc list-inside leading-relaxed">
+                    <li>Founded an e-commerce watch brand, successfully scaled digital marketing, and generated over 100,000 all-time store visits.</li>
+                    <li>Managed cross-border manufacturing relations, quality assurance, logistics pipelines, and vendor negotiations.</li>
+                  </ul>
                 </div>
-                <p class="text-body1 text-content-secondary">Key learnings from studying LoveFrom: physical tangibility, bevels, material truth, and quiet digital interfaces.</p>
-              </article>
+                <span class="text-xs font-mono text-gray-500 whitespace-nowrap bg-stone-100 px-3 py-1 rounded-full border border-stone-200 self-start">
+                  2024 – 2026
+                </span>
+              </div>
 
-              <article class="py-6 flex flex-col gap-2">
-                <div class="flex items-center justify-between gap-4">
-                  <h3 class="text-display text-[17px]">Engineering Foundations: Memory &amp; Linked Lists</h3>
-                  <time class="text-body2 text-content-tertiary shrink-0">May 2020</time>
+              <!-- Role 5: VisionRare -->
+              <div class="py-8 flex flex-col md:flex-row md:items-start justify-between gap-4">
+                <div class="flex flex-col gap-2 max-w-2xl">
+                  <div class="flex items-baseline gap-3">
+                    <h3 class="text-lg font-semibold text-gray-900">Junior Principal Backend Software Engineer</h3>
+                    <span class="text-sm font-medium text-indigo-600">VisionRare</span>
+                  </div>
+                  <p class="text-xs font-mono text-gray-500">Remote</p>
+                  <ul class="mt-2 text-sm text-gray-600 space-y-1.5 list-disc list-inside leading-relaxed">
+                    <li>Engineered backend application logic in an agile team environment, developing clean REST APIs and database queries.</li>
+                  </ul>
                 </div>
-                <p class="text-body1 text-content-secondary">Self-taught engineering lessons from first principles, pointer arithmetic, and algorithmic thinking.</p>
-              </article>
+                <span class="text-xs font-mono text-gray-500 whitespace-nowrap bg-stone-100 px-3 py-1 rounded-full border border-stone-200 self-start">
+                  2021 – 2021
+                </span>
+              </div>
+
+              <!-- Role 6: Microsoft Ambassador -->
+              <div class="py-8 flex flex-col md:flex-row md:items-start justify-between gap-4">
+                <div class="flex flex-col gap-2 max-w-2xl">
+                  <div class="flex items-baseline gap-3">
+                    <h3 class="text-lg font-semibold text-gray-900">Microsoft Learn Student Ambassador</h3>
+                    <span class="text-sm font-medium text-indigo-600">Microsoft Community</span>
+                  </div>
+                  <p class="text-xs font-mono text-gray-500">Global Developer Program</p>
+                  <ul class="mt-2 text-sm text-gray-600 space-y-1.5 list-disc list-inside leading-relaxed">
+                    <li>Organized technical workshops on Azure AI tools, cloud fundamentals, and modern developer workflows for university students.</li>
+                  </ul>
+                </div>
+                <span class="text-xs font-mono text-gray-500 whitespace-nowrap bg-stone-100 px-3 py-1 rounded-full border border-stone-200 self-start">
+                  2020 – 2022
+                </span>
+              </div>
 
             </div>
+
           </div>
         </section>
 
-        <!-- ================= TAB 5: STORY ================= -->
-        <section id="tab-panel-story" class="tab-panel hidden mt-6 w-full px-6 md:px-10">
-          <div class="flex flex-col gap-10 max-w-[720px]">
-            <div class="flex flex-col gap-4">
-              <h2 class="text-display">Khan Muhammad Ahsan</h2>
-              <p class="text-body1 text-content-secondary leading-relaxed">
-                I&#x27;m a Software Engineer &amp; AI Founder based in Suwon, South Korea. Currently studying Software Engineering at Ajou University under the prestigious Global Korea Scholarship (GKS).
-              </p>
-              <p class="text-body1 text-content-secondary leading-relaxed">
-                I spend my days architecting high-performance intelligent software systems and obsessing over the tactile feel of user interfaces. I co-founded Preplit AI, bringing personalized, adaptive intelligence to students worldwide.
-              </p>
+        <!-- ================= SECTION 4: EDUCATION ================= -->
+        <section id="education" class="pt-16 pb-16 border-b border-stroke-secondary">
+          <div class="flex flex-col gap-10">
+            
+            <div class="flex flex-col gap-2">
+              <h2 class="text-2xl md:text-3xl font-medium tracking-tight text-gray-900">Education &amp; Global Leadership</h2>
+              <p class="text-base text-gray-600">Academic foundations, government fellowships, and university governance.</p>
             </div>
 
-            <!-- Experience Timeline -->
-            <div class="flex flex-col gap-4 pt-6 border-t border-stroke-secondary">
-              <h3 class="text-title font-medium">Experience &amp; Milestones</h3>
-              <div class="flex flex-col divide-y divide-stroke-secondary">
-                
-                <div class="py-4 flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
-                  <div>
-                    <h4 class="text-title font-medium">Founder &amp; CEO</h4>
-                    <p class="text-body1 text-content-secondary">Preplit AI</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+              <!-- University Card -->
+              <div class="p-6 md:p-8 rounded-2xl bg-white/70 border border-stroke-secondary shadow-sm flex flex-col justify-between gap-4">
+                <div class="flex flex-col gap-2">
+                  <div class="flex items-center justify-between">
+                    <span class="text-xs font-mono text-indigo-600 font-semibold uppercase">Ajou University</span>
+                    <span class="text-xs font-mono text-gray-500">2024 – Present</span>
                   </div>
-                  <span class="text-body2 text-content-tertiary">2024 — Present</span>
+                  <h3 class="text-xl font-semibold text-gray-900">Bachelor of Science in Software Engineering</h3>
+                  <p class="text-xs font-mono text-gray-500">Suwon, South Korea • GPA: 3.8 / 4.5</p>
+                  <p class="text-sm text-gray-600 mt-2 leading-relaxed">
+                    Awarded the prestigious <strong class="text-gray-900 font-medium">Global Korea Scholarship (GKS)</strong>, a competitive merit-based government fellowship covering full undergraduate tuition, research grants, and monthly stipend.
+                  </p>
+                </div>
+                <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+                  <span class="text-xs font-medium text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">GKS Fellow</span>
+                  <a href="https://www.ajou.ac.kr/en/" target="_blank" rel="noopener noreferrer" class="text-xs font-medium text-gray-500 hover:text-indigo-600">ajou.ac.kr ↗</a>
+                </div>
+              </div>
+
+              <!-- Student Council -->
+              <div class="p-6 md:p-8 rounded-2xl bg-white/70 border border-stroke-secondary shadow-sm flex flex-col justify-between gap-4">
+                <div class="flex flex-col gap-2">
+                  <div class="flex items-center justify-between">
+                    <span class="text-xs font-mono text-indigo-600 font-semibold uppercase">Ajou University</span>
+                    <span class="text-xs font-mono text-gray-500">Elected Member</span>
+                  </div>
+                  <h3 class="text-xl font-semibold text-gray-900">Ajou International Student Council</h3>
+                  <p class="text-xs font-mono text-gray-500">Student Representation &amp; Administration</p>
+                  <p class="text-sm text-gray-600 mt-2 leading-relaxed">
+                    Elected member actively representing the global student body in university administrative deliberations, academic policy feedback, and international community initiatives.
+                  </p>
+                </div>
+                <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+                  <span class="text-xs font-medium text-indigo-700 bg-indigo-50 px-2.5 py-1 rounded-full border border-indigo-200">University Leadership</span>
+                  <span class="text-xs text-gray-400 font-mono">Governance</span>
+                </div>
+              </div>
+
+              <!-- Suwon Global Center -->
+              <div class="p-6 md:p-8 rounded-2xl bg-white/70 border border-stroke-secondary shadow-sm flex flex-col justify-between gap-4">
+                <div class="flex flex-col gap-2">
+                  <div class="flex items-center justify-between">
+                    <span class="text-xs font-mono text-indigo-600 font-semibold uppercase">Suwon Global Center</span>
+                    <span class="text-xs font-mono text-gray-500">Volunteer</span>
+                  </div>
+                  <h3 class="text-xl font-semibold text-gray-900">Community Volunteer &amp; Cultural Liaison</h3>
+                  <p class="text-xs font-mono text-gray-500">Suwon, South Korea</p>
+                  <p class="text-sm text-gray-600 mt-2 leading-relaxed">
+                    Volunteered as a Korean–English translator and cultural liaison, assisting international residents with civic integration, documentation, and community navigation.
+                  </p>
+                </div>
+                <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+                  <span class="text-xs font-medium text-stone-700 bg-stone-100 px-2.5 py-1 rounded-full border border-stone-200">Civic Engagement</span>
+                  <span class="text-xs text-gray-400 font-mono">Bilingual Service</span>
+                </div>
+              </div>
+
+              <!-- High School -->
+              <div class="p-6 md:p-8 rounded-2xl bg-white/70 border border-stroke-secondary shadow-sm flex flex-col justify-between gap-4">
+                <div class="flex flex-col gap-2">
+                  <div class="flex items-center justify-between">
+                    <span class="text-xs font-mono text-indigo-600 font-semibold uppercase">Fazaia Degree College</span>
+                    <span class="text-xs font-mono text-gray-500">Graduate</span>
+                  </div>
+                  <h3 class="text-xl font-semibold text-gray-900">Secondary &amp; Higher Secondary School</h3>
+                  <p class="text-xs font-mono text-gray-500">PAF Base Faisal, Pakistan</p>
+                  <p class="text-sm text-gray-600 mt-2 leading-relaxed">
+                    Completed Pre-Engineering academic curriculum with distinction, building a rigorous foundation in advanced mathematics, physics, and computer science fundamentals.
+                  </p>
+                </div>
+                <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+                  <span class="text-xs font-medium text-stone-700 bg-stone-100 px-2.5 py-1 rounded-full border border-stone-200">Pre-Engineering</span>
+                  <span class="text-xs text-gray-400 font-mono">Distinction</span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </section>
+
+        <!-- ================= SECTION 5: SKILLS ================= -->
+        <section id="skills" class="pt-16 pb-16 border-b border-stroke-secondary">
+          <div class="flex flex-col gap-10">
+            
+            <div class="flex flex-col gap-2">
+              <h2 class="text-2xl md:text-3xl font-medium tracking-tight text-gray-900">Technical Arsenal &amp; Honors</h2>
+              <p class="text-base text-gray-600">Core technologies, research publications, verified credentials, and languages.</p>
+            </div>
+
+            <!-- Tech Stack Categories -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+              <div class="p-6 rounded-2xl bg-white/70 border border-stroke-secondary shadow-sm flex flex-col gap-4">
+                <h3 class="text-sm font-semibold uppercase tracking-wider text-indigo-600 font-mono">Core &amp; AI Engineering</h3>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-800 border border-stone-200">Python</span>
+                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-800 border border-stone-200">TypeScript</span>
+                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-800 border border-stone-200">JavaScript</span>
+                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-800 border border-stone-200">C++</span>
+                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-800 border border-stone-200">C</span>
+                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-800 border border-stone-200">SQL</span>
+                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-indigo-50 text-indigo-800 border border-indigo-200 font-semibold">LLM Orchestration</span>
+                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-indigo-50 text-indigo-800 border border-indigo-200 font-semibold">Agentic Workflows</span>
+                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-800 border border-stone-200">OpenCV</span>
+                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-800 border border-stone-200">TensorFlow</span>
+                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-800 border border-stone-200">NumPy</span>
+                </div>
+              </div>
+
+              <div class="p-6 rounded-2xl bg-white/70 border border-stroke-secondary shadow-sm flex flex-col gap-4">
+                <h3 class="text-sm font-semibold uppercase tracking-wider text-indigo-600 font-mono">Full-Stack &amp; Frameworks</h3>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-indigo-50 text-indigo-800 border border-indigo-200 font-semibold">Next.js 15 (App Router)</span>
+                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-800 border border-stone-200">React</span>
+                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-800 border border-stone-200">Node.js</span>
+                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-800 border border-stone-200">Tailwind CSS</span>
+                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-800 border border-stone-200">Django REST</span>
+                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-800 border border-stone-200">Supabase</span>
+                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-800 border border-stone-200">RESTful APIs</span>
+                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-800 border border-stone-200">HTML5 / CSS3</span>
+                </div>
+              </div>
+
+              <div class="p-6 rounded-2xl bg-white/70 border border-stroke-secondary shadow-sm flex flex-col gap-4">
+                <h3 class="text-sm font-semibold uppercase tracking-wider text-indigo-600 font-mono">Cloud, Systems &amp; Data</h3>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-800 border border-stone-200">Microsoft Azure</span>
+                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-800 border border-stone-200">AWS</span>
+                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-800 border border-stone-200">Docker</span>
+                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-indigo-50 text-indigo-800 border border-indigo-200 font-semibold">pgvector</span>
+                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-800 border border-stone-200">PostgreSQL</span>
+                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-800 border border-stone-200">MySQL</span>
+                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-800 border border-stone-200">Vercel</span>
+                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-stone-100 text-stone-800 border border-stone-200">Git / GitHub</span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Research & Certifications Grid -->
+            <div class="flex flex-col gap-4 pt-4">
+              <h3 class="text-lg font-semibold text-gray-900">Research &amp; Verified Certifications</h3>
+              
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+                <div class="p-4 rounded-xl bg-white/70 border border-stroke-secondary flex items-start gap-3">
+                  <span class="text-indigo-600 text-lg">📄</span>
+                  <div class="flex flex-col">
+                    <h4 class="text-sm font-semibold text-gray-900">Research Paper: Comprehensive Study of Dijkstra's Algorithm</h4>
+                    <p class="text-xs text-gray-500">Published in Global Scientific Journal (GSJ)</p>
+                  </div>
                 </div>
 
-                <div class="py-4 flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
-                  <div>
-                    <h4 class="text-title font-medium">GKS Scholar &amp; Software Engineering</h4>
-                    <p class="text-body1 text-content-secondary">Ajou University</p>
+                <div class="p-4 rounded-xl bg-white/70 border border-stroke-secondary flex items-start gap-3">
+                  <span class="text-amber-600 text-lg">🏆</span>
+                  <div class="flex flex-col">
+                    <h4 class="text-sm font-semibold text-gray-900">Top 20 • Incheon Foreign Start-up Challenge 2026</h4>
+                    <p class="text-xs text-gray-500">OASIS Korea Start-up Incubation Program</p>
                   </div>
-                  <span class="text-body2 text-content-tertiary">2023 — Present</span>
                 </div>
 
-                <div class="py-4 flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
-                  <div>
-                    <h4 class="text-title font-medium">Full-Stack &amp; AI Engineer</h4>
-                    <p class="text-body1 text-content-secondary">Independent Systems &amp; Products</p>
+                <div class="p-4 rounded-xl bg-white/70 border border-stroke-secondary flex items-start gap-3">
+                  <span class="text-blue-600 text-lg">☁️</span>
+                  <div class="flex flex-col">
+                    <h4 class="text-sm font-semibold text-gray-900">Microsoft Certified: Azure AI Fundamentals (AI-900)</h4>
+                    <p class="text-xs text-gray-500">Official Microsoft Technical Certification</p>
                   </div>
-                  <span class="text-body2 text-content-tertiary">2022 — 2024</span>
+                </div>
+
+                <div class="p-4 rounded-xl bg-white/70 border border-stroke-secondary flex items-start gap-3">
+                  <span class="text-rose-600 text-lg">🎓</span>
+                  <div class="flex flex-col">
+                    <h4 class="text-sm font-semibold text-gray-900">CS50: Introduction to Computer Science</h4>
+                    <p class="text-xs text-gray-500">Harvard University Online (edX Verified)</p>
+                  </div>
+                </div>
+
+                <div class="p-4 rounded-xl bg-white/70 border border-stroke-secondary flex items-start gap-3">
+                  <span class="text-purple-600 text-lg">🧠</span>
+                  <div class="flex flex-col">
+                    <h4 class="text-sm font-semibold text-gray-900">Supervised Machine Learning: Regression &amp; Classification</h4>
+                    <p class="text-xs text-gray-500">Stanford University Online &amp; DeepLearning.AI</p>
+                  </div>
+                </div>
+
+                <div class="p-4 rounded-xl bg-white/70 border border-stroke-secondary flex items-start gap-3">
+                  <span class="text-emerald-600 text-lg">⚙️</span>
+                  <div class="flex flex-col">
+                    <h4 class="text-sm font-semibold text-gray-900">Google IT Automation with Python</h4>
+                    <p class="text-xs text-gray-500">Professional Certificate — Google</p>
+                  </div>
+                </div>
+
+                <div class="p-4 rounded-xl bg-white/70 border border-stroke-secondary flex items-start gap-3">
+                  <span class="text-cyan-600 text-lg">🌐</span>
+                  <div class="flex flex-col">
+                    <h4 class="text-sm font-semibold text-gray-900">Elements of AI</h4>
+                    <p class="text-xs text-gray-500">University of Helsinki &amp; MinnaLearn</p>
+                  </div>
+                </div>
+
+                <div class="p-4 rounded-xl bg-white/70 border border-stroke-secondary flex items-start gap-3">
+                  <span class="text-blue-700 text-lg">💻</span>
+                  <div class="flex flex-col">
+                    <h4 class="text-sm font-semibold text-gray-900">Introduction to Back-End Development</h4>
+                    <p class="text-xs text-gray-500">Meta Certified Professional Program</p>
+                  </div>
                 </div>
 
               </div>
             </div>
 
-            <!-- Philosophy -->
-            <div class="flex flex-col gap-3 pt-6 border-t border-stroke-secondary">
-              <h3 class="text-title font-medium">Philosophy</h3>
-              <p class="text-body1 text-content-secondary leading-relaxed">
-                Software should not feel like an sterile spreadsheet. Great software has weight, texture, responsiveness, and respect for the human mind using it. Whether engineering vector indexing pipelines or micro-tuning a CSS ease-out curve, craft is in the details.
-              </p>
+            <!-- Languages -->
+            <div class="flex flex-col gap-4 pt-4">
+              <h3 class="text-lg font-semibold text-gray-900">Spoken Languages</h3>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div class="p-4 rounded-xl bg-white/70 border border-stroke-secondary flex flex-col gap-1">
+                  <span class="text-sm font-semibold text-gray-900">English</span>
+                  <span class="text-xs text-indigo-600 font-mono font-medium">IELTS Band 8.0 (Expert)</span>
+                  <p class="text-xs text-gray-500">Full professional and academic fluency</p>
+                </div>
+                <div class="p-4 rounded-xl bg-white/70 border border-stroke-secondary flex flex-col gap-1">
+                  <span class="text-sm font-semibold text-gray-900">Korean (한국어)</span>
+                  <span class="text-xs text-indigo-600 font-mono font-medium">TOPIK Level 4</span>
+                  <p class="text-xs text-gray-500">Advanced professional proficiency in South Korea</p>
+                </div>
+                <div class="p-4 rounded-xl bg-white/70 border border-stroke-secondary flex flex-col gap-1">
+                  <span class="text-sm font-semibold text-gray-900">Urdu (اردو)</span>
+                  <span class="text-xs text-indigo-600 font-mono font-medium">Native Fluency</span>
+                  <p class="text-xs text-gray-500">First language</p>
+                </div>
+              </div>
             </div>
 
           </div>
         </section>
 
-        <!-- ================= TAB 6: CONNECT ================= -->
-        <section id="tab-panel-connect" class="tab-panel hidden mt-6 w-full px-6 md:px-10">
-          <div class="flex flex-col gap-8 max-w-[640px]">
+        <!-- ================= SECTION 6: CONTACT ================= -->
+        <section id="contact" class="pt-16 pb-8">
+          <div class="flex flex-col gap-8">
+            
             <div class="flex flex-col gap-2">
-              <h2 class="text-display">Connect &amp; Collaborate</h2>
-              <p class="text-body1 text-content-secondary">Always excited to connect with engineers, designers, founders, and curious minds.</p>
+              <h2 class="text-2xl md:text-3xl font-medium tracking-tight text-gray-900">Let&#x27;s build something extraordinary together.</h2>
+              <p class="text-base text-gray-600">Open to engineering opportunities, founder discussions, research, and product collaborations.</p>
             </div>
 
-            <div class="flex flex-col gap-3">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               
-              <a href="https://linkedin.com/in/khan-ahsan" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-4 rounded-xl border border-stroke-secondary bg-indigo-50/50 hover:bg-sand-4 transition-colors duration-150">
-                <div class="flex items-center gap-3">
-                  <span class="text-title font-medium">LinkedIn</span>
-                  <span class="text-body2 text-content-tertiary">/in/khan-ahsan</span>
+              <!-- Email Card with Copy Button -->
+              <div class="p-6 rounded-2xl bg-white/80 border border-stroke-secondary flex flex-col justify-between gap-4 shadow-sm">
+                <div class="flex flex-col gap-1">
+                  <span class="text-xs font-mono text-gray-500 uppercase">Direct Email</span>
+                  <a href="mailto:455ahsankhan@gmail.com" class="text-base font-semibold text-gray-900 hover:text-indigo-600 break-all">
+                    455ahsankhan@gmail.com
+                  </a>
                 </div>
-                <span class="text-body2 text-content-secondary">Visit ↗</span>
+                <button type="button" id="copy-email-btn" data-email="455ahsankhan@gmail.com" class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full text-xs font-medium text-gray-800 bg-stone-100 hover:bg-stone-200 transition-colors self-start border border-stone-300">
+                  <span>Copy Email Address</span>
+                  <span id="copy-check" class="hidden text-emerald-600">✓</span>
+                </button>
+              </div>
+
+              <!-- Phone Card -->
+              <div class="p-6 rounded-2xl bg-white/80 border border-stroke-secondary flex flex-col justify-between gap-4 shadow-sm">
+                <div class="flex flex-col gap-1">
+                  <span class="text-xs font-mono text-gray-500 uppercase">Phone / Contact</span>
+                  <a href="tel:+821066513148" class="text-base font-semibold text-gray-900 hover:text-indigo-600">
+                    +82 10-6651-3148
+                  </a>
+                  <p class="text-xs text-gray-500">Suwon / Seoul, South Korea (KST)</p>
+                </div>
+                <a href="tel:+821066513148" class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full text-xs font-medium text-gray-800 bg-stone-100 hover:bg-stone-200 transition-colors self-start border border-stone-300">
+                  <span>Call ↗</span>
+                </a>
+              </div>
+
+              <!-- LinkedIn -->
+              <a href="https://www.linkedin.com/in/455ahsankhan" target="_blank" rel="noopener noreferrer" class="p-6 rounded-2xl bg-white/80 border border-stroke-secondary flex items-center justify-between gap-4 shadow-sm hover:border-indigo-300 transition-colors group">
+                <div class="flex flex-col gap-1">
+                  <span class="text-xs font-mono text-gray-500 uppercase">Professional Network</span>
+                  <span class="text-base font-semibold text-gray-900 group-hover:text-indigo-600">LinkedIn</span>
+                  <span class="text-xs text-gray-500">linkedin.com/in/455ahsankhan</span>
+                </div>
+                <span class="text-gray-400 group-hover:text-indigo-600 text-lg">↗</span>
               </a>
 
-              <a href="https://github.com/ahsann826" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-4 rounded-xl border border-stroke-secondary bg-indigo-50/50 hover:bg-sand-4 transition-colors duration-150">
-                <div class="flex items-center gap-3">
-                  <span class="text-title font-medium">GitHub</span>
-                  <span class="text-body2 text-content-tertiary">@ahsann826</span>
+              <!-- GitHub -->
+              <a href="https://github.com/ahsann826" target="_blank" rel="noopener noreferrer" class="p-6 rounded-2xl bg-white/80 border border-stroke-secondary flex items-center justify-between gap-4 shadow-sm hover:border-indigo-300 transition-colors group">
+                <div class="flex flex-col gap-1">
+                  <span class="text-xs font-mono text-gray-500 uppercase">Open Source &amp; Code</span>
+                  <span class="text-base font-semibold text-gray-900 group-hover:text-indigo-600">GitHub</span>
+                  <span class="text-xs text-gray-500">@ahsann826</span>
                 </div>
-                <span class="text-body2 text-content-secondary">Visit ↗</span>
-              </a>
-
-              <a href="mailto:khan.ahsan.dev@gmail.com" class="flex items-center justify-between p-4 rounded-xl border border-stroke-secondary bg-indigo-50/50 hover:bg-sand-4 transition-colors duration-150">
-                <div class="flex items-center gap-3">
-                  <span class="text-title font-medium">Email</span>
-                  <span class="text-body2 text-content-tertiary">khan.ahsan.dev@gmail.com</span>
-                </div>
-                <span class="text-body2 text-content-secondary">Send ↗</span>
-              </a>
-
-              <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-4 rounded-xl border border-stroke-secondary bg-indigo-50/50 hover:bg-sand-4 transition-colors duration-150">
-                <div class="flex items-center gap-3">
-                  <span class="text-title font-medium">X (Twitter)</span>
-                  <span class="text-body2 text-content-tertiary">@khan_ahsan</span>
-                </div>
-                <span class="text-body2 text-content-secondary">Follow ↗</span>
+                <span class="text-gray-400 group-hover:text-indigo-600 text-lg">↗</span>
               </a>
 
             </div>
+
           </div>
         </section>
 
       </div>
 
       <!-- Footer -->
-      <footer class="flex w-full flex-col px-6 md:px-10">
-        <div class="text-gray-800 flex flex-col gap-8 border-t border-stroke-secondary py-8 md:flex-row md:items-start md:justify-between">
-          <div class="flex gap-2">
-            <a class="text-title" href="index.html">Khan Muhammad Ahsan</a>
-            <p class="text-body2 text-content-tertiary">© 2026</p>
+      <footer class="flex w-full flex-col px-6 md:px-12 max-w-[1100px] mx-auto pb-12">
+        <div class="text-gray-800 flex flex-col sm:flex-row gap-6 border-t border-stroke-secondary pt-8 items-center justify-between">
+          <div class="flex items-center gap-3">
+            <span class="text-sm font-semibold text-gray-900">Khan Muhammad Ahsan</span>
+            <span class="text-xs text-gray-500 font-mono">© 2026</span>
           </div>
-          <nav aria-label="Footer links" class="flex flex-col items-start gap-3 md:flex-row md:flex-wrap md:items-center md:justify-end md:gap-x-5">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="text-body1 font-medium underline decoration-content-decoration underline-offset-3 hover:decoration-content-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-content-inverse">X</a>
-            <a href="mailto:khan.ahsan.dev@gmail.com" class="text-body1 font-medium underline decoration-content-decoration underline-offset-3 hover:decoration-content-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-content-inverse">Email</a>
-            <a href="https://github.com/ahsann826" target="_blank" rel="noopener noreferrer" class="text-body1 font-medium underline decoration-content-decoration underline-offset-3 hover:decoration-content-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-content-inverse">Github</a>
-            <a href="https://linkedin.com/in/khan-ahsan" target="_blank" rel="noopener noreferrer" class="text-body1 font-medium underline decoration-content-decoration underline-offset-3 hover:decoration-content-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-content-inverse">LinkedIn</a>
+          <nav aria-label="Footer links" class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-gray-600">
+            <a href="mailto:455ahsankhan@gmail.com" class="hover:text-indigo-600">Email</a>
+            <a href="https://www.linkedin.com/in/455ahsankhan" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600">LinkedIn</a>
+            <a href="https://github.com/ahsann826" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600">GitHub</a>
+            <a href="https://preplitai.com" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600">Preplit AI</a>
           </nav>
         </div>
       </footer>
@@ -627,9 +1004,9 @@
   </div>
 
   <!-- Floating Back to top Button -->
-  <button id="back-to-top" type="button" style="border:2px solid transparent;background-image:linear-gradient(180deg, #ededed 0%, #cccccc 75%, #c2c2c2 100%), linear-gradient(180deg, #ffffff 0%, #bdbdbd 30%, #e1e1e1 100%);background-origin:padding-box, border-box;background-clip:padding-box, border-box;box-shadow:0px 0px 0px 0.5px rgba(0,0,0,0.25),0px 1px 2px -1px rgba(0,0,0,0.06),0px 2px 4px 0px rgba(0,0,0,0.04)" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 inline-flex items-center justify-center gap-1 rounded-full px-[16px] py-[6px] select-none text-body2 font-medium leading-[1.4] whitespace-nowrap transition-all duration-200 text-[#4a4a47] bg-no-repeat hover:brightness-[1.04] active:scale-[0.97] opacity-0 pointer-events-none">
-    <span class="bg-gradient-to-b from-[#75756f] to-[#4a4a47] bg-clip-text text-transparent">Back to top</span>
-    <span aria-hidden="true" class="inline-flex size-3.5 shrink-0 items-center justify-center">↑</span>
+  <button id="back-to-top" type="button" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 inline-flex items-center justify-center gap-1.5 rounded-full px-5 py-2 select-none text-xs font-medium whitespace-nowrap transition-all duration-200 text-gray-800 bg-white/90 backdrop-blur border border-gray-300 shadow-md hover:bg-white active:scale-95 opacity-0 pointer-events-none">
+    <span>Back to top</span>
+    <span aria-hidden="true">↑</span>
   </button>
 
   <script src="js/main.js"></script>
