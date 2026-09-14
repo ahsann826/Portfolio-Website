@@ -4,30 +4,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const tabButtons = document.querySelectorAll('.tab-btn');
   const tabPanels = document.querySelectorAll('.tab-panel');
 
-  const activeClasses = [
-    'text-content-primary',
-    'after:absolute',
-    'after:inset-x-0',
-    'after:-bottom-px',
-    'after:h-px',
-    'after:bg-content-primary'
-  ];
-  const inactiveClasses = [
-    'text-content-tertiary',
-    'hover:text-content-primary'
-  ];
-
   function setActiveTab(targetTab) {
     tabButtons.forEach(btn => {
       const isMatch = btn.getAttribute('data-tab') === targetTab;
       btn.setAttribute('aria-pressed', isMatch ? 'true' : 'false');
-      if (isMatch) {
-        inactiveClasses.forEach(c => btn.classList.remove(c));
-        activeClasses.forEach(c => btn.classList.add(c));
-      } else {
-        activeClasses.forEach(c => btn.classList.remove(c));
-        inactiveClasses.forEach(c => btn.classList.add(c));
-      }
+      btn.classList.toggle('active', isMatch);
     });
 
     tabPanels.forEach(panel => {
