@@ -1,32 +1,24 @@
 document.addEventListener("DOMContentLoaded", () => {
   /* ==========================================================
-     1. THEME SWITCHER (Warm Paper / Onyx Dark)
+     1. THEME SWITCHER (Sand Light / Obsidian Dark)
      ========================================================== */
   const themeToggleBtn = document.getElementById("theme-toggle");
-  const themeIcon = themeToggleBtn ? themeToggleBtn.querySelector(".theme-icon") : null;
-  const themeLabel = themeToggleBtn ? themeToggleBtn.querySelector(".theme-label") : null;
+  const themeIcon = document.getElementById("theme-icon");
 
   function getPreferredTheme() {
-    const saved = localStorage.getItem("portfolio_theme");
+    const saved = localStorage.getItem("portfolio_theme_cleon");
     if (saved) return saved;
     return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
   }
 
   function applyTheme(theme) {
     document.documentElement.setAttribute("data-theme", theme);
-    localStorage.setItem("portfolio_theme", theme);
-    if (themeIcon && themeLabel) {
-      if (theme === "dark") {
-        themeIcon.textContent = "☼";
-        themeLabel.textContent = "Light";
-      } else {
-        themeIcon.textContent = "☾";
-        themeLabel.textContent = "Dark";
-      }
+    localStorage.setItem("portfolio_theme_cleon", theme);
+    if (themeIcon) {
+      themeIcon.textContent = theme === "dark" ? "☼" : "☾";
     }
   }
 
-  // Initialize theme
   applyTheme(getPreferredTheme());
 
   if (themeToggleBtn) {
@@ -64,70 +56,48 @@ document.addEventListener("DOMContentLoaded", () => {
   setInterval(updateSuwonClock, 1000);
 
   /* ==========================================================
-     3. PRELOADER & GSAP ENTRANCE ANIMATIONS
+     3. INTERACTIVE TAB NAVIGATION (Cleon Wong System)
      ========================================================== */
-  const preloader = document.querySelector(".preloader");
+  const tabButtons = document.querySelectorAll(".tab-btn");
+  const tabPanes = document.querySelectorAll(".tab-pane");
 
-  function runEntranceAnimations() {
-    if (typeof gsap !== "undefined") {
-      gsap.registerPlugin(ScrollTrigger);
+  function switchTab(tabName) {
+    let targetPane = document.getElementById(`pane-${tabName}`);
+    if (!targetPane) {
+      tabName = "work";
+      targetPane = document.getElementById("pane-work");
+    }
 
-      // Initial state
-      gsap.set(".js-fade-page", { opacity: 0, y: 14 });
-      gsap.set(".js-fade-section", { opacity: 0, y: 18 });
+    tabButtons.forEach((btn) => {
+      const isTarget = btn.getAttribute("data-tab") === tabName;
+      btn.setAttribute("aria-pressed", isTarget ? "true" : "false");
+    });
 
-      // Fade in hero elements
-      gsap.to(".js-fade-page", {
-        opacity: 1,
-        y: 0,
-        duration: 1.4,
-        ease: "power2.out",
-        stagger: 0.1
-      });
+    tabPanes.forEach((pane) => {
+      pane.classList.remove("active");
+    });
 
-      // ScrollTrigger for sections
-      gsap.utils.toArray(".js-fade-section").forEach((section) => {
-        gsap.to(section, {
-          opacity: 1,
-          y: 0,
-          duration: 1.3,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: section,
-            start: "top 88%",
-            once: true
-          }
-        });
-      });
+    if (targetPane) {
+      targetPane.classList.add("active");
+    }
 
-      ScrollTrigger.refresh();
-    } else {
-      // Fallback
-      document.querySelectorAll(".js-fade-page, .js-fade-section").forEach((el) => {
-        el.style.opacity = "1";
-        el.style.transform = "none";
-      });
+    if (history.replaceState) {
+      history.replaceState(null, "", `#${tabName}`);
     }
   }
 
-  window.addEventListener("load", () => {
-    if (preloader) {
-      setTimeout(() => {
-        preloader.classList.add("hide");
-        setTimeout(runEntranceAnimations, 300);
-      }, 400);
-    } else {
-      runEntranceAnimations();
-    }
+  tabButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const tabName = btn.getAttribute("data-tab");
+      if (tabName) switchTab(tabName);
+    });
   });
 
-  // Fallback in case load event already fired or is delayed
-  setTimeout(() => {
-    if (preloader && !preloader.classList.contains("hide")) {
-      preloader.classList.add("hide");
-      runEntranceAnimations();
-    }
-  }, 1600);
+  // Check URL hash on load
+  const hash = window.location.hash.replace("#", "").toLowerCase();
+  if (hash && document.getElementById(`pane-${hash}`)) {
+    switchTab(hash);
+  }
 
   /* ==========================================================
      4. 1-CLICK EMAIL COPY & TOAST NOTIFICATION
@@ -143,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
     clearTimeout(toastTimer);
     toastTimer = setTimeout(() => {
       toast.classList.remove("show");
-    }, 3200);
+    }, 3000);
   }
 
   copyEmailBtns.forEach((btn) => {

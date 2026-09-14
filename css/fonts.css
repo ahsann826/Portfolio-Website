@@ -1,15 +1,31 @@
 @font-face {
-  font-family: "Helvetica Now Display";
-  src: url("../fonts/HelveticaNowDisplay-Medium.woff2") format("woff2");
-  font-weight: 500;
+  font-family: "Inter";
   font-style: normal;
+  font-weight: 100 900;
   font-display: swap;
+  src: url("../fonts/83afe278b6a6bb3c-s.p.3a6ba036.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: "EB Garamond";
-  src: url("../fonts/EBGaramond-Regular.woff2") format("woff2");
-  font-weight: 400;
+  font-family: "Geist Mono";
   font-style: normal;
+  font-weight: 100 900;
   font-display: swap;
+  src: url("../fonts/797e433ab948586e-s.p.29207c2f.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Fraunces";
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("../fonts/84585a440835450c-s.p.f66aa07e.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Caveat";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("../fonts/a85fe84266768609-s.p.e658778d.woff2") format("woff2");
 }
