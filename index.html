@@ -24,19 +24,7 @@
   <link rel="stylesheet" href="_next/static/chunks/348c73c4200ac295.css" />
   <link rel="icon" href="favicon.ico" />
 
-  <!-- Premium Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
   <style>
-    @font-face {
-      font-family: 'Helvetica Now Display';
-      src: url('fonts/HelveticaNowDisplay-Medium.woff2') format('woff2');
-      font-weight: 500;
-      font-style: normal;
-      font-display: swap;
-    }
     :root {
       /* Exact Ivory background matching screenshot */
       --bg-canvas: #FBF9F5;
@@ -60,48 +48,31 @@
     html, body {
       background-color: #FBF9F5 !important;
       color: #1D1D1F;
-      font-family: 'Plus Jakarta Sans', 'Helvetica Now Display', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', sans-serif !important;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      text-rendering: optimizeLegibility;
       scroll-behavior: smooth;
     }
-    .hero-title {
-      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', sans-serif !important;
-      letter-spacing: -0.032em;
-      font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
-    }
-    .hero-sub {
-      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', sans-serif !important;
-      letter-spacing: -0.015em;
-    }
-    /* Floating Capsule Tab Navigation (CampusRank-style) */
-    .capsule-tab {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 7px 18px;
-      border-radius: 9999px;
-      font-size: 14px;
-      font-weight: 500;
-      color: #6E6E73;
-      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-      white-space: nowrap;
-      user-select: none;
-      border: 1px solid transparent;
+    /* Tab button states */
+    .tab-btn {
+      position: relative;
       cursor: pointer;
-      background: transparent;
+      user-select: none;
+      transition: color 0.18s ease;
     }
-    .capsule-tab:hover {
-      color: #111827;
-      background-color: rgba(0, 0, 0, 0.04);
+    .tab-btn:hover {
+      color: #1D1D1F !important;
     }
-    .capsule-tab[aria-pressed="true"], .capsule-tab.active {
-      color: #0071E3 !important;
-      background-color: #FFFFFF !important;
-      border: 1px solid rgba(0, 113, 227, 0.32) !important;
-      box-shadow: 0 2px 8px rgba(0, 113, 227, 0.12), 0 1px 2px rgba(0, 0, 0, 0.04) !important;
-      font-weight: 600 !important;
+    .tab-btn[aria-pressed="true"] {
+      color: #1D1D1F !important;
+      font-weight: 600;
+    }
+    .tab-btn[aria-pressed="true"]::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -1px;
+      height: 2px;
+      background-color: #0071E3;
+      border-radius: 2px;
     }
     /* Tactile button active states */
     .tactile-btn:active {
@@ -116,14 +87,6 @@
     }
     .tab-panel.hidden {
       display: none !important;
-    }
-    /* Hide scrollbar for mobile capsule nav */
-    .no-scrollbar::-webkit-scrollbar {
-      display: none;
-    }
-    .no-scrollbar {
-      -ms-overflow-style: none;
-      scrollbar-width: none;
     }
     /* Sleek selection highlight */
     ::selection {
@@ -148,7 +111,7 @@
       <div class="absolute inset-x-0 top-0" style="height:20%;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);mask-image:linear-gradient(to bottom, black, transparent);-webkit-mask-image:linear-gradient(to bottom, black, transparent)"></div>
       <div class="absolute inset-x-0 top-0" style="height:10%;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);mask-image:linear-gradient(to bottom, black, transparent);-webkit-mask-image:linear-gradient(to bottom, black, transparent)"></div>
     </div>
-    <div class="relative flex items-center justify-between h-[84px] max-w-[1140px] mx-auto px-6 md:px-12">
+    <div class="relative flex items-center justify-between h-[84px] px-6 md:px-10">
       <div class="flex items-center gap-[5px]">
         <a class="flex items-center gap-3.5 group" href="index.html">
           <img src="assets/avatar.jpg" alt="Khan Muhammad Ahsan" width="42" height="42" class="rounded-full object-cover object-[50%_25%] border border-black/10 shadow-sm transition-transform duration-200 group-hover:scale-105 ring-2 ring-black/[0.04]" style="width:42px;height:42px;object-fit:cover;" />
@@ -156,7 +119,7 @@
         </a>
       </div>
       <a href="https://linkedin.com/in/khan-ahsan" target="_blank" rel="noopener noreferrer" style="border:2px solid transparent;background-image:linear-gradient(180deg, #ededed 0%, #cccccc 75%, #c2c2c2 100%), linear-gradient(180deg, #ffffff 0%, #bdbdbd 30%, #e1e1e1 100%);background-origin:padding-box, border-box;background-clip:padding-box, border-box;box-shadow:0px 0px 0px 0.5px rgba(0,0,0,0.25),0px 1px 2px -1px rgba(0,0,0,0.06),0px 2px 4px 0px rgba(0,0,0,0.04)" class="inline-flex items-center justify-center gap-1 rounded-full px-[16px] py-[8px] select-none text-body1 font-medium leading-[1.4] whitespace-nowrap transition-[transform,background-color,color,filter] duration-150 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 disabled:pointer-events-none disabled:opacity-50 text-[#4a4a47] bg-no-repeat hover:brightness-[1.04] active:scale-[0.97]">
-        <span class="bg-gradient-to-b from-[#75756f] to-[#4a4a47] bg-clip-text text-transparent">Connect</span>
+        <span class="bg-gradient-to-b from-[#75756f] to-[#4a4a47] bg-clip-text text-transparent">More on X</span>
         <span aria-hidden="true" class="inline-flex size-4 shrink-0 items-center justify-center [&_svg]:size-4">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"><path stroke="currentColor" stroke-linecap="square" stroke-width="1.2" d="M11.667 4.333 4 12M5.333 4H12v6.667"></path></svg>
         </span>
@@ -169,71 +132,62 @@
       <div class="w-full flex flex-col mb-[120px]">
 
         <!-- Intro Section -->
-        <section class="w-full px-6 md:px-12 pt-14 md:pt-20 pb-4 max-w-[1140px] mx-auto">
-          <div class="flex flex-col gap-6 max-w-[840px]">
-            <h1 class="hero-title text-3xl sm:text-4xl md:text-[40px] font-semibold leading-[1.26] text-[#111827] tracking-tight">
-              I am a Software engineering student with a strong business acumen and a sharp focus on user experience, currently studying at <a href="https://www.ajou.ac.kr/en/" target="_blank" rel="noopener noreferrer" class="underline decoration-black/25 underline-offset-4 hover:text-[#0071E3] hover:decoration-[#0071E3] transition-colors">Ajou University</a> in South Korea under the prestigious <span class="font-bold text-black">Global Korea Scholarship</span>.
+        <section class="w-full px-6 md:px-10 pt-10 md:pt-14">
+          <div class="flex flex-col gap-6 max-w-[880px]">
+            <h1 class="text-2xl sm:text-3xl md:text-[34px] font-normal leading-[1.38] text-[#1D1D1F] tracking-tight text-balance">
+              I am a Software engineering student with a strong business acumen and a sharp focus on user experience, currently studying at <a href="https://www.ajou.ac.kr/en/" target="_blank" rel="noopener noreferrer" class="underline decoration-black/25 underline-offset-4 hover:text-[#0071E3] hover:decoration-[#0071E3] transition-colors">Ajou University</a> in South Korea under the prestigious <span class="font-medium text-[#111827]">Global Korea Scholarship</span>.
             </h1>
-            <p class="hero-sub text-xl sm:text-2xl md:text-[24px] font-normal leading-[1.45] text-[#6E6E73] tracking-tight">
+            <p class="text-xl sm:text-2xl md:text-[25px] font-normal leading-[1.46] text-[#6E6E73] tracking-tight text-balance">
               My dream is to contribute to the world by shipping products that simplify people&#x27;s lives as technology rapidly advances.
             </p>
           </div>
         </section>
 
-        <!-- Floating Segmented Navigation Bar (CampusRank-style) -->
-        <div id="tabs-container" class="sticky top-[84px] z-40 w-full px-4 py-3 flex justify-center pointer-events-none mt-10">
-          <div class="pointer-events-auto p-1.5 rounded-full bg-white/90 border border-black/[0.08] shadow-[0_4px_20px_rgba(0,0,0,0.05)] backdrop-blur-xl max-w-full overflow-x-auto no-scrollbar flex items-center">
-            <nav class="flex items-center gap-1" aria-label="Sections">
-              <button type="button" data-tab="work" aria-pressed="true" class="tab-btn capsule-tab active">
-                <span>Work</span>
-              </button>
-              <button type="button" data-tab="play" aria-pressed="false" class="tab-btn capsule-tab">
-                <span>Play</span>
-              </button>
-              <button type="button" data-tab="icon" aria-pressed="false" class="tab-btn capsule-tab">
-                <span>Icon</span>
-              </button>
-              <button type="button" data-tab="essay" aria-pressed="false" class="tab-btn capsule-tab">
-                <span>Essay</span>
-              </button>
-              <button type="button" data-tab="story" aria-pressed="false" class="tab-btn capsule-tab">
-                <span>Story</span>
-              </button>
-              <button type="button" data-tab="connect" aria-pressed="false" class="tab-btn capsule-tab">
-                <span>Connect</span>
-              </button>
-            </nav>
-          </div>
+        <!-- Navigation Tabs Bar -->
+        <div id="tabs-container" class="mt-14 w-auto px-6 md:px-10">
+          <nav class="w-fit flex items-center gap-6 border-b border-stroke-secondary" aria-label="Homepage tabs">
+            <button type="button" data-tab="work" aria-pressed="true" class="tab-btn relative flex items-center pb-3 text-body1 font-medium leading-[normal] whitespace-nowrap text-[#1D1D1F] after:absolute after:inset-x-0 after:-bottom-px after:h-[2px] after:bg-[#0071E3]">Work</button>
+            <button type="button" data-tab="play" aria-pressed="false" class="tab-btn relative flex items-center pb-3 text-body1 font-medium leading-[normal] whitespace-nowrap text-[#6E6E73] hover:text-[#1D1D1F]">Play</button>
+            <button type="button" data-tab="icon" aria-pressed="false" class="tab-btn relative flex items-center pb-3 text-body1 font-medium leading-[normal] whitespace-nowrap text-[#6E6E73] hover:text-[#1D1D1F]">Icon</button>
+            <button type="button" data-tab="essay" aria-pressed="false" class="tab-btn relative flex items-center pb-3 text-body1 font-medium leading-[normal] whitespace-nowrap text-[#6E6E73] hover:text-[#1D1D1F]">
+              Essay
+              <svg class="absolute top-[1.5px] -right-[8px]" xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 10 9" fill="none">
+                <path d="M3.07886 0.990234C3.93268 0.828804 4.81511 1.01384 5.323 1.20117C6.13615 1.50118 7.12406 1.96362 7.72827 2.73242C8.05 3.14181 8.27073 3.64776 8.28394 4.24219C8.29685 4.826 8.10767 5.41018 7.76343 5.98535C6.70603 7.75075 4.80416 8.14367 3.28687 7.51367C1.77068 6.88389 0.662848 5.25746 0.984131 3.16211V3.16113C1.08136 2.53079 1.34641 2.01222 1.75757 1.63086C2.15867 1.25892 2.63761 1.07366 3.07886 0.990234Z" fill="#0071E3" stroke="#FBF9F5" stroke-width="1.85601"></path>
+              </svg>
+            </button>
+            <button type="button" data-tab="story" aria-pressed="false" class="tab-btn relative flex items-center pb-3 text-body1 font-medium leading-[normal] whitespace-nowrap text-[#6E6E73] hover:text-[#1D1D1F]">Story</button>
+            <button type="button" data-tab="connect" aria-pressed="false" class="tab-btn relative flex items-center pb-3 text-body1 font-medium leading-[normal] whitespace-nowrap text-[#6E6E73] hover:text-[#1D1D1F]">Connect</button>
+          </nav>
         </div>
 
         <!-- ================= TAB 1: WORK ================= -->
-        <section id="tab-panel-work" class="tab-panel mt-6 w-full max-w-[1140px] mx-auto px-6 md:px-12 overflow-x-hidden">
+        <section id="tab-panel-work" class="tab-panel mt-6 w-full overflow-x-hidden">
           <div class="w-full">
             <div class="flex flex-col gap-30">
 
               <!-- Project 1: Sanctum App -->
               <section class="flex flex-col gap-3">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  <div class="relative aspect-[16/9] bg-sand-2 rounded-2xl overflow-hidden border border-black/[0.06] shadow-xs">
+                  <div class="relative aspect-[16/9] bg-sand-2 overflow-hidden">
                     <img alt="Sanctum App 1" loading="lazy" decoding="async" class="object-cover absolute inset-0 w-full h-full" src="_next/012e7f.png" />
                   </div>
-                  <div class="relative aspect-[16/9] bg-sand-2 rounded-2xl overflow-hidden border border-black/[0.06] shadow-xs">
+                  <div class="relative aspect-[16/9] bg-sand-2 overflow-hidden">
                     <img alt="Sanctum App 2" loading="lazy" decoding="async" class="object-cover absolute inset-0 w-full h-full" src="_next/02223c.png" />
                   </div>
-                  <div class="relative aspect-[16/9] bg-sand-2 rounded-2xl overflow-hidden border border-black/[0.06] shadow-xs">
+                  <div class="relative aspect-[16/9] bg-sand-2 overflow-hidden">
                     <img alt="Sanctum App 3" loading="lazy" decoding="async" class="object-cover absolute inset-0 w-full h-full" src="_next/03b1ff.png" />
                   </div>
-                  <div class="relative aspect-[16/9] bg-sand-2 rounded-2xl overflow-hidden border border-black/[0.06] shadow-xs">
+                  <div class="relative aspect-[16/9] bg-sand-2 overflow-hidden">
                     <img alt="Sanctum App 4" loading="lazy" decoding="async" class="object-cover absolute inset-0 w-full h-full" src="_next/04043a.png" />
                   </div>
-                  <div class="relative aspect-[16/9] bg-sand-2 rounded-2xl overflow-hidden border border-black/[0.06] shadow-xs">
+                  <div class="relative aspect-[16/9] bg-sand-2 overflow-hidden">
                     <img alt="Sanctum App 5" loading="lazy" decoding="async" class="object-cover absolute inset-0 w-full h-full" src="_next/051e31.png" />
                   </div>
-                  <div class="relative aspect-[16/9] bg-sand-2 rounded-2xl overflow-hidden border border-black/[0.06] shadow-xs">
+                  <div class="relative aspect-[16/9] bg-sand-2 overflow-hidden">
                     <img alt="Sanctum App 6" loading="lazy" decoding="async" class="object-cover absolute inset-0 w-full h-full" src="_next/06065f.png" />
                   </div>
                 </div>
-                <div class="px-1 md:px-2 pt-4 grid grid-cols-1 md:grid-cols-2 gap-3 mt-3">
+                <div class="px-6 md:px-10 pt-4 grid grid-cols-1 md:grid-cols-2 gap-3 mt-3">
                   <div class="flex md:flex-col gap-3 md:gap-2 items-center md:items-start">
                     <h3 class="text-display">
                       <a href="https://sanctum.so/app" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-1">
@@ -263,20 +217,20 @@
               <!-- Project 2: Sanctum Web -->
               <section class="flex flex-col gap-3">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  <div class="relative aspect-[16/9] bg-sand-2 rounded-2xl overflow-hidden border border-black/[0.06] shadow-xs">
+                  <div class="relative aspect-[16/9] bg-sand-2 overflow-hidden">
                     <video src="assets/work/sanctum-website/01.mp4" autoPlay="" loop="" muted="" playsInline="" class="absolute inset-0 m-auto h-[71.25%] object-contain border-[0.3px] border-stroke-secondary"></video>
                   </div>
-                  <div class="relative aspect-[16/9] bg-sand-2 rounded-2xl overflow-hidden border border-black/[0.06] shadow-xs">
+                  <div class="relative aspect-[16/9] bg-sand-2 overflow-hidden">
                     <img alt="Sanctum Web 2" loading="lazy" decoding="async" class="object-cover absolute inset-0 w-full h-full" src="_next/022da4.png" />
                   </div>
-                  <div class="relative aspect-[16/9] bg-sand-2 rounded-2xl overflow-hidden border border-black/[0.06] shadow-xs">
+                  <div class="relative aspect-[16/9] bg-sand-2 overflow-hidden">
                     <img alt="Sanctum Web 3" loading="lazy" decoding="async" class="object-cover absolute inset-0 w-full h-full" src="_next/03a312.png" />
                   </div>
-                  <div class="relative aspect-[16/9] bg-sand-2 rounded-2xl overflow-hidden border border-black/[0.06] shadow-xs">
+                  <div class="relative aspect-[16/9] bg-sand-2 overflow-hidden">
                     <img alt="Sanctum Web 4" loading="lazy" decoding="async" class="object-cover absolute inset-0 w-full h-full" src="_next/042458.png" />
                   </div>
                 </div>
-                <div class="px-1 md:px-2 pt-4 grid grid-cols-1 md:grid-cols-2 gap-3 mt-3">
+                <div class="px-6 md:px-10 pt-4 grid grid-cols-1 md:grid-cols-2 gap-3 mt-3">
                   <div class="flex md:flex-col gap-3 md:gap-2 items-center md:items-start">
                     <h3 class="text-display">
                       <a href="https://www.sanctum.so/" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-1">
@@ -298,14 +252,14 @@
               <!-- Project 3: Focus Island -->
               <section class="flex flex-col gap-3">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  <div class="relative aspect-[16/9] bg-sand-2 rounded-2xl overflow-hidden border border-black/[0.06] shadow-xs">
+                  <div class="relative aspect-[16/9] bg-sand-2 overflow-hidden">
                     <video src="assets/work/misc/01.mp4" autoPlay="" loop="" muted="" playsInline="" class="absolute inset-0 m-auto h-[71.25%] object-contain border-[0.3px] border-stroke-secondary"></video>
                   </div>
-                  <div class="relative aspect-[16/9] bg-sand-2 rounded-2xl overflow-hidden border border-black/[0.06] shadow-xs">
+                  <div class="relative aspect-[16/9] bg-sand-2 overflow-hidden">
                     <img alt="Focus Island 2" loading="lazy" decoding="async" class="object-cover absolute inset-0 w-full h-full" src="_next/02c1ac.png" />
                   </div>
                 </div>
-                <div class="px-1 md:px-2 pt-4 grid grid-cols-1 md:grid-cols-2 gap-3 mt-3">
+                <div class="px-6 md:px-10 pt-4 grid grid-cols-1 md:grid-cols-2 gap-3 mt-3">
                   <div class="flex md:flex-col gap-3 md:gap-2 items-center md:items-start">
                     <h3 class="text-display">Focus Island</h3>
                     <p class="text-body1 text-content-tertiary">Personal Project</p>
@@ -327,14 +281,14 @@
               <!-- Project 4: Gateway -->
               <section class="flex flex-col gap-3">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  <div class="relative aspect-[16/9] bg-sand-2 rounded-2xl overflow-hidden border border-black/[0.06] shadow-xs">
+                  <div class="relative aspect-[16/9] bg-sand-2 overflow-hidden">
                     <img alt="Gateway 1" loading="lazy" decoding="async" class="object-cover absolute inset-0 w-full h-full" src="_next/015e25.png" />
                   </div>
-                  <div class="relative aspect-[16/9] bg-sand-2 rounded-2xl overflow-hidden border border-black/[0.06] shadow-xs">
+                  <div class="relative aspect-[16/9] bg-sand-2 overflow-hidden">
                     <img alt="Gateway 2" loading="lazy" decoding="async" class="object-cover absolute inset-0 w-full h-full" src="_next/022327.png" />
                   </div>
                 </div>
-                <div class="px-1 md:px-2 pt-4 grid grid-cols-1 md:grid-cols-2 gap-3 mt-3">
+                <div class="px-6 md:px-10 pt-4 grid grid-cols-1 md:grid-cols-2 gap-3 mt-3">
                   <div class="flex md:flex-col gap-3 md:gap-2 items-center md:items-start">
                     <h3 class="text-display">
                       <a href="https://gateway.sanctum.so/" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-1">
@@ -356,14 +310,14 @@
               <!-- Project 5: Elfa.ai -->
               <section class="flex flex-col gap-3">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  <div class="relative aspect-[16/9] bg-sand-2 rounded-2xl overflow-hidden border border-black/[0.06] shadow-xs">
+                  <div class="relative aspect-[16/9] bg-sand-2 overflow-hidden">
                     <img alt="Elfa.ai 1" loading="lazy" decoding="async" class="object-cover absolute inset-0 w-full h-full" src="_next/01e1ca.png" />
                   </div>
-                  <div class="relative aspect-[16/9] bg-sand-2 rounded-2xl overflow-hidden border border-black/[0.06] shadow-xs">
+                  <div class="relative aspect-[16/9] bg-sand-2 overflow-hidden">
                     <img alt="Elfa.ai 2" loading="lazy" decoding="async" class="object-cover absolute inset-0 w-full h-full" src="_next/022d46.png" />
                   </div>
                 </div>
-                <div class="px-1 md:px-2 pt-4 grid grid-cols-1 md:grid-cols-2 gap-3 mt-3">
+                <div class="px-6 md:px-10 pt-4 grid grid-cols-1 md:grid-cols-2 gap-3 mt-3">
                   <div class="flex md:flex-col gap-3 md:gap-2 items-center md:items-start">
                     <h3 class="text-display">
                       <a href="https://elfa.ai/" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-1">
@@ -385,14 +339,14 @@
               <!-- Project 6: AYANA -->
               <section class="flex flex-col gap-3">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  <div class="relative aspect-[16/9] bg-sand-2 rounded-2xl overflow-hidden border border-black/[0.06] shadow-xs">
+                  <div class="relative aspect-[16/9] bg-sand-2 overflow-hidden">
                     <img alt="AYANA 1" loading="lazy" decoding="async" class="object-cover absolute inset-0 w-full h-full" src="_next/0181e1.png" />
                   </div>
-                  <div class="relative aspect-[16/9] bg-sand-2 rounded-2xl overflow-hidden border border-black/[0.06] shadow-xs">
+                  <div class="relative aspect-[16/9] bg-sand-2 overflow-hidden">
                     <img alt="AYANA 2" loading="lazy" decoding="async" class="object-cover absolute inset-0 w-full h-full" src="_next/02908d.png" />
                   </div>
                 </div>
-                <div class="px-1 md:px-2 pt-4 grid grid-cols-1 md:grid-cols-2 gap-3 mt-3">
+                <div class="px-6 md:px-10 pt-4 grid grid-cols-1 md:grid-cols-2 gap-3 mt-3">
                   <div class="flex md:flex-col gap-3 md:gap-2 items-center md:items-start">
                     <h3 class="text-display">
                       <a href="https://ayana.com/" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-1">
@@ -416,7 +370,7 @@
         </section>
 
         <!-- ================= TAB 2: PLAY ================= -->
-        <section id="tab-panel-play" class="tab-panel hidden mt-6 w-full max-w-[1140px] mx-auto px-6 md:px-12">
+        <section id="tab-panel-play" class="tab-panel hidden mt-6 w-full px-6 md:px-10">
           <div class="flex flex-col gap-12 max-w-[900px]">
             <div class="flex flex-col gap-2">
               <h2 class="text-display">Interactive Skeuomorphic Buttons</h2>
@@ -510,7 +464,7 @@
         </section>
 
         <!-- ================= TAB 3: ICON ================= -->
-        <section id="tab-panel-icon" class="tab-panel hidden mt-6 w-full max-w-[1140px] mx-auto px-6 md:px-12">
+        <section id="tab-panel-icon" class="tab-panel hidden mt-6 w-full px-6 md:px-10">
           <div class="flex flex-col gap-8 max-w-[900px]">
             <div class="flex flex-col gap-2">
               <h2 class="text-display">Iconography &amp; Marks</h2>
@@ -563,7 +517,7 @@
         </section>
 
         <!-- ================= TAB 4: ESSAY ================= -->
-        <section id="tab-panel-essay" class="tab-panel hidden mt-6 w-full max-w-[1140px] mx-auto px-6 md:px-12">
+        <section id="tab-panel-essay" class="tab-panel hidden mt-6 w-full px-6 md:px-10">
           <div class="flex flex-col gap-8 max-w-[720px]">
             <div class="flex flex-col gap-2">
               <h2 class="text-display">Essays &amp; Writing</h2>
@@ -617,7 +571,7 @@
         </section>
 
         <!-- ================= TAB 5: STORY ================= -->
-        <section id="tab-panel-story" class="tab-panel hidden mt-6 w-full max-w-[1140px] mx-auto px-6 md:px-12">
+        <section id="tab-panel-story" class="tab-panel hidden mt-6 w-full px-6 md:px-10">
           <div class="flex flex-col gap-10 max-w-[720px]">
             <div class="flex flex-col gap-4">
               <h2 class="text-display">Khan Muhammad Ahsan</h2>
@@ -673,7 +627,7 @@
         </section>
 
         <!-- ================= TAB 6: CONNECT ================= -->
-        <section id="tab-panel-connect" class="tab-panel hidden mt-6 w-full max-w-[1140px] mx-auto px-6 md:px-12">
+        <section id="tab-panel-connect" class="tab-panel hidden mt-6 w-full px-6 md:px-10">
           <div class="flex flex-col gap-8 max-w-[640px]">
             <div class="flex flex-col gap-2">
               <h2 class="text-display">Connect &amp; Collaborate</h2>
@@ -721,7 +675,7 @@
       </div>
 
       <!-- Footer -->
-      <footer class="flex w-full flex-col max-w-[1140px] mx-auto px-6 md:px-12">
+      <footer class="flex w-full flex-col px-6 md:px-10">
         <div class="text-gray-800 flex flex-col gap-8 border-t border-stroke-secondary py-8 md:flex-row md:items-start md:justify-between">
           <div class="flex gap-2">
             <a class="text-title" href="index.html">Khan Muhammad Ahsan</a>
