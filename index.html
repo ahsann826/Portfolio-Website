@@ -27,9 +27,30 @@
   <!-- Premium Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 
   <style>
+    @font-face {
+      font-family: 'Outfit';
+      src: url('fonts/Outfit-400.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: block;
+    }
+    @font-face {
+      font-family: 'Outfit';
+      src: url('fonts/Outfit-500.woff2') format('woff2');
+      font-weight: 500;
+      font-style: normal;
+      font-display: block;
+    }
+    @font-face {
+      font-family: 'Outfit';
+      src: url('fonts/Outfit-600.woff2') format('woff2');
+      font-weight: 600;
+      font-style: normal;
+      font-display: block;
+    }
     @font-face {
       font-family: 'Helvetica Now Display';
       src: url('fonts/HelveticaNowDisplay-Medium.woff2') format('woff2');
@@ -61,25 +82,148 @@
     html, body {
       background-color: #FAF7F4 !important;
       color: #2E2C33;
-      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', sans-serif !important;
+      font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif !important;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       text-rendering: optimizeLegibility;
       scroll-behavior: smooth;
     }
-    .hero-statement {
-      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-      letter-spacing: -0.012em;
+    /* Layout containers */
+    .site-container {
+      width: 100%;
+      max-width: 1024px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 32px;
+      padding-right: 32px;
+      box-sizing: border-box;
     }
-    /* Tab button states */
+    /* Header */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      width: 100%;
+      background-color: rgba(250, 247, 244, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+    .site-header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 48px;
+      width: 100%;
+      max-width: 1024px;
+      margin: 0 auto;
+      padding: 0 32px;
+      box-sizing: border-box;
+    }
+    .header-brand {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 9px !important;
+      text-decoration: none !important;
+    }
+    .header-avatar {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      flex-shrink: 0;
+    }
+    .header-name {
+      font-size: 13px;
+      font-weight: 500;
+      color: #1E1B29;
+      letter-spacing: -0.01em;
+      font-family: 'Outfit', sans-serif;
+      line-height: 1;
+    }
+    .connect-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      border-radius: 9999px;
+      padding: 4px 13px;
+      height: 29px;
+      font-size: 12px;
+      font-weight: 500;
+      color: #1E1B29;
+      text-decoration: none;
+      font-family: 'Outfit', sans-serif;
+      background: linear-gradient(180deg, #FFFFFF 0%, #F5F1EC 100%);
+      border: 1px solid rgba(255, 255, 255, 0.95);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.03), inset 0 1px 0 rgba(255, 255, 255, 1);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .connect-pill:hover {
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06), 0 2px 4px rgba(0, 0, 0, 0.03), inset 0 1px 0 rgba(255, 255, 255, 1);
+    }
+    /* Intro Section */
+    .hero-intro-section {
+      margin-top: 20px;
+      width: 100%;
+    }
+    .hero-p1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 12.8px;
+      line-height: 1.55;
+      color: #2E2C33;
+      font-weight: 400;
+      margin: 0;
+      letter-spacing: -0.008em;
+      max-width: 960px;
+    }
+    .hero-p2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 12.8px;
+      line-height: 1.55;
+      color: #2E2C33;
+      font-weight: 400;
+      margin-top: 18px;
+      margin-bottom: 0;
+      letter-spacing: -0.008em;
+      max-width: 960px;
+    }
+      max-width: 960px;
+    }
+    .text-wine-link {
+      color: #94546A;
+      font-weight: 400;
+      text-decoration: none;
+    }
+    .text-wine-link:hover {
+      text-decoration: underline;
+    }
+    .text-wine-span {
+      color: #94546A;
+      font-weight: 400;
+    }
+    /* Navigation Tabs */
+    .tabs-nav-bar {
+      margin-top: 28px;
+      width: 100%;
+    }
+    .tabs-nav-list {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
     .tab-btn {
       position: relative;
       cursor: pointer;
       user-select: none;
-      padding-bottom: 7px;
-      font-size: 14.5px;
+      background: transparent;
+      border: none;
+      padding: 0 0 8px 0;
+      margin: 0;
+      font-size: 13px;
       font-weight: 400;
       color: #9EA2B0;
+      font-family: 'Outfit', sans-serif;
       transition: color 0.18s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .tab-btn:hover {
@@ -87,7 +231,7 @@
     }
     .tab-btn[aria-pressed="true"] {
       color: #1E1B29 !important;
-      font-weight: 600;
+      font-weight: 500;
     }
     .tab-btn[aria-pressed="true"]::after {
       content: "";
@@ -95,18 +239,14 @@
       left: 0;
       right: 0;
       bottom: 0;
-      height: 2.5px;
-      background-color: #691837;
-      border-radius: 9999px;
+      height: 2px;
+      background-color: #631333;
+      border-radius: 1px;
     }
-    /* Sleek Connect Pill */
-    .connect-pill {
-      background: linear-gradient(180deg, #FFFFFF 0%, #F4F1EC 100%);
-      border: 1px solid rgba(255, 255, 255, 0.95);
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 1);
-    }
-    .connect-pill:hover {
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 1);
+    /* Showcase */
+    .showcase-banner {
+      margin-top: 28px;
+      width: 100%;
     }
     /* Tactile button active states */
     .tactile-btn:active {
@@ -132,43 +272,43 @@
 <body class="font-sans antialiased">
 
   <!-- Progressive Blurred Sticky Header -->
-  <header class="sticky top-0 z-50 w-full" style="background-color: rgba(250, 247, 244, 0.88); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);">
-    <div class="relative flex items-center justify-between h-[68px] max-w-[1240px] mx-auto px-6 md:px-10">
-      <div class="flex items-center gap-3">
-        <a class="flex items-center gap-3 group" href="index.html">
-          <img src="assets/avatar.jpg" alt="Khan Muhammad Ahsan" width="34" height="34" class="rounded-full object-cover object-[50%_25%] border border-black/10 shadow-xs" style="width:34px;height:34px;object-fit:cover;" />
-          <span class="text-[14.5px] font-medium text-[#1E1B29] tracking-tight">Khan Muhammad Ahsan</span>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div class="flex items-center gap-2.5">
+        <a class="header-brand group" href="index.html">
+          <img src="assets/avatar.jpg" alt="Khan Muhammad Ahsan" width="26" height="26" class="header-avatar" />
+          <span class="header-name">Khan Muhammad Ahsan</span>
         </a>
       </div>
-      <a href="https://linkedin.com/in/khan-ahsan" target="_blank" rel="noopener noreferrer" class="connect-pill inline-flex items-center justify-center gap-1 rounded-full px-[18px] py-[6.5px] select-none text-[13.5px] font-medium text-[#1E1B29] transition-all hover:scale-[1.02] active:scale-[0.97]">
+      <a href="https://linkedin.com/in/khan-ahsan" target="_blank" rel="noopener noreferrer" class="connect-pill">
         <span>Connect</span>
-        <span class="text-xs">↗</span>
+        <span class="text-[11px]">↗</span>
       </a>
     </div>
   </header>
 
   <div class="min-h-screen flex flex-col relative overflow-hidden" style="background-color: #FAF7F4;">
-    <!-- Ambient Silk Ribbon in Top Right -->
-    <img src="assets/ribbon-top-right.png" alt="" class="pointer-events-none absolute top-0 right-0 z-0 select-none max-w-[240px] sm:max-w-[300px] md:max-w-[360px] h-auto" aria-hidden="true" />
+    <!-- Container for Ambient Silk Ribbon aligning with 1024px grid -->
+    <div class="w-full max-w-[1024px] mx-auto relative pointer-events-none">
+      <img src="assets/ribbon-top-right.png" alt="" class="absolute top-0 right-0 z-0 select-none w-[174px] h-[170px] hidden sm:block" aria-hidden="true" />
+    </div>
 
     <main class="relative z-10 flex min-h-dvh flex-1 flex-col" style="background-color: transparent;">
       <div class="w-full flex flex-col mb-[120px]">
 
         <!-- Intro Section -->
-        <section class="relative z-10 w-full max-w-[1240px] mx-auto px-6 md:px-10 pt-6 md:pt-10">
-          <div class="flex flex-col gap-0 max-w-[1040px]">
-            <p class="hero-statement text-[15px] sm:text-[16px] md:text-[17px] leading-[1.64] text-[#2E2C33] font-normal">
-              I am a Software engineering student with a strong business acumen and a sharp focus on user experience, currently studying at <a href="https://www.ajou.ac.kr/en/" target="_blank" rel="noopener noreferrer" class="text-[#94546A] hover:underline font-normal">Ajou University</a> in South Korea under the prestigious <span class="text-[#94546A] font-normal">Global Korea Scholarship</span>.
-            </p>
-            <p class="hero-statement text-[15px] sm:text-[16px] md:text-[17px] leading-[1.64] text-[#2E2C33] font-normal mt-4">
-              My dream is to contribute to the world by shipping products that simplify people&#x27;s lives as technology rapidly advances.
-            </p>
-          </div>
+        <section class="site-container hero-intro-section">
+          <p class="hero-p1">
+            I am a Software engineering student with a strong business acumen and a sharp focus on user experience, currently studying at <a href="https://www.ajou.ac.kr/en/" target="_blank" rel="noopener noreferrer" class="text-wine-link">Ajou University</a> in South Korea under the prestigious <span class="text-wine-span">Global Korea Scholarship</span>.
+          </p>
+          <p class="hero-p2">
+            My dream is to contribute to the world by shipping products that simplify people&#x27;s lives as technology rapidly advances.
+          </p>
         </section>
 
         <!-- Navigation Tabs Bar -->
-        <div id="tabs-container" class="relative z-10 mt-7 md:mt-9 w-full max-w-[1240px] mx-auto px-6 md:px-10">
-          <nav class="flex items-center gap-6 sm:gap-7 md:gap-8" aria-label="Homepage tabs">
+        <div id="tabs-container" class="site-container tabs-nav-bar">
+          <nav class="tabs-nav-list" aria-label="Homepage tabs">
             <button type="button" data-tab="work" aria-pressed="true" class="tab-btn">Work</button>
             <button type="button" data-tab="play" aria-pressed="false" class="tab-btn">Play</button>
             <button type="button" data-tab="icon" aria-pressed="false" class="tab-btn">Icon</button>
@@ -179,16 +319,16 @@
         </div>
 
         <!-- ================= TAB 1: WORK ================= -->
-        <section id="tab-panel-work" class="tab-panel relative z-10 mt-4 md:mt-6 w-full max-w-[1240px] mx-auto px-4 md:px-6 overflow-x-hidden">
+        <section id="tab-panel-work" class="tab-panel relative z-10 showcase-banner w-full max-w-[1024px] mx-auto px-0 overflow-x-hidden">
           <div class="w-full">
-            <div class="flex flex-col gap-24">
+            <div class="flex flex-col gap-20">
 
               <!-- Project 1: Sanctum Mobile Suite (Hero Showcase matching screenshot) -->
               <section class="flex flex-col gap-4">
                 <div class="w-full relative overflow-hidden">
-                  <img src="assets/work/sanctum-showcase.png" alt="Sanctum Mobile Showcase" class="w-full h-auto object-contain block select-none" width="1024" height="303" />
+                  <img src="assets/work/sanctum-showcase.png" alt="Sanctum Mobile Showcase" class="w-full h-auto object-contain block select-none" width="1024" height="311" />
                 </div>
-                <div class="px-2 md:px-4 pt-2 grid grid-cols-1 md:grid-cols-2 gap-3 mt-1">
+                <div class="px-8 pt-2 grid grid-cols-1 md:grid-cols-2 gap-3 mt-1">
                   <div class="flex md:flex-col gap-2 items-center md:items-start">
                     <h3 class="text-display">
                       <a href="https://sanctum.so/app" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-1 hover:text-[#94546A] transition-colors">
@@ -371,7 +511,7 @@
         </section>
 
         <!-- ================= TAB 2: PLAY ================= -->
-        <section id="tab-panel-play" class="tab-panel hidden mt-6 w-full max-w-[1240px] mx-auto px-6 md:px-10">
+        <section id="tab-panel-play" class="tab-panel hidden mt-7 w-full max-w-[1024px] mx-auto px-8">
           <div class="flex flex-col gap-12 max-w-[900px]">
             <div class="flex flex-col gap-2">
               <h2 class="text-display">Interactive Skeuomorphic Buttons</h2>
@@ -465,7 +605,7 @@
         </section>
 
         <!-- ================= TAB 3: ICON ================= -->
-        <section id="tab-panel-icon" class="tab-panel hidden mt-6 w-full max-w-[1240px] mx-auto px-6 md:px-10">
+        <section id="tab-panel-icon" class="tab-panel hidden mt-7 w-full max-w-[1024px] mx-auto px-8">
           <div class="flex flex-col gap-8 max-w-[900px]">
             <div class="flex flex-col gap-2">
               <h2 class="text-display">Iconography &amp; Marks</h2>
@@ -518,7 +658,7 @@
         </section>
 
         <!-- ================= TAB 4: ESSAY ================= -->
-        <section id="tab-panel-essay" class="tab-panel hidden mt-6 w-full max-w-[1240px] mx-auto px-6 md:px-10">
+        <section id="tab-panel-essay" class="tab-panel hidden mt-7 w-full max-w-[1024px] mx-auto px-8">
           <div class="flex flex-col gap-8 max-w-[720px]">
             <div class="flex flex-col gap-2">
               <h2 class="text-display">Essays &amp; Writing</h2>
@@ -572,7 +712,7 @@
         </section>
 
         <!-- ================= TAB 5: STORY ================= -->
-        <section id="tab-panel-story" class="tab-panel hidden mt-6 w-full max-w-[1240px] mx-auto px-6 md:px-10">
+        <section id="tab-panel-story" class="tab-panel hidden mt-7 w-full max-w-[1024px] mx-auto px-8">
           <div class="flex flex-col gap-10 max-w-[720px]">
             <div class="flex flex-col gap-4">
               <h2 class="text-display">Khan Muhammad Ahsan</h2>
@@ -628,7 +768,7 @@
         </section>
 
         <!-- ================= TAB 6: CONNECT ================= -->
-        <section id="tab-panel-connect" class="tab-panel hidden mt-6 w-full max-w-[1240px] mx-auto px-6 md:px-10">
+        <section id="tab-panel-connect" class="tab-panel hidden mt-7 w-full max-w-[1024px] mx-auto px-8">
           <div class="flex flex-col gap-8 max-w-[640px]">
             <div class="flex flex-col gap-2">
               <h2 class="text-display">Connect &amp; Collaborate</h2>
