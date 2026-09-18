@@ -317,63 +317,17 @@
     .tab-btn:hover .tab-icon svg {
       stroke: #52525B;
     }
-    /* Active State (matches reference screenshot) */
+    /* Active State (matches reference screenshot: black squircle + white icon) */
     .tab-btn[aria-pressed="true"] {
       color: #111111;
       font-weight: 700;
     }
     .tab-btn[aria-pressed="true"] .tab-icon {
-      background: transparent;
-    }
-    .tab-btn[aria-pressed="true"]:not([data-tab="work"]) .tab-icon {
       background: #111111;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
     }
-    .tab-btn[aria-pressed="true"]:not([data-tab="work"]) .tab-icon svg {
+    .tab-btn[aria-pressed="true"] .tab-icon svg {
       stroke: #FFFFFF;
-    }
-    .tab-btn[aria-pressed="true"] .home-icon-active {
-      display: block !important;
-    }
-    .tab-btn[aria-pressed="true"] .home-icon-inactive {
-      display: none !important;
-    }
-    .tab-btn[aria-pressed="false"] .home-icon-active {
-      display: none !important;
-    }
-    .tab-btn[aria-pressed="false"] .home-icon-inactive {
-      display: block !important;
-    }
-
-    /* Center Orange Glowing Sun Button */
-    .center-fab-btn {
-      width: 72px;
-      height: 72px;
-      border-radius: 50%;
-      background: linear-gradient(180deg, #FFA947 0%, #FF831E 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 10px 24px -2px rgba(255, 131, 30, 0.42), 0 4px 10px rgba(255, 131, 30, 0.25);
-      border: none;
-      cursor: pointer;
-      padding: 0;
-      margin: 0 4px;
-      outline: none;
-      transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease;
-      flex-shrink: 0;
-    }
-    .center-fab-btn:hover {
-      transform: scale(1.06);
-      box-shadow: 0 14px 28px -2px rgba(255, 131, 30, 0.52);
-    }
-    .center-fab-btn:active {
-      transform: scale(0.95);
-    }
-    @media (max-width: 640px) {
-      .center-fab-btn {
-        width: 54px;
-        height: 54px;
-      }
     }
     
     /* Showcase */
@@ -444,83 +398,83 @@
           </p>
         </section>
 
-        <!-- Navigation Tabs Bar — Exact replica of reference image -->
+        <!-- Navigation Tabs Bar — Floating Pill Capsule matching portfolio menu -->
         <div id="tabs-container" class="tabs-nav-bar">
           <div class="nav-outer-frame">
             <nav class="tabs-nav-list" aria-label="Homepage navigation">
               
-              <!-- 1. Home (Active) -->
+              <!-- 1. Work -->
               <button type="button" data-tab="work" aria-pressed="true" class="tab-btn">
                 <span class="tab-icon">
-                  <!-- Active home icon (black house with white heart) -->
-                  <svg class="home-icon-active" width="36" height="36" viewBox="0 0 36 36" fill="none">
-                    <path d="M18 4.2 L30 14.5 C30.6 15 31 15.8 31 16.6 L31 28 C31 30.2 29.2 32 27 32 L9 32 C6.8 32 5 30.2 5 28 L5 16.6 C5 15.8 5.4 15 6 14.5 L18 4.2 Z" fill="#111111"/>
-                    <path d="M18 24.2 C17.8 24.2 17.5 24.1 17.3 23.9 C15 21.9 12.8 19.8 12.8 17.5 C12.8 15.7 14.2 14.3 16 14.3 C16.9 14.3 17.7 14.8 18 15.4 C18.3 14.8 19.1 14.3 20 14.3 C21.8 14.3 23.2 15.7 23.2 17.5 C23.2 19.8 21 21.9 18.7 23.9 C18.5 24.1 18.2 24.2 18 24.2 Z" stroke="#FFFFFF" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                  </svg>
-                  <!-- Inactive home icon -->
-                  <svg class="home-icon-inactive" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#9E9EA7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M3 10.5 L12 3 L21 10.5 V20 C21 21.1 20.1 22 19 22 H5 C3.9 22 3 21.1 3 20 Z" />
-                    <path d="M12 16.5 C11.8 16.5 11.6 16.4 11.4 16.2 C9.8 14.8 8.5 13.5 8.5 12 C8.5 10.8 9.4 9.8 10.6 9.8 C11.2 9.8 11.7 10.1 12 10.5 C12.3 10.1 12.8 9.8 13.4 9.8 C14.6 9.8 15.5 10.8 15.5 12 C15.5 13.5 14.2 14.8 12.6 16.2 C12.4 16.4 12.2 16.5 12 16.5 Z" />
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2.5" y="7" width="19" height="13" rx="2.5" />
+                    <path d="M8 7V4.5A1.5 1.5 0 0 1 9.5 3h5A1.5 1.5 0 0 1 16 4.5V7" />
+                    <line x1="10" y1="12" x2="14" y2="12" />
                   </svg>
                 </span>
-                <span class="tab-label">Home</span>
+                <span class="tab-label">Work</span>
               </button>
 
-              <!-- 2. Meditate -->
+              <!-- 2. Play -->
               <button type="button" data-tab="play" aria-pressed="false" class="tab-btn">
                 <span class="tab-icon">
-                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#9E9EA7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M11 20A7 7 0 0 1 4 13C4 7 11 3 20 3c0 9-4 16-9 17Z" />
-                    <path d="M4 21c3-3 5-7 7-11" />
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="6" y1="12" x2="10" y2="12" />
+                    <line x1="8" y1="10" x2="8" y2="14" />
+                    <circle cx="15" cy="13" r="0.75" fill="currentColor" stroke="none" />
+                    <circle cx="17.5" cy="11" r="0.75" fill="currentColor" stroke="none" />
+                    <path d="M17.5 19l-2.5-3H9L6.5 19A2.5 2.5 0 0 1 2 16.5V11a4.5 4.5 0 0 1 4.5-4.5h11A4.5 4.5 0 0 1 22 11v5.5a2.5 2.5 0 0 1-4.5 2.5Z" />
                   </svg>
                 </span>
-                <span class="tab-label">Meditate</span>
+                <span class="tab-label">Play</span>
               </button>
 
-              <!-- 3. Center Glowing Sun Button -->
-              <button type="button" data-tab="icon" class="center-fab-btn" aria-label="Center action button">
-                <svg width="34" height="34" viewBox="0 0 32 32" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round">
-                  <line x1="16" y1="5" x2="16" y2="9" />
-                  <line x1="23.8" y1="8.2" x2="21" y2="11" />
-                  <line x1="27" y1="16" x2="23" y2="16" />
-                  <line x1="23.8" y1="23.8" x2="21" y2="21" />
-                  <line x1="16" y1="27" x2="16" y2="23" />
-                  <line x1="8.2" y1="23.8" x2="11" y2="21" />
-                  <line x1="5" y1="16" x2="9" y2="16" />
-                  <line x1="8.2" y1="8.2" x2="11" y2="11" />
-                </svg>
+              <!-- 3. Icon -->
+              <button type="button" data-tab="icon" aria-pressed="false" class="tab-btn">
+                <span class="tab-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3.5" y="3.5" width="6.5" height="6.5" rx="1.8" />
+                    <rect x="14" y="3.5" width="6.5" height="6.5" rx="1.8" />
+                    <rect x="3.5" y="14" width="6.5" height="6.5" rx="1.8" />
+                    <circle cx="17.25" cy="17.25" r="3.25" />
+                  </svg>
+                </span>
+                <span class="tab-label">Icon</span>
               </button>
 
-              <!-- 4. Sleep -->
+              <!-- 4. Essay -->
+              <button type="button" data-tab="essay" aria-pressed="false" class="tab-btn">
+                <span class="tab-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6Z" />
+                    <path d="M14 2v6h6" />
+                    <line x1="8" y1="13" x2="16" y2="13" />
+                    <line x1="8" y1="17" x2="13" y2="17" />
+                  </svg>
+                </span>
+                <span class="tab-label">Essay</span>
+              </button>
+
+              <!-- 5. Story -->
               <button type="button" data-tab="story" aria-pressed="false" class="tab-btn">
                 <span class="tab-icon">
-                  <svg width="26" height="26" viewBox="0 0 28 28" fill="none" stroke="#9E9EA7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                    <!-- Crescent moon matching reference -->
-                    <path d="M19 9.5 C21.5 13 21 17.5 18 20.5 C14.5 23.5 9.5 23.5 6 20.5 C10 21.5 14.5 20 16.8 16.5 C19 13 18.5 8.5 16 5.5 C17.5 6.5 18.5 7.8 19 9.5 Z" />
-                    <!-- z z letters -->
-                    <path d="M4.5 11.5 h3 l-3 3.5 h3" stroke-width="1.4" />
-                    <path d="M7 6 h2.5 l-2.5 3 h2.5" stroke-width="1.3" />
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 3.5h6a4 4 0 0 1 4 4v13a3 3 0 0 0-3-3H2z" />
+                    <path d="M22 3.5h-6a4 4 0 0 0-4 4v13a3 3 0 0 1 3-3h7z" />
                   </svg>
                 </span>
-                <span class="tab-label">Sleep</span>
+                <span class="tab-label">Story</span>
               </button>
 
-              <!-- 5. Progress -->
+              <!-- 6. Connect -->
               <button type="button" data-tab="connect" aria-pressed="false" class="tab-btn">
                 <span class="tab-icon">
-                  <svg width="26" height="26" viewBox="0 0 28 28" fill="none" stroke="#9E9EA7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                    <!-- Rounded card open at top-right -->
-                    <path d="M15 6 H8 C5.8 6 4 7.8 4 10 V18 C4 20.2 5.8 22 8 22 H18 C20.2 22 22 20.2 22 18 V15" />
-                    <!-- Upward-right curved arrow -->
-                    <path d="M5 18 C9 18 13.5 16 18 10.5" />
-                    <path d="M14.5 10.5 h4 v4" />
-                    <!-- 3 sparkle rays -->
-                    <line x1="18" y1="5.5" x2="19" y2="3.5" stroke-width="1.5" />
-                    <line x1="22.5" y1="7.5" x2="24.5" y2="6" stroke-width="1.5" />
-                    <line x1="23.5" y1="11" x2="25.5" y2="11" stroke-width="1.5" />
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
                   </svg>
                 </span>
-                <span class="tab-label">Progress</span>
+                <span class="tab-label">Connect</span>
               </button>
 
             </nav>
