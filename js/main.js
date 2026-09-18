@@ -1,7 +1,7 @@
 // Main JavaScript for interactive tabs, tactile buttons, and back-to-top behavior
 document.addEventListener('DOMContentLoaded', () => {
   // 1. Tab Switching
-  const tabButtons = document.querySelectorAll('.tab-btn');
+  const tabButtons = document.querySelectorAll('.tab-btn, .center-fab-btn');
   const tabPanels = document.querySelectorAll('.tab-panel');
 
   function setActiveTab(targetTab) {
