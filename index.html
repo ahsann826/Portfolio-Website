@@ -94,9 +94,15 @@
       max-width: 1240px;
       margin-left: auto;
       margin-right: auto;
-      padding-left: 24px;
-      padding-right: 24px;
+      padding-left: 16px;
+      padding-right: 16px;
       box-sizing: border-box;
+    }
+    @media (min-width: 640px) {
+      .site-container {
+        padding-left: 24px;
+        padding-right: 24px;
+      }
     }
     @media (min-width: 768px) {
       .site-container {
@@ -118,12 +124,18 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 64px;
+      height: 60px;
       width: 100%;
       max-width: 1240px;
       margin: 0 auto;
-      padding: 0 24px;
+      padding: 0 16px;
       box-sizing: border-box;
+    }
+    @media (min-width: 640px) {
+      .site-header-inner {
+        padding: 0 24px;
+        height: 64px;
+      }
     }
     @media (min-width: 768px) {
       .site-header-inner {
@@ -134,23 +146,38 @@
     .header-brand {
       display: inline-flex !important;
       align-items: center !important;
-      gap: 12px !important;
+      gap: 10px !important;
       text-decoration: none !important;
+      min-width: 0;
     }
     .header-avatar {
-      width: 34px;
-      height: 34px;
+      width: 32px;
+      height: 32px;
       border-radius: 50%;
       object-fit: cover;
       border: 1px solid rgba(0, 0, 0, 0.08);
       flex-shrink: 0;
     }
+    @media (min-width: 768px) {
+      .header-avatar {
+        width: 34px;
+        height: 34px;
+      }
+    }
     .header-name {
-      font-size: 14.5px;
+      font-size: 13.5px;
       font-weight: 500;
       color: #1E1B29;
       letter-spacing: -0.01em;
       font-family: 'Outfit', sans-serif;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    @media (min-width: 640px) {
+      .header-name {
+        font-size: 14.5px;
+      }
     }
     .connect-pill {
       display: inline-flex;
@@ -158,9 +185,9 @@
       justify-content: center;
       gap: 4px;
       border-radius: 9999px;
-      padding: 6px 18px;
-      height: 34px;
-      font-size: 13px;
+      padding: 5px 14px;
+      height: 30px;
+      font-size: 12px;
       font-weight: 500;
       color: #1E1B29;
       text-decoration: none;
@@ -169,13 +196,21 @@
       border: 1px solid rgba(255, 255, 255, 0.95);
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.03), inset 0 1px 0 rgba(255, 255, 255, 1);
       transition: transform 0.15s ease, box-shadow 0.15s ease;
+      flex-shrink: 0;
+    }
+    @media (min-width: 640px) {
+      .connect-pill {
+        padding: 6px 18px;
+        height: 34px;
+        font-size: 13px;
+      }
     }
     .connect-pill:hover {
       box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06), 0 2px 4px rgba(0, 0, 0, 0.03), inset 0 1px 0 rgba(255, 255, 255, 1);
     }
     /* Intro Section */
     .hero-intro-section {
-      margin-top: 32px;
+      margin-top: 24px;
       width: 100%;
     }
     @media (min-width: 768px) {
@@ -185,13 +220,19 @@
     }
     .hero-p1 {
       font-family: 'Outfit', sans-serif;
-      font-size: 15.5px;
-      line-height: 1.65;
+      font-size: 15px;
+      line-height: 1.6;
       color: #2E2C33;
       font-weight: 400;
       margin: 0;
       letter-spacing: -0.005em;
       max-width: 1100px;
+    }
+    @media (min-width: 640px) {
+      .hero-p1 {
+        font-size: 16px;
+        line-height: 1.65;
+      }
     }
     @media (min-width: 768px) {
       .hero-p1 {
@@ -200,14 +241,21 @@
     }
     .hero-p2 {
       font-family: 'Outfit', sans-serif;
-      font-size: 15.5px;
-      line-height: 1.65;
+      font-size: 15px;
+      line-height: 1.6;
       color: #2E2C33;
       font-weight: 400;
-      margin-top: 20px;
+      margin-top: 16px;
       margin-bottom: 0;
       letter-spacing: -0.005em;
       max-width: 1100px;
+    }
+    @media (min-width: 640px) {
+      .hero-p2 {
+        font-size: 16px;
+        line-height: 1.65;
+        margin-top: 20px;
+      }
     }
     @media (min-width: 768px) {
       .hero-p2 {
@@ -227,45 +275,41 @@
       color: #94546A;
       font-weight: 400;
     }
-    /* Navigation Tabs — Pixel-perfect replica of reference image */
+    /* Navigation Tabs — Floating Pill Bar */
     .tabs-nav-bar {
-      margin-top: 36px;
-      margin-bottom: 32px;
+      margin-top: 24px;
+      margin-bottom: 24px;
       width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
+      padding-left: 16px;
+      padding-right: 16px;
+      box-sizing: border-box;
     }
     .nav-outer-frame {
-      display: inline-flex;
+      display: flex;
       align-items: center;
       justify-content: center;
-      padding: 24px 36px;
-      border: 1.5px dashed rgba(0, 0, 0, 0.12);
+      padding: 0;
+      border: none;
       border-radius: 9999px;
       background: transparent;
-      max-width: 100%;
-    }
-    @media (max-width: 640px) {
-      .nav-outer-frame {
-        padding: 8px 10px;
-        border: none;
-      }
+      width: 100%;
+      max-width: 350px;
+      box-sizing: border-box;
     }
     .tabs-nav-list {
-      display: inline-flex;
+      display: flex;
       align-items: center;
-      gap: 36px;
+      justify-content: space-between;
+      gap: 2px;
       background: #FFFFFF;
       border-radius: 9999px;
-      padding: 14px 44px;
-      box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.08), 0 4px 16px -2px rgba(0, 0, 0, 0.03);
-    }
-    @media (max-width: 640px) {
-      .tabs-nav-list {
-        padding: 10px 18px;
-        gap: 16px;
-      }
+      padding: 6px 10px;
+      box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.08), 0 3px 10px -2px rgba(0, 0, 0, 0.03);
+      width: 100%;
+      box-sizing: border-box;
     }
     .tab-btn {
       position: relative;
@@ -273,9 +317,9 @@
       user-select: none;
       background: transparent;
       border: none;
-      padding: 0;
+      padding: 2px 0;
       margin: 0;
-      font-size: 13.5px;
+      font-size: 11px;
       font-weight: 500;
       color: #9E9EA7;
       font-family: 'Outfit', sans-serif;
@@ -284,26 +328,27 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 5px;
-      min-width: 52px;
+      gap: 2px;
+      flex: 1 1 0%;
+      min-width: 0;
       outline: none;
     }
     .tab-btn:active {
       transform: scale(0.95);
     }
     .tab-btn .tab-icon {
-      width: 44px;
-      height: 44px;
+      width: 34px;
+      height: 34px;
       display: flex;
       align-items: center;
       justify-content: center;
-      border-radius: 14px;
+      border-radius: 10px;
       background: transparent;
       transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .tab-btn .tab-icon svg {
-      width: 26px;
-      height: 26px;
+      width: 19px;
+      height: 19px;
       stroke: #9E9EA7;
       fill: none;
       stroke-width: 1.8;
@@ -328,6 +373,67 @@
     }
     .tab-btn[aria-pressed="true"] .tab-icon svg {
       stroke: #FFFFFF;
+    }
+
+    /* Responsive Overrides */
+    @media (max-width: 360px) {
+      .tabs-nav-bar {
+        padding-left: 8px;
+        padding-right: 8px;
+      }
+      .tabs-nav-list {
+        padding: 5px 8px;
+        gap: 2px;
+      }
+      .tab-btn {
+        font-size: 10.5px;
+      }
+      .tab-btn .tab-icon {
+        width: 34px;
+        height: 34px;
+        border-radius: 10px;
+      }
+      .tab-btn .tab-icon svg {
+        width: 19px;
+        height: 19px;
+      }
+    }
+    @media (min-width: 640px) {
+      .tabs-nav-bar {
+        margin-top: 36px;
+        margin-bottom: 32px;
+        padding-left: 0;
+        padding-right: 0;
+      }
+      .nav-outer-frame {
+        display: inline-flex;
+        width: auto;
+        max-width: 100%;
+        padding: 16px 24px;
+        border: 1.5px dashed rgba(0, 0, 0, 0.12);
+      }
+      .tabs-nav-list {
+        display: inline-flex;
+        width: auto;
+        gap: 32px;
+        padding: 14px 40px;
+        box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.08), 0 4px 16px -2px rgba(0, 0, 0, 0.03);
+      }
+      .tab-btn {
+        font-size: 13.5px;
+        gap: 5px;
+        min-width: 52px;
+        flex: none;
+      }
+      .tab-btn .tab-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 14px;
+      }
+      .tab-btn .tab-icon svg {
+        width: 24px;
+        height: 24px;
+      }
     }
     
     /* Showcase */
