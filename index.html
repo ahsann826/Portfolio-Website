@@ -151,33 +151,35 @@
       min-width: 0;
     }
     .header-avatar {
-      width: 32px;
-      height: 32px;
+      width: 38px;
+      height: 38px;
       border-radius: 50%;
       object-fit: cover;
       border: 1px solid rgba(0, 0, 0, 0.08);
       flex-shrink: 0;
+      transition: transform 0.2s ease;
     }
     @media (min-width: 768px) {
       .header-avatar {
-        width: 34px;
-        height: 34px;
+        width: 42px;
+        height: 42px;
       }
     }
-    .header-name {
-      font-size: 13.5px;
-      font-weight: 500;
-      color: #1E1B29;
-      letter-spacing: -0.01em;
-      font-family: 'Outfit', sans-serif;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+    .header-signature {
+      height: 28px;
+      width: auto;
+      object-fit: contain;
+      flex-shrink: 0;
+      display: block;
+      transition: opacity 0.2s ease;
     }
     @media (min-width: 640px) {
-      .header-name {
-        font-size: 14.5px;
+      .header-signature {
+        height: 32px;
       }
+    }
+    .header-brand:hover .header-signature {
+      opacity: 0.8;
     }
     .connect-pill {
       display: inline-flex;
@@ -472,12 +474,10 @@
   <!-- Progressive Blurred Sticky Header -->
   <header class="site-header">
     <div class="site-header-inner">
-      <div class="flex items-center gap-2.5">
-        <a class="header-brand group" href="index.html">
-          <img src="assets/avatar.jpg" alt="Khan Muhammad Ahsan" width="34" height="34" class="header-avatar" />
-          <span class="header-name">Khan Muhammad Ahsan</span>
+        <a class="header-brand group" href="index.html" aria-label="Khan Muhammad Ahsan - Home">
+          <img src="assets/avatar.jpg" alt="Khan Muhammad Ahsan" class="header-avatar" />
+          <img src="assets/signature.png" alt="Khan Ahsan" class="header-signature" />
         </a>
-      </div>
       <a href="https://www.linkedin.com/in/khanahsan826/" target="_blank" rel="noopener noreferrer" class="connect-pill">
         <span>Connect</span>
         <span class="text-[11px]">↗</span>
