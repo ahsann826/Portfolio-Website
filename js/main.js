@@ -40,6 +40,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Handle Header Contact Me button
+  const headerContactBtn = document.getElementById('header-contact-btn');
+  if (headerContactBtn) {
+    headerContactBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      setActiveTab('connect');
+      history.replaceState(null, '', '#connect');
+      const connectPanel = document.getElementById('tab-panel-connect');
+      const tabsNav = document.getElementById('tabs-container');
+      const targetPos = tabsNav ? tabsNav.offsetTop - 80 : (connectPanel ? connectPanel.offsetTop - 80 : 0);
+      window.scrollTo({
+        top: targetPos,
+        behavior: 'smooth'
+      });
+    });
+  }
+
   // Handle URL hash on load
   if (window.location.hash) {
     const initialTab = window.location.hash.replace('#', '');

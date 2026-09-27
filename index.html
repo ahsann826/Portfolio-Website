@@ -464,10 +464,219 @@
     .tab-panel.hidden {
       display: none !important;
     }
-    /* Sleek selection highlight */
-    ::selection {
-      background-color: rgba(148, 84, 106, 0.18);
+    /* Modern Sleek Connect UI */
+    .connect-container {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 100%;
+    }
+    .connect-hero-card {
+      background: #FFFFFF;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    @media (min-width: 640px) {
+      .connect-hero-card {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 24px 28px;
+      }
+    }
+    .connect-hero-card:hover {
+      border-color: rgba(0, 0, 0, 0.15);
+      box-shadow: 0 10px 30px -6px rgba(0, 0, 0, 0.07);
+    }
+    .connect-icon-box {
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      background: #FAF7F4;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1E1B29;
+      flex-shrink: 0;
+    }
+    .connect-action-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      border-radius: 9999px;
+      padding: 7px 18px;
+      font-size: 13px;
+      font-weight: 500;
+      text-decoration: none !important;
+      transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+      user-select: none;
+      font-family: 'Outfit', sans-serif;
+    }
+    .connect-action-pill:active {
+      transform: scale(0.97);
+    }
+    .pill-secondary {
+      background: #F4EFE9;
+      color: #2E2C33 !important;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+    }
+    .pill-secondary:hover {
+      background: #EDE5DC;
+      color: #111111 !important;
+    }
+    .pill-primary {
+      background: #1E1B29;
+      color: #FFFFFF !important;
+      border: 1px solid #1E1B29;
+    }
+    .pill-primary:hover {
+      background: #000000;
+      color: #FFFFFF !important;
+    }
+    .pill-wine {
+      background: #94546A;
+      color: #FFFFFF !important;
+      border: 1px solid #94546A;
+    }
+    .pill-wine:hover {
+      background: #7D4659;
+      color: #FFFFFF !important;
+    }
+    .connect-cv-card {
+      background: linear-gradient(135deg, #FFFFFF 0%, #FDFBF9 60%, rgba(148, 84, 106, 0.04) 100%);
+      border: 1px solid rgba(148, 84, 106, 0.28);
+      border-radius: 20px;
+      padding: 22px 24px;
+      box-shadow: 0 4px 18px -4px rgba(148, 84, 106, 0.05);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      text-decoration: none !important;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    @media (min-width: 640px) {
+      .connect-cv-card {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 24px 28px;
+      }
+    }
+    .connect-cv-card:hover {
+      border-color: #94546A;
+      transform: translateY(-1px);
+      box-shadow: 0 10px 28px -6px rgba(148, 84, 106, 0.12);
+    }
+    .cv-badge {
+      width: 44px;
+      height: 44px;
+      border-radius: 13px;
+      background: rgba(148, 84, 106, 0.1);
+      border: 1px solid rgba(148, 84, 106, 0.2);
       color: #94546A;
+      font-weight: 700;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-family: 'Outfit', sans-serif;
+    }
+    .connect-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+    @media (min-width: 640px) {
+      .connect-grid-2 {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+    }
+    .connect-item-card {
+      background: #FFFFFF;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 18px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 16px;
+      text-decoration: none !important;
+      transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+    }
+    .connect-item-card:hover {
+      border-color: rgba(0, 0, 0, 0.16);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.06);
+    }
+    .connect-info-card {
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(0, 0, 0, 0.07);
+      border-radius: 18px;
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none !important;
+      transition: all 0.2s ease;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02);
+    }
+    .connect-info-card:hover {
+      border-color: rgba(0, 0, 0, 0.14);
+      background: #FFFFFF;
+    }
+    .status-badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border-radius: 9999px;
+      padding: 5px 14px;
+      background: rgba(16, 185, 129, 0.08);
+      border: 1px solid rgba(16, 185, 129, 0.22);
+      color: #065F46;
+      font-size: 12px;
+      font-weight: 500;
+      width: fit-content;
+      font-family: 'Outfit', sans-serif;
+    }
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #10B981;
+      display: inline-block;
+      box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+    }
+    .work-preview-frame {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      background: #F0ECE6;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(0, 0, 0, 0.07);
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
+    }
+    .blog-tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 3px 10px;
+      border-radius: 9999px;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.01em;
     }
   </style>
 </head>
@@ -480,8 +689,8 @@
           <img src="assets/avatar.jpg" alt="Khan Muhammad Ahsan" class="header-avatar" />
           <span class="header-name">Khan Muhammad Ahsan</span>
         </a>
-      <a href="https://www.linkedin.com/in/khanahsan826/" target="_blank" rel="noopener noreferrer" class="connect-pill">
-        <span>Connect</span>
+      <a href="#connect" id="header-contact-btn" class="connect-pill">
+        <span>Contact Me</span>
         <span class="text-[11px]">↗</span>
       </a>
     </div>
@@ -538,15 +747,17 @@
                 <span class="tab-label">Essay</span>
               </button>
 
-              <!-- 5. Story -->
-              <button type="button" data-tab="story" aria-pressed="false" class="tab-btn">
+              <!-- 3. Blogs -->
+              <button type="button" data-tab="blogs" aria-pressed="false" class="tab-btn">
                 <span class="tab-icon">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M2 3.5h6a4 4 0 0 1 4 4v13a3 3 0 0 0-3-3H2z" />
-                    <path d="M22 3.5h-6a4 4 0 0 0-4 4v13a3 3 0 0 1 3-3h7z" />
+                    <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/>
+                    <path d="M8 7h8"/>
+                    <path d="M8 11h8"/>
+                    <path d="M8 15h5"/>
                   </svg>
                 </span>
-                <span class="tab-label">Story</span>
+                <span class="tab-label">Blogs</span>
               </button>
 
               <!-- 6. Connect -->
@@ -571,13 +782,8 @@
 
               <!-- Project 1: Preplit AI -->
               <section class="flex flex-col gap-3">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  <div class="relative aspect-[16/9] bg-sand-2 rounded-xl overflow-hidden border border-black/[0.06] group">
-                    <img alt="Preplit AI Workspace" loading="lazy" decoding="async" class="object-cover absolute inset-0 w-full h-full transition-transform duration-300 group-hover:scale-[1.02]" src="assets/work_preplit.png" />
-                  </div>
-                  <div class="relative aspect-[16/9] bg-sand-2 rounded-xl overflow-hidden border border-black/[0.06] group">
-                    <img alt="Preplit AI Learning Features" loading="lazy" decoding="async" class="object-cover absolute inset-0 w-full h-full transition-transform duration-300 group-hover:scale-[1.02]" src="assets/work_preplit_2.png" />
-                  </div>
+                <div class="work-preview-frame group">
+                  <img alt="Preplit AI Workspace" loading="eager" class="object-cover absolute inset-0 w-full h-full transition-transform duration-500 group-hover:scale-[1.015]" src="assets/work_preplit.png" />
                 </div>
                 <div class="px-0 md:px-1.5 pt-4 grid grid-cols-1 md:grid-cols-2 gap-3 mt-3">
                   <div class="flex md:flex-col gap-3 md:gap-2 items-center md:items-start">
@@ -607,13 +813,8 @@
 
               <!-- Project 2: CampusRank -->
               <section class="flex flex-col gap-3">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  <div class="relative aspect-[16/9] bg-sand-2 rounded-xl overflow-hidden border border-black/[0.06] group">
-                    <img alt="CampusRank Leaderboard" loading="lazy" decoding="async" class="object-cover absolute inset-0 w-full h-full transition-transform duration-300 group-hover:scale-[1.02]" src="assets/work_campusrank.png" />
-                  </div>
-                  <div class="relative aspect-[16/9] bg-sand-2 rounded-xl overflow-hidden border border-black/[0.06] group">
-                    <img alt="CampusRank University Rankings" loading="lazy" decoding="async" class="object-cover absolute inset-0 w-full h-full transition-transform duration-300 group-hover:scale-[1.02]" src="assets/work_campusrank_2.png" />
-                  </div>
+                <div class="work-preview-frame group">
+                  <img alt="CampusRank Leaderboard" loading="eager" class="object-cover absolute inset-0 w-full h-full transition-transform duration-500 group-hover:scale-[1.015]" src="assets/work_campusrank.png" />
                 </div>
                 <div class="px-0 md:px-1.5 pt-4 grid grid-cols-1 md:grid-cols-2 gap-3 mt-3">
                   <div class="flex md:flex-col gap-3 md:gap-2 items-center md:items-start">
@@ -643,13 +844,8 @@
 
               <!-- Project 3: Resumate -->
               <section class="flex flex-col gap-3">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  <div class="relative aspect-[16/9] bg-sand-2 rounded-xl overflow-hidden border border-black/[0.06] group">
-                    <img alt="Resumate AI Resume Analyzer" loading="lazy" decoding="async" class="object-cover absolute inset-0 w-full h-full transition-transform duration-300 group-hover:scale-[1.02]" src="assets/work_resumate.png" />
-                  </div>
-                  <div class="relative aspect-[16/9] bg-sand-2 rounded-xl overflow-hidden border border-black/[0.06] group">
-                    <img alt="Resumate Feedback and Analysis" loading="lazy" decoding="async" class="object-cover absolute inset-0 w-full h-full transition-transform duration-300 group-hover:scale-[1.02]" src="assets/work_resumate_2.png" />
-                  </div>
+                <div class="work-preview-frame group">
+                  <img alt="Resumate AI Resume Analyzer" loading="eager" class="object-cover absolute inset-0 w-full h-full transition-transform duration-500 group-hover:scale-[1.015]" src="assets/work_resumate.png" />
                 </div>
                 <div class="px-0 md:px-1.5 pt-4 grid grid-cols-1 md:grid-cols-2 gap-3 mt-3">
                   <div class="flex md:flex-col gap-3 md:gap-2 items-center md:items-start">
@@ -679,13 +875,8 @@
 
               <!-- Project 4: Covenant & Co -->
               <section class="flex flex-col gap-3">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  <div class="relative aspect-[16/9] bg-sand-2 rounded-xl overflow-hidden border border-black/[0.06] group">
-                    <img alt="Covenant & Co Timepieces" loading="lazy" decoding="async" class="object-cover absolute inset-0 w-full h-full transition-transform duration-300 group-hover:scale-[1.02]" src="assets/work_covenant_1.png" />
-                  </div>
-                  <div class="relative aspect-[16/9] bg-sand-2 rounded-xl overflow-hidden border border-black/[0.06] group">
-                    <img alt="Covenant & Co Storefront & Logistics" loading="lazy" decoding="async" class="object-cover absolute inset-0 w-full h-full transition-transform duration-300 group-hover:scale-[1.02]" src="assets/work_covenant_2.png" />
-                  </div>
+                <div class="work-preview-frame group">
+                  <img alt="Covenant & Co Timepieces" loading="eager" class="object-cover absolute inset-0 w-full h-full transition-transform duration-500 group-hover:scale-[1.015]" src="assets/work_covenant_1.png" />
                 </div>
                 <div class="px-0 md:px-1.5 pt-4 grid grid-cols-1 md:grid-cols-2 gap-3 mt-3">
                   <div class="flex md:flex-col gap-3 md:gap-2 items-center md:items-start">
@@ -713,6 +904,44 @@
                 </div>
               </section>
 
+              <!-- Project 5: Research Publication - Dijkstra's Algorithm -->
+              <section class="flex flex-col gap-3">
+                <div class="work-preview-frame group" style="background: linear-gradient(135deg, #FAF7F4 0%, #EDE5DC 100%); display: flex; align-items: center; justify-content: center; padding: 24px;">
+                  <img alt="Dijkstra Algorithm Research Paper Publication Certificate - Global Scientific Journal" loading="eager" style="max-height: 85%; width: auto; max-width: 90%; object-fit: contain; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);" class="transition-transform duration-500 group-hover:scale-[1.02]" src="assets/dijkstra_certificate.png" />
+                </div>
+                <div class="px-0 md:px-1.5 pt-4 grid grid-cols-1 md:grid-cols-2 gap-3 mt-3">
+                  <div class="flex md:flex-col gap-3 md:gap-2 items-center md:items-start">
+                    <h3 class="text-display">
+                      <a href="assets/dijkstra_certificate.png" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-1">
+                        A Comprehensive Study of Dijkstra&#x27;s Algorithm
+                        <span class="relative inline-block overflow-hidden">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" class="block transition-transform duration-200 ease-in-out group-hover:translate-x-full group-hover:-translate-y-full"><path stroke="currentColor" stroke-linecap="square" stroke-width="1.2" d="M11.667 4.333 4 12M5.333 4H12v6.667"></path></svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" class="absolute inset-0 block transition-transform duration-200 ease-in-out -translate-x-full translate-y-full group-hover:translate-x-0 group-hover:translate-y-0"><path stroke="currentColor" stroke-linecap="square" stroke-width="1.2" d="M11.667 4.333 4 12M5.333 4H12v6.667"></path></svg>
+                        </span>
+                      </a>
+                    </h3>
+                    <p class="text-body1 text-content-tertiary">Lead Author &amp; Researcher — Global Scientific Journal (GSJ), 2023</p>
+                  </div>
+                  <div class="flex flex-col items-start gap-5">
+                    <p class="text-body1 text-content-secondary text-balance max-w-[500px] whitespace-pre-line">Published peer-reviewed research paper examining computational complexity, priority queue data structures (binary vs Fibonacci heaps), and performance benchmarks across large-scale directed graphs and modern network routing protocols. Reached over 1,000+ academic downloads worldwide.</p>
+                    <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px;">
+                      <a href="assets/dijkstra_certificate.png" target="_blank" rel="noopener noreferrer" class="connect-action-pill pill-wine">
+                        <span>View Certificate</span>
+                        <span style="font-size: 11px;">↗</span>
+                      </a>
+                      <a href="https://www.globalscientificjournal.com" target="_blank" rel="noopener noreferrer" class="connect-action-pill pill-secondary">
+                        <span>Journal (GSJ)</span>
+                        <span style="font-size: 11px;">↗</span>
+                      </a>
+                      <span style="display: inline-flex; align-items: center; padding: 5px 12px; border-radius: 9999px; font-size: 12px; font-weight: 600; background: rgba(16, 185, 129, 0.1); color: #065F46; border: 1px solid rgba(16, 185, 129, 0.25);">
+                        1,000+ Downloads
+                      </span>
+                      <span class="text-body2 text-content-tertiary">ISSN 2320-9186 · Graph Theory</span>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
               <!-- Additional Engineering & Systems Archive -->
               <div class="flex flex-col gap-6 pt-10 border-t border-stroke-secondary">
                 <div class="flex flex-col gap-1">
@@ -720,7 +949,7 @@
                   <p class="text-body2 text-content-tertiary">Backend engineering, distributed automations, and computer vision projects.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  <div class="flex flex-col gap-2.5 p-5 rounded-xl border border-stroke-secondary bg-white shadow-xs">
+                  <div class="flex flex-col gap-2.5 p-5 bg-white shadow-xs" style="border: 1px solid rgba(0, 0, 0, 0.08); border-radius: 16px;">
                     <div class="flex items-center justify-between">
                       <h4 class="text-title font-medium">VisionRare</h4>
                       <span class="text-body2 text-content-tertiary">2021</span>
@@ -728,7 +957,7 @@
                     <p class="text-body2 text-content-tertiary font-medium">Junior Principal Backend Software Engineer</p>
                     <p class="text-body2 text-content-secondary leading-relaxed">Built and maintained REST APIs, worked on core backend features, and resolved performance bottlenecks in an Agile environment.</p>
                   </div>
-                  <div class="flex flex-col gap-2.5 p-5 rounded-xl border border-stroke-secondary bg-white shadow-xs">
+                  <div class="flex flex-col gap-2.5 p-5 bg-white shadow-xs" style="border: 1px solid rgba(0, 0, 0, 0.08); border-radius: 16px;">
                     <div class="flex items-center justify-between">
                       <h4 class="text-title font-medium">Pokémon Automation</h4>
                       <span class="text-body2 text-content-tertiary">2020</span>
@@ -736,15 +965,15 @@
                     <p class="text-body2 text-content-tertiary font-medium">Python · OpenCV · PyAutoGUI</p>
                     <p class="text-body2 text-content-secondary leading-relaxed">Engineered desktop screen-automation &amp; computer-vision tools for Pokémon Revolution Online, automating repetitive workflows for thousands of users.</p>
                   </div>
-                  <div class="flex flex-col gap-2.5 p-5 rounded-xl border border-stroke-secondary bg-white shadow-xs">
+                  <div class="flex flex-col gap-2.5 p-5 bg-white shadow-xs" style="border: 1px solid rgba(0, 0, 0, 0.08); border-radius: 16px;">
                     <div class="flex items-center justify-between">
                       <h4 class="text-title font-medium">TextVision OCR</h4>
                       <span class="text-body2 text-content-tertiary">2019</span>
                     </div>
                     <p class="text-body2 text-content-tertiary font-medium">Python · Flask · Azure OCR</p>
                     <p class="text-body2 text-content-secondary leading-relaxed">Developed a web app that extracts text and structural data from images using Microsoft Azure Computer Vision OCR.</p>
+                  </div>
                 </div>
-              </div>
 
             </div>
           </div>
@@ -760,36 +989,7 @@
             
             <div class="flex flex-col divide-y divide-stroke-secondary">
               
-              <!-- Featured Research Publication -->
-              <article class="py-6 flex flex-col gap-4">
-                <div class="p-5 md:p-6 rounded-2xl bg-white border border-stroke-secondary shadow-xs flex flex-col md:flex-row gap-5 items-start md:items-center justify-between">
-                  <div class="flex flex-col gap-2 max-w-[460px]">
-                    <div class="flex flex-wrap items-center gap-2">
-                      <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-semibold tracking-wide uppercase bg-[#94546A]/10 text-[#94546A]">
-                        Published Research Paper
-                      </span>
-                      <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-medium bg-emerald-50 text-emerald-700 border border-emerald-200">
-                        1,000+ Downloads
-                      </span>
-                    </div>
-                    <h3 class="text-display text-[18px] md:text-[20px] leading-snug">A Comprehensive Study of Dijkstra&#x27;s Algorithm</h3>
-                    <p class="text-body2 text-content-secondary leading-relaxed">
-                      Accepted and published in <em>Global Scientific Journal (GSJ)</em>, ISSN 2320-9186. Investigates algorithmic performance, time complexity, priority queues, and practical shortest-path optimizations in modern network routing.
-                    </p>
-                    <div class="flex items-center gap-3 text-body2 text-content-tertiary pt-1">
-                      <span>Sept 4, 2023</span>
-                      <span>•</span>
-                      <a href="https://www.globalscientificjournal.com" target="_blank" rel="noopener noreferrer" class="text-wine-link font-medium">globalscientificjournal.com ↗</a>
-                    </div>
-                  </div>
-                  <a href="assets/dijkstra_certificate.png" target="_blank" rel="noopener noreferrer" class="shrink-0 w-full md:w-[170px] rounded-xl overflow-hidden border border-black/[0.08] shadow-2xs group relative block">
-                    <img src="assets/dijkstra_certificate.png" alt="Certificate of Acceptance - Global Scientific Journal" class="w-full h-auto object-cover transition-transform duration-200 group-hover:scale-105" />
-                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                      <span class="text-[11px] font-medium text-white bg-black/70 px-2.5 py-1 rounded-full">View Certificate ↗</span>
-                    </div>
-                  </a>
-                </div>
-              </article>
+
 
               <article class="py-6 flex flex-col gap-2">
                 <div class="flex items-center justify-between gap-4">
@@ -835,328 +1035,281 @@
           </div>
         </section>
 
-        <!-- ================= TAB 5: STORY ================= -->
-        <section id="tab-panel-story" class="tab-panel hidden mt-7 w-full max-w-[1240px] mx-auto px-6 md:px-10">
-          <div class="flex flex-col gap-12 max-w-[760px]">
-            
-            <!-- Bio & Summary -->
-            <div class="flex flex-col gap-4">
-              <h2 class="text-display">Khan Muhammad Ahsan</h2>
-              <p class="text-body1 text-content-secondary leading-relaxed">
-                I am a Software engineering student with a strong business acumen and a sharp focus on user experience, currently studying at <a href="https://www.ajou.ac.kr/en/" target="_blank" rel="noopener noreferrer" class="text-wine-link">Ajou University</a> in South Korea under the prestigious <span class="text-wine-span font-medium">Global Korea Scholarship (GKS)</span>.
-              </p>
-              <p class="text-body1 text-content-secondary leading-relaxed">
-                I spend my time architecting intelligent software systems and obsessing over the tactile feel of digital products. I founded <a href="https://preplitai.com" target="_blank" rel="noopener noreferrer" class="text-wine-link font-medium">Preplit AI</a>, building an AI-powered super-workspace for students, as well as <a href="https://campusrank-ruby.vercel.app" target="_blank" rel="noopener noreferrer" class="text-wine-link font-medium">CampusRank</a> and <a href="https://resumate-ai-lake.vercel.app" target="_blank" rel="noopener noreferrer" class="text-wine-link font-medium">Resumate</a>.
-              </p>
+        <!-- ================= TAB 3: BLOGS ================= -->
+        <section id="tab-panel-blogs" class="tab-panel hidden mt-7 w-full max-w-[1240px] mx-auto px-6 md:px-10">
+          <div class="flex flex-col gap-8 max-w-[760px]">
+            <div class="flex flex-col gap-2">
+              <h2 class="text-display">Blogs &amp; Insights</h2>
+              <p class="text-body1 text-content-secondary">Thoughts on software architecture, artificial intelligence, scaling products, and lessons from building startups.</p>
             </div>
 
-            <!-- Education -->
-            <div class="flex flex-col gap-5 pt-6 border-t border-stroke-secondary">
-              <h3 class="text-title font-medium">Education</h3>
-              <div class="flex flex-col divide-y divide-stroke-secondary">
-                
-                <div class="py-4 flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-2">
-                  <div>
-                    <h4 class="text-title font-medium">Ajou University</h4>
-                    <p class="text-body1 text-content-secondary">Bachelor of Science in Software Engineering (Sophomore)</p>
-                    <p class="text-body2 text-[#94546A] mt-1 font-medium">★ Global Korea Scholarship (GKS) Recipient — Fully Funded by Korean Government</p>
-                  </div>
-                  <span class="text-body2 text-content-tertiary shrink-0">Suwon, South Korea</span>
-                </div>
+            <div class="flex flex-col divide-y divide-stroke-secondary">
 
-                <div class="py-4 flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-2">
-                  <div>
-                    <h4 class="text-title font-medium">Fazaia Degree College, PAF Base Faisal</h4>
-                    <p class="text-body1 text-content-secondary">Secondary &amp; High School (Pre-Engineering)</p>
+              <!-- Blog 1 -->
+              <article class="py-6 flex flex-col gap-3 group">
+                <div class="flex flex-wrap items-center justify-between gap-2">
+                  <div class="flex flex-wrap items-center gap-2">
+                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-medium bg-[#94546A]/10 text-[#94546A]">
+                      AI Architecture
+                    </span>
+                    <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-medium bg-sand-2 text-content-tertiary">
+                      Next.js &amp; pgvector
+                    </span>
                   </div>
-                  <span class="text-body2 text-content-tertiary shrink-0">Pakistan</span>
+                  <span class="text-body2 text-content-tertiary">Feb 2026 · 6 min read</span>
                 </div>
+                <h3 class="text-display text-[19px] leading-snug group-hover:text-[#94546A] transition-colors">
+                  <a href="https://preplitai.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5">
+                    Building Preplit AI: Architecture of an LLM-Powered Student Workspace
+                    <span class="text-[13px] opacity-0 group-hover:opacity-100 transition-opacity">↗</span>
+                  </a>
+                </h3>
+                <p class="text-body1 text-content-secondary leading-relaxed">
+                  How we structured multi-agent LLM pipelines, prompt distillation, and sub-100ms vector search using pgvector and semantic caching to deliver instant, contextual academic assistance for university students.
+                </p>
+              </article>
 
-              </div>
+              <!-- Blog 2 -->
+              <article class="py-6 flex flex-col gap-3 group">
+                <div class="flex flex-wrap items-center justify-between gap-2">
+                  <div class="flex flex-wrap items-center gap-2">
+                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-medium bg-[#94546A]/10 text-[#94546A]">
+                      System Design
+                    </span>
+                    <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-medium bg-sand-2 text-content-tertiary">
+                      Competitive Scoring
+                    </span>
+                  </div>
+                  <span class="text-body2 text-content-tertiary">Jan 2026 · 4 min read</span>
+                </div>
+                <h3 class="text-display text-[19px] leading-snug group-hover:text-[#94546A] transition-colors">
+                  <a href="https://campusrank-ruby.vercel.app" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5">
+                    Designing Real-Time University Leaderboards: Inside CampusRank
+                    <span class="text-[13px] opacity-0 group-hover:opacity-100 transition-opacity">↗</span>
+                  </a>
+                </h3>
+                <p class="text-body1 text-content-secondary leading-relaxed">
+                  Constructing a verifiable ranking engine that normalizes student achievements across disparate international grading scales, balancing active campus participation with robust anti-gaming protections.
+                </p>
+              </article>
+
+              <!-- Blog 3 -->
+              <article class="py-6 flex flex-col gap-3 group">
+                <div class="flex flex-wrap items-center justify-between gap-2">
+                  <div class="flex flex-wrap items-center gap-2">
+                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-medium bg-[#94546A]/10 text-[#94546A]">
+                      AI / NLP
+                    </span>
+                    <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-medium bg-sand-2 text-content-tertiary">
+                      ATS Optimization
+                    </span>
+                  </div>
+                  <span class="text-body2 text-content-tertiary">Nov 2025 · 5 min read</span>
+                </div>
+                <h3 class="text-display text-[19px] leading-snug group-hover:text-[#94546A] transition-colors">
+                  <a href="https://resumate-ai-lake.vercel.app" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5">
+                    Beating the Modern ATS Filter: What Machine Parsers Actually Look For
+                    <span class="text-[13px] opacity-0 group-hover:opacity-100 transition-opacity">↗</span>
+                  </a>
+                </h3>
+                <p class="text-body1 text-content-secondary leading-relaxed">
+                  A breakdown of lexical extraction, vector embeddings, and semantic matching algorithms inside modern Applicant Tracking Systems — and how Resumate provides deterministic feedback to pass algorithmic filters.
+                </p>
+              </article>
+
+              <!-- Blog 4 -->
+              <article class="py-6 flex flex-col gap-3 group">
+                <div class="flex flex-wrap items-center justify-between gap-2">
+                  <div class="flex flex-wrap items-center gap-2">
+                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-medium bg-[#94546A]/10 text-[#94546A]">
+                      Operations &amp; Scale
+                    </span>
+                    <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-medium bg-sand-2 text-content-tertiary">
+                      B2B Sourcing
+                    </span>
+                  </div>
+                  <span class="text-body2 text-content-tertiary">Sep 2025 · 5 min read</span>
+                </div>
+                <h3 class="text-display text-[19px] leading-snug group-hover:text-[#94546A] transition-colors">
+                  <a href="https://instagram.com/covenantwatch" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5">
+                    Scaling Covenant &amp; Co: What Sourcing Across 3 Countries Taught Me About Systems
+                    <span class="text-[13px] opacity-0 group-hover:opacity-100 transition-opacity">↗</span>
+                  </a>
+                </h3>
+                <p class="text-body1 text-content-secondary leading-relaxed">
+                  Managing international supply chains, manufacturer QA across China and South Korea, and serving over 100,000 visitors. Key reflections on unit economics, vendor reliability, and building digital trust.
+                </p>
+              </article>
+
+              <!-- Blog 5 -->
+              <article class="py-6 flex flex-col gap-3 group">
+                <div class="flex flex-wrap items-center justify-between gap-2">
+                  <div class="flex flex-wrap items-center gap-2">
+                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-medium bg-[#94546A]/10 text-[#94546A]">
+                      Computer Science
+                    </span>
+                    <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-medium bg-sand-2 text-content-tertiary">
+                      Foundations
+                    </span>
+                  </div>
+                  <span class="text-body2 text-content-tertiary">May 2024 · 7 min read</span>
+                </div>
+                <h3 class="text-display text-[19px] leading-snug group-hover:text-[#94546A] transition-colors">
+                  <span>From First Principles: Memory Layout, Pointers, and Why CS Fundamentals Matter</span>
+                </h3>
+                <p class="text-body1 text-content-secondary leading-relaxed">
+                  In an era dominated by high-level LLM abstractions, why understanding cache locality, memory layout, pointer arithmetic, and algorithmic complexity remains the ultimate competitive edge for software engineers.
+                </p>
+              </article>
+
             </div>
-
-            <!-- Experience Timeline -->
-            <div class="flex flex-col gap-5 pt-6 border-t border-stroke-secondary">
-              <h3 class="text-title font-medium">Professional Experience</h3>
-              <div class="flex flex-col divide-y divide-stroke-secondary">
-                
-                <div class="py-4 flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-2">
-                  <div>
-                    <div class="flex items-center gap-2">
-                      <h4 class="text-title font-medium">Preplit AI</h4>
-                      <span class="text-body2 text-content-tertiary font-mono">• preplitai.com</span>
-                    </div>
-                    <p class="text-body1 text-content-secondary font-medium mt-0.5">Chief Executive Officer</p>
-                    <p class="text-body2 text-content-secondary mt-1 leading-relaxed">Architecting and developing an AI-powered education workspace using Next.js, React, TypeScript, Tailwind CSS, and LLM APIs with multi-agent pipelines, RAG, and pgvector vector search.</p>
-                  </div>
-                  <span class="text-body2 text-content-tertiary shrink-0">2026 — Present</span>
-                </div>
-
-                <div class="py-4 flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-2">
-                  <div>
-                    <div class="flex items-center gap-2">
-                      <h4 class="text-title font-medium">CampusRank</h4>
-                      <span class="text-body2 text-content-tertiary font-mono">• campusrank-ruby.vercel.app</span>
-                    </div>
-                    <p class="text-body1 text-content-secondary font-medium mt-0.5">Founder (Side Project)</p>
-                    <p class="text-body2 text-content-secondary mt-1 leading-relaxed">Developing a real-time global student and university ranking platform with verifiable user profiles, leaderboards, and competitive scoring.</p>
-                  </div>
-                  <span class="text-body2 text-content-tertiary shrink-0">2026 — Present</span>
-                </div>
-
-                <div class="py-4 flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-2">
-                  <div>
-                    <div class="flex items-center gap-2">
-                      <h4 class="text-title font-medium">Resumate</h4>
-                      <span class="text-body2 text-content-tertiary font-mono">• resumate-ai-lake.vercel.app</span>
-                    </div>
-                    <p class="text-body1 text-content-secondary font-medium mt-0.5">Founder &amp; Full-Stack Developer</p>
-                    <p class="text-body2 text-content-secondary mt-1 leading-relaxed">Built an AI platform performing deep resume analysis, ATS compatibility scoring, and automated feedback to maximize interview callback rates.</p>
-                  </div>
-                  <span class="text-body2 text-content-tertiary shrink-0">2026 — Present</span>
-                </div>
-
-                <div class="py-4 flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-2">
-                  <div>
-                    <div class="flex items-center gap-2">
-                      <h4 class="text-title font-medium">Covenant &amp; Co</h4>
-                      <span class="text-body2 text-content-tertiary font-mono">• @covenantwatch</span>
-                    </div>
-                    <p class="text-body1 text-content-secondary font-medium mt-0.5">Founder, B2B Product Outsourcing</p>
-                    <p class="text-body2 text-content-secondary mt-1 leading-relaxed">Operated a luxury watch e-commerce storefront with 100,000+ all-time visitors, managing B2B sourcing and vendor negotiations across China and South Korea.</p>
-                  </div>
-                  <span class="text-body2 text-content-tertiary shrink-0">2024 — 2026</span>
-                </div>
-
-                <div class="py-4 flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-2">
-                  <div>
-                    <h4 class="text-title font-medium">VisionRare</h4>
-                    <p class="text-body1 text-content-secondary font-medium mt-0.5">Junior Principal Backend Software Engineer</p>
-                    <p class="text-body2 text-content-secondary mt-1 leading-relaxed">Built and maintained REST APIs, worked on backend features, and resolved performance bottlenecks in an Agile development environment.</p>
-                  </div>
-                  <span class="text-body2 text-content-tertiary shrink-0">2021</span>
-                </div>
-
-                <div class="py-4 flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-2">
-                  <div>
-                    <h4 class="text-title font-medium">Python Automation Developer</h4>
-                    <p class="text-body2 text-content-secondary mt-1 leading-relaxed">Developed desktop automation and image recognition workflows for Pokémon Revolution Online using Python, PyAutoGUI, and OpenCV for thousands of users.</p>
-                  </div>
-                  <span class="text-body2 text-content-tertiary shrink-0">2020</span>
-                </div>
-
-                <div class="py-4 flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-2">
-                  <div>
-                    <h4 class="text-title font-medium">TextVision, Image Text Extractor</h4>
-                    <p class="text-body2 text-content-secondary mt-1 leading-relaxed">Built a web application with Python and Flask that extracts text from images using Microsoft Azure Computer Vision OCR.</p>
-                  </div>
-                  <span class="text-body2 text-content-tertiary shrink-0">2019</span>
-                </div>
-
-              </div>
-            </div>
-
-            <!-- Skills & Competencies -->
-            <div class="flex flex-col gap-5 pt-6 border-t border-stroke-secondary">
-              <h3 class="text-title font-medium">Technical Skills &amp; Competencies</h3>
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                
-                <div class="p-4 rounded-xl border border-stroke-secondary bg-white shadow-xs flex flex-col gap-1.5">
-                  <h4 class="text-body1 font-medium text-gray-900">AI / ML Engineering</h4>
-                  <p class="text-body2 text-content-secondary leading-relaxed">LLM application development, RAG pipelines, vector databases (pgvector), LLM API integration (OpenAI, Anthropic, Groq).</p>
-                </div>
-
-                <div class="p-4 rounded-xl border border-stroke-secondary bg-white shadow-xs flex flex-col gap-1.5">
-                  <h4 class="text-body1 font-medium text-gray-900">Programming Languages</h4>
-                  <p class="text-body2 text-content-secondary leading-relaxed">Python, TypeScript, JavaScript, C, C++, Java, Swift, HTML5 / CSS3.</p>
-                </div>
-
-                <div class="p-4 rounded-xl border border-stroke-secondary bg-white shadow-xs flex flex-col gap-1.5">
-                  <h4 class="text-body1 font-medium text-gray-900">Frameworks &amp; Libraries</h4>
-                  <p class="text-body2 text-content-secondary leading-relaxed">React, Next.js, Node.js, Django REST, Tailwind CSS, TensorFlow, NumPy.</p>
-                </div>
-
-                <div class="p-4 rounded-xl border border-stroke-secondary bg-white shadow-xs flex flex-col gap-1.5">
-                  <h4 class="text-body1 font-medium text-gray-900">Cloud &amp; DevOps</h4>
-                  <p class="text-body2 text-content-secondary leading-relaxed">AWS, Microsoft Azure, Cloudflare, Docker, Vercel CI/CD pipelines.</p>
-                </div>
-
-                <div class="p-4 rounded-xl border border-stroke-secondary bg-white shadow-xs flex flex-col gap-1.5">
-                  <h4 class="text-body1 font-medium text-gray-900">Databases</h4>
-                  <p class="text-body2 text-content-secondary leading-relaxed">Supabase, PostgreSQL, MySQL, MariaDB, SQLite, Microsoft SQL Server.</p>
-                </div>
-
-                <div class="p-4 rounded-xl border border-stroke-secondary bg-white shadow-xs flex flex-col gap-1.5">
-                  <h4 class="text-body1 font-medium text-gray-900">Growth &amp; Management</h4>
-                  <p class="text-body2 text-content-secondary leading-relaxed">SEO, AI-assisted content production (Higgsfield AI), B2B supply chain operations, Agile workflows.</p>
-                </div>
-
-              </div>
-            </div>
-
-            <!-- Roles & Community Leadership -->
-            <div class="flex flex-col gap-5 pt-6 border-t border-stroke-secondary">
-              <h3 class="text-title font-medium">Leadership &amp; Community</h3>
-              <div class="flex flex-col divide-y divide-stroke-secondary">
-                
-                <div class="py-4 flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-2">
-                  <div>
-                    <h4 class="text-title font-medium">Microsoft Learn Student Ambassador</h4>
-                    <p class="text-body2 text-content-secondary mt-0.5">Represented Microsoft's developer community; organized technical events, workshops, and student developer initiatives.</p>
-                  </div>
-                  <span class="text-body2 text-content-tertiary shrink-0">2020 — 2022</span>
-                </div>
-
-                <div class="py-4 flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-2">
-                  <div>
-                    <h4 class="text-title font-medium">Ajou International Student Council</h4>
-                    <p class="text-body2 text-content-secondary mt-0.5">Elected member representing the international student body in university governance.</p>
-                  </div>
-                  <span class="text-body2 text-content-tertiary shrink-0">Elected Member</span>
-                </div>
-
-                <div class="py-4 flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-2">
-                  <div>
-                    <h4 class="text-title font-medium">Community Volunteer, Suwon Global Center</h4>
-                    <p class="text-body2 text-content-secondary mt-0.5">Served as a Korean–English interpreter and cultural liaison, assisting international residents with government documentation and community integration.</p>
-                  </div>
-                  <span class="text-body2 text-content-tertiary shrink-0">South Korea</span>
-                </div>
-
-              </div>
-            </div>
-
-            <!-- Certifications & Honors -->
-            <div class="flex flex-col gap-5 pt-6 border-t border-stroke-secondary">
-              <h3 class="text-title font-medium">Certifications &amp; Achievements</h3>
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                <div class="p-3 rounded-lg bg-white border border-stroke-secondary flex items-start gap-2 text-body2">
-                  <span class="text-[#94546A]">★</span>
-                  <div><strong>Top 20</strong>, Incheon Foreign Start-up Challenge 2026 — OASIS</div>
-                </div>
-                <div class="p-3 rounded-lg bg-white border border-[#94546A]/30 flex items-start gap-2 text-body2">
-                  <span class="text-[#94546A]">★</span>
-                  <div>
-                    <strong>Research Paper:</strong> A Comprehensive Study of Dijkstra's Algorithm — <em>Global Scientific Journal</em> (Sept 2023, <span class="text-emerald-700 font-medium">1,000+ downloads</span>, ISSN 2320-9186)
-                  </div>
-                </div>
-                <div class="p-3 rounded-lg bg-white border border-stroke-secondary flex items-start gap-2 text-body2">
-                  <span class="text-[#94546A]">✓</span>
-                  <div><strong>Microsoft AI-900:</strong> Azure AI Fundamentals Certification</div>
-                </div>
-                <div class="p-3 rounded-lg bg-white border border-stroke-secondary flex items-start gap-2 text-body2">
-                  <span class="text-[#94546A]">✓</span>
-                  <div><strong>Harvard University Online:</strong> CS50 Introduction to Computer Science</div>
-                </div>
-                <div class="p-3 rounded-lg bg-white border border-stroke-secondary flex items-start gap-2 text-body2">
-                  <span class="text-[#94546A]">✓</span>
-                  <div><strong>Stanford Online:</strong> Supervised Machine Learning: Regression &amp; Classification</div>
-                </div>
-                <div class="p-3 rounded-lg bg-white border border-stroke-secondary flex items-start gap-2 text-body2">
-                  <span class="text-[#94546A]">✓</span>
-                  <div><strong>Google:</strong> IT Automation with Python Professional</div>
-                </div>
-                <div class="p-3 rounded-lg bg-white border border-stroke-secondary flex items-start gap-2 text-body2">
-                  <span class="text-[#94546A]">✓</span>
-                  <div><strong>IBM:</strong> Professional Data Science Certification</div>
-                </div>
-                <div class="p-3 rounded-lg bg-white border border-stroke-secondary flex items-start gap-2 text-body2">
-                  <span class="text-[#94546A]">✓</span>
-                  <div><strong>University of Helsinki:</strong> Elements of AI</div>
-                </div>
-                <div class="p-3 rounded-lg bg-white border border-stroke-secondary flex items-start gap-2 text-body2">
-                  <span class="text-[#94546A]">✓</span>
-                  <div><strong>Meta:</strong> Introduction to Back-End Development</div>
-                </div>
-                <div class="p-3 rounded-lg bg-white border border-stroke-secondary flex items-start gap-2 text-body2">
-                  <span class="text-[#94546A]">✓</span>
-                  <div><strong>LinkedIn:</strong> Azure Data Scientist Associate Preparation</div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Languages -->
-            <div class="flex flex-col gap-3 pt-6 border-t border-stroke-secondary">
-              <h3 class="text-title font-medium">Languages</h3>
-              <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1.5 rounded-full bg-white border border-stroke-secondary text-body2"><strong>English:</strong> IELTS Band 8.0 (Expert)</span>
-                <span class="px-3 py-1.5 rounded-full bg-white border border-stroke-secondary text-body2"><strong>Korean:</strong> TOPIK Level 4 (Advanced)</span>
-                <span class="px-3 py-1.5 rounded-full bg-white border border-stroke-secondary text-body2"><strong>Urdu:</strong> Native</span>
-              </div>
-            </div>
-
-            <!-- Philosophy -->
-            <div class="flex flex-col gap-3 pt-6 border-t border-stroke-secondary">
-              <h3 class="text-title font-medium">Engineering Philosophy</h3>
-              <p class="text-body1 text-content-secondary leading-relaxed">
-                Software should not feel like an sterile spreadsheet. Great software has weight, texture, responsiveness, and respect for the human mind using it. Whether engineering vector indexing pipelines or micro-tuning a CSS ease-out curve, craft is in the details.
-              </p>
-            </div>
-
           </div>
         </section>
 
-        <!-- ================= TAB 6: CONNECT ================= -->
+        <!-- ================= TAB 4: CONNECT ================= -->
         <section id="tab-panel-connect" class="tab-panel hidden mt-7 w-full max-w-[1240px] mx-auto px-6 md:px-10">
-          <div class="flex flex-col gap-8 max-w-[640px]">
-            <div class="flex flex-col gap-2">
-              <h2 class="text-display">Connect &amp; Collaborate</h2>
-              <p class="text-body1 text-content-secondary">Always excited to connect with engineers, designers, founders, and curious minds.</p>
+          <div class="flex flex-col gap-8 max-w-[760px]">
+            
+            <!-- Header & Status -->
+            <div class="flex flex-col gap-3">
+              <div class="status-badge-pill">
+                <span class="status-dot"></span>
+                <span>Available for innovative projects &amp; engineering leadership</span>
+              </div>
+              <h2 class="text-display text-[28px] md:text-[34px] tracking-tight">Connect &amp; Collaborate</h2>
+              <p class="text-body1 text-content-secondary leading-relaxed max-w-[620px]">
+                Whether you want to discuss AI architecture, collaborative ventures, engineering challenges, or explore working together — my inbox is always open.
+              </p>
             </div>
 
-            <div class="flex flex-col gap-3">
-              
-              <!-- Curriculum Vitae / Resume -->
-              <a href="cv.html" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-4 rounded-xl border border-[#94546A]/30 bg-white hover:border-[#94546A] shadow-xs hover:shadow-sm transition-all duration-150 group">
-                <div class="flex items-center gap-3">
-                  <div class="size-9 rounded-lg bg-[#94546A]/10 text-[#94546A] flex items-center justify-center font-serif text-[15px] font-bold">
+            <div class="connect-container">
+
+              <!-- Primary Hero Email Card -->
+              <div class="connect-hero-card group">
+                <div style="display: flex; align-items: center; gap: 16px;">
+                  <div class="connect-icon-box">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="20" height="16" x="2" y="4" rx="2"/>
+                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                    </svg>
+                  </div>
+                  <div style="display: flex; flex-direction: column;">
+                    <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: #8E8E93;">Direct Email</span>
+                    <span style="font-size: 17px; font-weight: 500; color: #111111; user-select: all; font-family: 'Outfit', sans-serif;">455ahsankhan@gmail.com</span>
+                  </div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+                  <button type="button" id="copy-email-btn" onclick="navigator.clipboard.writeText('455ahsankhan@gmail.com'); this.innerHTML='<span>Copied! ✓</span>'; setTimeout(() => this.innerHTML='<svg width=\'14\' height=\'14\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'><rect width=\'14\' height=\'14\' x=\'8\' y=\'8\' rx=\'2\' ry=\'2\'/><path d=\'M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2\'/></svg><span>Copy</span>', 2000)" class="connect-action-pill pill-secondary">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
+                      <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
+                    </svg>
+                    <span>Copy</span>
+                  </button>
+                  <a href="mailto:455ahsankhan@gmail.com" class="connect-action-pill pill-primary">
+                    <span>Send Message</span>
+                    <span style="font-size: 11px;">↗</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Featured Curriculum Vitae Card -->
+              <a href="cv.html" target="_blank" rel="noopener noreferrer" class="connect-cv-card group">
+                <div style="display: flex; align-items: center; gap: 16px;">
+                  <div class="cv-badge">
                     CV
                   </div>
                   <div>
-                    <span class="text-title font-medium block">Curriculum Vitae</span>
-                    <span class="text-body2 text-content-tertiary">View formal academic &amp; career PDF resume</span>
+                    <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                      <span style="font-size: 17px; font-weight: 600; color: #111111; font-family: 'Outfit', sans-serif;">Curriculum Vitae</span>
+                      <span style="font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 9999px; background: rgba(148, 84, 106, 0.1); color: #94546A;">Academic &amp; Professional</span>
+                    </div>
+                    <p style="font-size: 13px; color: #6E6E73; margin-top: 3px;">Ajou University (GKS Scholar) · Preplit AI · Research Publications &amp; Engineering Roles</p>
                   </div>
                 </div>
-                <span class="text-body2 text-[#94546A] font-medium group-hover:translate-x-0.5 transition-transform">View CV ↗</span>
+                <div class="connect-action-pill pill-wine" style="align-self: flex-start;">
+                  <span>Open CV</span>
+                  <span style="font-size: 11px;">↗</span>
+                </div>
               </a>
 
-              <!-- LinkedIn -->
-              <a href="https://www.linkedin.com/in/khanahsan826/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-4 rounded-xl border border-stroke-secondary bg-white hover:border-[#94546A]/50 shadow-xs hover:shadow-sm transition-colors duration-150">
-                <div class="flex items-center gap-3">
-                  <span class="text-title font-medium">LinkedIn</span>
-                  <span class="text-body2 text-content-tertiary">/in/khanahsan826</span>
-                </div>
-                <span class="text-body2 text-content-secondary">Visit ↗</span>
-              </a>
+              <!-- Social Profiles Grid -->
+              <div class="connect-grid-2">
 
-              <!-- GitHub -->
-              <a href="https://github.com/ahsann826" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-4 rounded-xl border border-stroke-secondary bg-white hover:border-[#94546A]/50 shadow-xs hover:shadow-sm transition-colors duration-150">
-                <div class="flex items-center gap-3">
-                  <span class="text-title font-medium">GitHub</span>
-                  <span class="text-body2 text-content-tertiary">@ahsann826</span>
-                </div>
-                <span class="text-body2 text-content-secondary">Visit ↗</span>
-              </a>
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/khanahsan826/" target="_blank" rel="noopener noreferrer" class="connect-item-card group">
+                  <div style="display: flex; align-items: center; justify-content: space-between;">
+                    <div style="width: 40px; height: 40px; border-radius: 12px; background: rgba(0, 119, 181, 0.1); color: #0077B5; display: flex; align-items: center; justify-content: center;">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                        <rect width="4" height="12" x="2" y="9"/>
+                        <circle cx="4" cy="4" r="2"/>
+                      </svg>
+                    </div>
+                    <span style="font-size: 12px; font-weight: 500; color: #8E8E93;">Visit ↗</span>
+                  </div>
+                  <div>
+                    <h3 style="font-size: 16px; font-weight: 600; color: #111111; margin: 0; font-family: 'Outfit', sans-serif;">LinkedIn</h3>
+                    <p style="font-size: 13px; font-family: monospace; color: #8E8E93; margin: 2px 0 6px 0;">/in/khanahsan826</p>
+                    <p style="font-size: 13px; color: #515154; margin: 0; line-height: 1.45;">Professional career timeline, startup milestones, and network updates.</p>
+                  </div>
+                </a>
 
-              <!-- Email -->
-              <a href="mailto:455ahsankhan@gmail.com" class="flex items-center justify-between p-4 rounded-xl border border-stroke-secondary bg-white hover:border-[#94546A]/50 shadow-xs hover:shadow-sm transition-colors duration-150">
-                <div class="flex items-center gap-3">
-                  <span class="text-title font-medium">Email</span>
-                  <span class="text-body2 text-content-tertiary">455ahsankhan@gmail.com</span>
-                </div>
-                <span class="text-body2 text-content-secondary">Send ↗</span>
-              </a>
+                <!-- GitHub -->
+                <a href="https://github.com/ahsann826" target="_blank" rel="noopener noreferrer" class="connect-item-card group">
+                  <div style="display: flex; align-items: center; justify-content: space-between;">
+                    <div style="width: 40px; height: 40px; border-radius: 12px; background: rgba(0, 0, 0, 0.06); color: #111111; display: flex; align-items: center; justify-content: center;">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/>
+                        <path d="M9 18c-4.51 2-5-2-7-2"/>
+                      </svg>
+                    </div>
+                    <span style="font-size: 12px; font-weight: 500; color: #8E8E93;">Visit ↗</span>
+                  </div>
+                  <div>
+                    <h3 style="font-size: 16px; font-weight: 600; color: #111111; margin: 0; font-family: 'Outfit', sans-serif;">GitHub</h3>
+                    <p style="font-size: 13px; font-family: monospace; color: #8E8E93; margin: 2px 0 6px 0;">@ahsann826</p>
+                    <p style="font-size: 13px; color: #515154; margin: 0; line-height: 1.45;">Open source code, personal repositories, and software experiments.</p>
+                  </div>
+                </a>
 
-              <!-- Location & Phone Info -->
-              <div class="p-4 rounded-xl border border-stroke-secondary bg-white/60 shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                <div class="flex items-center gap-2 text-body2 text-content-secondary">
-                  <span>📍 Suwon, South Korea</span>
-                  <span>•</span>
-                  <span>Ajou University</span>
+              </div>
+
+              <!-- Location & Phone Quick Cards -->
+              <div class="connect-grid-2">
+
+                <!-- Location -->
+                <div class="connect-info-card">
+                  <div class="connect-icon-box" style="width: 40px; height: 40px; border-radius: 12px;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/>
+                      <circle cx="12" cy="10" r="3"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <span style="font-size: 11px; font-weight: 600; text-transform: uppercase; color: #8E8E93; letter-spacing: 0.04em;">Location</span>
+                    <p style="font-size: 14px; font-weight: 500; color: #111111; margin: 1px 0 0 0; font-family: 'Outfit', sans-serif;">Suwon, South Korea</p>
+                    <p style="font-size: 12px; color: #8E8E93; margin: 1px 0 0 0;">Ajou University · KST (UTC+9)</p>
+                  </div>
                 </div>
-                <div class="text-body2 text-content-tertiary font-mono">
-                  +82 10-6651-3148
-                </div>
+
+                <!-- Direct Phone -->
+                <a href="tel:+821066513148" class="connect-info-card group" style="justify-content: space-between;">
+                  <div style="display: flex; align-items: center; gap: 14px;">
+                    <div class="connect-icon-box" style="width: 40px; height: 40px; border-radius: 12px;">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <span style="font-size: 11px; font-weight: 600; text-transform: uppercase; color: #8E8E93; letter-spacing: 0.04em;">Direct Line</span>
+                      <p style="font-size: 14px; font-weight: 500; font-family: monospace; color: #111111; margin: 1px 0 0 0;">+82 10-6651-3148</p>
+                      <p style="font-size: 12px; color: #8E8E93; margin: 1px 0 0 0;">Call / WhatsApp</p>
+                    </div>
+                  </div>
+                  <span style="font-size: 12px; font-weight: 500; color: #8E8E93;">Call ↗</span>
+                </a>
+
               </div>
 
             </div>
