@@ -165,21 +165,23 @@
         height: 42px;
       }
     }
-    .header-signature {
-      height: 28px;
-      width: auto;
-      object-fit: contain;
+    .header-name {
+      font-family: 'Outfit', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: -0.025em;
+      color: #1A1714;
+      white-space: nowrap;
       flex-shrink: 0;
-      display: block;
       transition: opacity 0.2s ease;
     }
     @media (min-width: 640px) {
-      .header-signature {
-        height: 32px;
+      .header-name {
+        font-size: 15px;
       }
     }
-    .header-brand:hover .header-signature {
-      opacity: 0.8;
+    .header-brand:hover .header-name {
+      opacity: 0.65;
     }
     .connect-pill {
       display: inline-flex;
@@ -476,7 +478,7 @@
     <div class="site-header-inner">
         <a class="header-brand group" href="index.html" aria-label="Khan Muhammad Ahsan - Home">
           <img src="assets/avatar.jpg" alt="Khan Muhammad Ahsan" class="header-avatar" />
-          <img src="assets/signature.png" alt="Khan Ahsan" class="header-signature" />
+          <span class="header-name">Khan Muhammad Ahsan</span>
         </a>
       <a href="https://www.linkedin.com/in/khanahsan826/" target="_blank" rel="noopener noreferrer" class="connect-pill">
         <span>Connect</span>
